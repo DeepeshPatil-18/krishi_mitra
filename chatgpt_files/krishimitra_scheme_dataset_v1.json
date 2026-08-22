@@ -1,0 +1,766 @@
+{
+  "dataset_name": "KrishiMitra Verified Farmer Scheme Catalog",
+  "version": "1.0",
+  "created_date": "2026-08-22",
+  "record_count": 45,
+  "purpose": "Hackathon MVP scheme search/retrieval catalog; not a legal eligibility engine.",
+  "rules": [
+    "Never invent subsidy, deadline, eligibility, documents or application status.",
+    "Use keywords for retrieval only.",
+    "Show official source with every result.",
+    "Tell the farmer to verify current eligibility on the official source.",
+    "Prefer Maharashtra records when farmer location is Maharashtra.",
+    "Keep this catalog separate from training data."
+  ],
+  "schemes": [
+    {
+      "id": "SCM-001",
+      "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+      "scope": "central",
+      "category": "income_support",
+      "keywords": [
+        "PM Kisan",
+        "PM-KISAN",
+        "किसान सम्मान निधि",
+        "पीएम किसान"
+      ],
+      "summary": "Income support for eligible landholding farmer families.",
+      "source_url": "https://pmkisan.gov.in/",
+      "source_name": "PM-KISAN official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-002",
+      "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+      "scope": "central",
+      "category": "crop_insurance",
+      "keywords": [
+        "PMFBY",
+        "crop insurance",
+        "फसल बीमा",
+        "पीक विमा"
+      ],
+      "summary": "Crop insurance for notified crops and areas against covered losses.",
+      "source_url": "https://pmfby.gov.in/",
+      "source_name": "PMFBY official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-003",
+      "name": "PMKSY – Per Drop More Crop (Micro Irrigation)",
+      "scope": "central",
+      "category": "irrigation",
+      "keywords": [
+        "PMKSY",
+        "drip",
+        "sprinkler",
+        "micro irrigation",
+        "ठिबक",
+        "तुषार"
+      ],
+      "summary": "Efficient irrigation and micro-irrigation support.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Farmer Schemes",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-004",
+      "name": "Sub-Mission on Agricultural Mechanization (SMAM)",
+      "scope": "central",
+      "category": "farm_mechanization",
+      "keywords": [
+        "SMAM",
+        "farm machinery",
+        "tractor",
+        "agricultural equipment",
+        "कृषी यंत्र"
+      ],
+      "summary": "Promotes farm machinery, custom hiring and mechanization.",
+      "source_url": "https://agrimachinery.nic.in/",
+      "source_name": "Agricultural Mechanization official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-005",
+      "name": "Agriculture Infrastructure Fund (AIF)",
+      "scope": "central",
+      "category": "infrastructure",
+      "keywords": [
+        "AIF",
+        "warehouse",
+        "cold storage",
+        "agri infrastructure",
+        "गोदाम"
+      ],
+      "summary": "Financing facility for eligible agriculture infrastructure projects.",
+      "source_url": "https://agriinfra.dac.gov.in/",
+      "source_name": "AIF official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-006",
+      "name": "Kisan Credit Card (KCC)",
+      "scope": "central",
+      "category": "credit",
+      "keywords": [
+        "KCC",
+        "Kisan Credit Card",
+        "crop loan",
+        "किसान क्रेडिट कार्ड",
+        "शेती कर्ज"
+      ],
+      "summary": "Institutional credit facility for eligible farmers and allied activities.",
+      "source_url": "https://www.nabard.org/",
+      "source_name": "NABARD / official banking ecosystem",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-007",
+      "name": "Soil Health Card Scheme",
+      "scope": "central",
+      "category": "soil",
+      "keywords": [
+        "Soil Health Card",
+        "soil test",
+        "मृदा आरोग्य कार्ड",
+        "मिट्टी जांच"
+      ],
+      "summary": "Soil-test information to guide nutrient and fertilizer management.",
+      "source_url": "https://soilhealth.dac.gov.in/",
+      "source_name": "Soil Health Card official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-008",
+      "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+      "scope": "central",
+      "category": "organic_farming",
+      "keywords": [
+        "PKVY",
+        "organic farming",
+        "जैविक खेती",
+        "सेंद्रिय शेती"
+      ],
+      "summary": "Promotes organic farming through notified cluster-based interventions.",
+      "source_url": "https://pgsindia-ncof.gov.in/",
+      "source_name": "PGS-India official ecosystem",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-009",
+      "name": "Mission for Integrated Development of Horticulture (MIDH)",
+      "scope": "central",
+      "category": "horticulture",
+      "keywords": [
+        "MIDH",
+        "horticulture",
+        "fruit",
+        "vegetable",
+        "mushroom",
+        "बागवानी",
+        "फळबाग"
+      ],
+      "summary": "Supports horticulture including fruits, vegetables, mushrooms and spices.",
+      "source_url": "https://nhb.gov.in/",
+      "source_name": "National Horticulture Board",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-010",
+      "name": "Rashtriya Krishi Vikas Yojana (RKVY-RAFTAAR)",
+      "scope": "central",
+      "category": "agriculture_development",
+      "keywords": [
+        "RKVY",
+        "RAFTAAR",
+        "कृषि विकास",
+        "कृषी विकास"
+      ],
+      "summary": "Agriculture-development framework supporting state-led interventions.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-011",
+      "name": "National Food Security Mission (NFSM)",
+      "scope": "central",
+      "category": "crop_production",
+      "keywords": [
+        "NFSM",
+        "food grains",
+        "pulses",
+        "oilseeds",
+        "rice",
+        "wheat",
+        "दाल",
+        "तूर",
+        "चना"
+      ],
+      "summary": "Supports notified crop-production and productivity interventions.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-012",
+      "name": "National Mission on Edible Oils – Oil Palm (NMEO-OP)",
+      "scope": "central",
+      "category": "oilseeds",
+      "keywords": [
+        "NMEO-OP",
+        "oil palm",
+        "edible oil",
+        "ऑयल पाम"
+      ],
+      "summary": "Promotes oil-palm cultivation and edible-oil development.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-013",
+      "name": "National Mission on Edible Oils – Oilseeds (NMEO-Oilseeds)",
+      "scope": "central",
+      "category": "oilseeds",
+      "keywords": [
+        "NMEO-Oilseeds",
+        "soybean",
+        "groundnut",
+        "mustard",
+        "तेलबिया",
+        "सोयाबीन"
+      ],
+      "summary": "Supports development of domestic oilseed production and value chains.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-014",
+      "name": "Sub-Mission on Seeds and Planting Material (SMSP)",
+      "scope": "central",
+      "category": "seeds",
+      "keywords": [
+        "SMSP",
+        "seed",
+        "quality seed",
+        "planting material",
+        "बियाणे",
+        "रोपे"
+      ],
+      "summary": "Supports quality seed and planting-material systems.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-015",
+      "name": "Sub-Mission on Plant Protection (SMPP)",
+      "scope": "central",
+      "category": "plant_protection",
+      "keywords": [
+        "plant protection",
+        "pest",
+        "disease",
+        "कीड",
+        "रोग",
+        "पिक संरक्षण"
+      ],
+      "summary": "Supports plant-protection and pest/disease management activities.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-016",
+      "name": "National Mission for Sustainable Agriculture (NMSA)",
+      "scope": "central",
+      "category": "sustainable_agriculture",
+      "keywords": [
+        "NMSA",
+        "sustainable agriculture",
+        "rainfed",
+        "climate resilient",
+        "शाश्वत शेती"
+      ],
+      "summary": "Promotes sustainable and climate-resilient agriculture approaches.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-017",
+      "name": "Rainfed Area Development (RAD)",
+      "scope": "central",
+      "category": "integrated_farming",
+      "keywords": [
+        "RAD",
+        "rainfed",
+        "integrated farming",
+        "कोरडवाहू",
+        "एकात्मिक शेती"
+      ],
+      "summary": "Promotes integrated farming approaches in rainfed areas.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Farmer Schemes",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-018",
+      "name": "PM-KUSUM",
+      "scope": "central",
+      "category": "solar_irrigation",
+      "keywords": [
+        "PM-KUSUM",
+        "solar pump",
+        "solar agriculture pump",
+        "सोलर पंप",
+        "सौर पंप"
+      ],
+      "summary": "Supports solar-energy solutions for agriculture, including eligible solar pumps.",
+      "source_url": "https://pmkusum.mnre.gov.in/",
+      "source_name": "PM-KUSUM official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-019",
+      "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+      "scope": "central",
+      "category": "fisheries",
+      "keywords": [
+        "PMMSY",
+        "fish farming",
+        "fisheries",
+        "मछली पालन",
+        "मासे पालन"
+      ],
+      "summary": "Supports fisheries, aquaculture and related value-chain development.",
+      "source_url": "https://dof.gov.in/",
+      "source_name": "Department of Fisheries",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-020",
+      "name": "Pradhan Mantri Matsya Kisan Samridhi Sah-Yojana (PM-MKSSY)",
+      "scope": "central",
+      "category": "fisheries",
+      "keywords": [
+        "PM-MKSSY",
+        "Matsya Kisan",
+        "aquaculture insurance",
+        "fish microenterprise"
+      ],
+      "summary": "Supports formalization and selected financial/insurance access in fisheries.",
+      "source_url": "https://dof.gov.in/",
+      "source_name": "Department of Fisheries",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-021",
+      "name": "Rashtriya Gokul Mission (RGM)",
+      "scope": "central",
+      "category": "dairy",
+      "keywords": [
+        "Rashtriya Gokul Mission",
+        "RGM",
+        "cattle",
+        "indigenous cattle",
+        "गोपालन"
+      ],
+      "summary": "Supports indigenous bovine-breed development and dairy-sector interventions.",
+      "source_url": "https://dahd.gov.in/",
+      "source_name": "Department of Animal Husbandry & Dairying",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-022",
+      "name": "National Livestock Mission (NLM)",
+      "scope": "central",
+      "category": "livestock",
+      "keywords": [
+        "NLM",
+        "goat",
+        "sheep",
+        "poultry",
+        "pig",
+        "बकरी",
+        "मेंढी",
+        "शेळी पालन"
+      ],
+      "summary": "Supports notified livestock entrepreneurship and breed-development activities.",
+      "source_url": "https://dahd.gov.in/",
+      "source_name": "Department of Animal Husbandry & Dairying",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-023",
+      "name": "Animal Husbandry Infrastructure Development Fund (AHIDF)",
+      "scope": "central",
+      "category": "animal_husbandry_infrastructure",
+      "keywords": [
+        "AHIDF",
+        "dairy processing",
+        "animal feed",
+        "पशुपालन",
+        "डेअरी"
+      ],
+      "summary": "Financing support for eligible animal-husbandry infrastructure/value-chain projects.",
+      "source_url": "https://dahd.gov.in/",
+      "source_name": "Department of Animal Husbandry & Dairying",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-024",
+      "name": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
+      "scope": "central",
+      "category": "food_processing",
+      "keywords": [
+        "PMFME",
+        "food processing",
+        "pickle",
+        "jam",
+        "flour mill",
+        "अन्न प्रक्रिया"
+      ],
+      "summary": "Supports formalization and upgradation of eligible micro food-processing enterprises.",
+      "source_url": "https://mofpi.gov.in/",
+      "source_name": "Ministry of Food Processing Industries",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-025",
+      "name": "Prime Minister's Employment Generation Programme (PMEGP)",
+      "scope": "central",
+      "category": "entrepreneurship",
+      "keywords": [
+        "PMEGP",
+        "self employment",
+        "business loan",
+        "स्वयंरोजगार",
+        "व्यवसाय"
+      ],
+      "summary": "Credit-linked support for eligible new micro-enterprises and self-employment projects.",
+      "source_url": "https://www.kviconline.gov.in/pmegpeportal/",
+      "source_name": "PMEGP official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-026",
+      "name": "Formation and Promotion of 10,000 Farmer Producer Organizations (FPOs)",
+      "scope": "central",
+      "category": "farmer_organization",
+      "keywords": [
+        "FPO",
+        "Farmer Producer Organisation",
+        "शेतकरी उत्पादक कंपनी",
+        "किसान उत्पादक संगठन"
+      ],
+      "summary": "Supports formation and strengthening of Farmer Producer Organisations.",
+      "source_url": "https://sfacindia.com/",
+      "source_name": "Small Farmers' Agribusiness Consortium",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-027",
+      "name": "National Agriculture Market (e-NAM)",
+      "scope": "central",
+      "category": "market_access",
+      "keywords": [
+        "eNAM",
+        "e-NAM",
+        "online mandi",
+        "market linkage",
+        "ई-नाम",
+        "बाजारभाव"
+      ],
+      "summary": "Electronic agricultural-market platform for market access and price discovery.",
+      "source_url": "https://www.enam.gov.in/",
+      "source_name": "e-NAM official portal",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-028",
+      "name": "Krishi Vigyan Kendra (KVK) Farmer Training & Extension",
+      "scope": "central",
+      "category": "training",
+      "keywords": [
+        "KVK",
+        "farmer training",
+        "कृषी विज्ञान केंद्र",
+        "किसान प्रशिक्षण"
+      ],
+      "summary": "Farmer training, demonstrations and extension through the KVK network.",
+      "source_url": "https://icar.gov.in/",
+      "source_name": "Indian Council of Agricultural Research",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-029",
+      "name": "National Beekeeping and Honey Mission (NBHM)",
+      "scope": "central",
+      "category": "beekeeping",
+      "keywords": [
+        "NBHM",
+        "beekeeping",
+        "honey",
+        "मधमाशी",
+        "मधुमक्षिका",
+        "शहद"
+      ],
+      "summary": "Promotes scientific beekeeping and the honey value chain.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-030",
+      "name": "Sub-Mission on Agroforestry",
+      "scope": "central",
+      "category": "agroforestry",
+      "keywords": [
+        "agroforestry",
+        "farm forestry",
+        "trees on farm",
+        "कृषिवन",
+        "शेतावर झाडे"
+      ],
+      "summary": "Promotes integration of suitable trees with agricultural systems.",
+      "source_url": "https://agriwelfare.gov.in/",
+      "source_name": "Department of Agriculture & Farmers Welfare",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-031",
+      "name": "Namo Shetkari Mahasanman Nidhi Yojana",
+      "scope": "maharashtra",
+      "category": "income_support",
+      "keywords": [
+        "Namo Shetkari",
+        "नमो शेतकरी",
+        "महासन्मान निधी"
+      ],
+      "summary": "Maharashtra state farmer-support scheme.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-032",
+      "name": "Bhausaheb Fundkar Falbaag Lagwad Yojana",
+      "scope": "maharashtra",
+      "category": "horticulture",
+      "keywords": [
+        "Bhausaheb Fundkar",
+        "Falbaag Lagwad",
+        "फळबाग लागवड"
+      ],
+      "summary": "Maharashtra horticulture plantation assistance programme.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-033",
+      "name": "Dr. Babasaheb Ambedkar Krushi Swavalamban Yojana",
+      "scope": "maharashtra",
+      "category": "irrigation",
+      "keywords": [
+        "Ambedkar Krushi Swavalamban",
+        "SC farmer",
+        "डॉ बाबासाहेब आंबेडकर कृषी स्वावलंबन"
+      ],
+      "summary": "Agriculture-support scheme for eligible Scheduled Caste farmers and notified components.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-034",
+      "name": "Birsa Munda Krishi Kranti Yojana",
+      "scope": "maharashtra",
+      "category": "tribal_agriculture",
+      "keywords": [
+        "Birsa Munda Krishi Kranti",
+        "ST farmer",
+        "बिरसा मुंडा कृषी क्रांती"
+      ],
+      "summary": "Agriculture-support scheme for eligible Scheduled Tribe farmers and notified components.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-035",
+      "name": "State Agriculture Mechanization Scheme – Maharashtra",
+      "scope": "maharashtra",
+      "category": "farm_mechanization",
+      "keywords": [
+        "Maharashtra mechanization",
+        "कृषी यांत्रिकीकरण",
+        "शेती अवजारे"
+      ],
+      "summary": "Maharashtra state support for farm mechanization and agricultural machinery.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-036",
+      "name": "Chief Minister Sustainable Agriculture Irrigation Scheme",
+      "scope": "maharashtra",
+      "category": "irrigation",
+      "keywords": [
+        "CM sustainable agriculture irrigation",
+        "मुख्यमंत्री शाश्वत कृषी सिंचन"
+      ],
+      "summary": "Maharashtra irrigation-support programme under farmer schemes.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-037",
+      "name": "Chief Minister Sustainable Agriculture Irrigation – Individual Farm Pond",
+      "scope": "maharashtra",
+      "category": "water_management",
+      "keywords": [
+        "farm pond",
+        "individual farm pond",
+        "शेततळे",
+        "वैयक्तिक शेततळे"
+      ],
+      "summary": "Maharashtra component related to eligible individual farm-pond interventions.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-038",
+      "name": "RKVY Plastic Lining to Farm Pond",
+      "scope": "maharashtra",
+      "category": "water_management",
+      "keywords": [
+        "plastic lining farm pond",
+        "शेततळे प्लास्टिक अस्तरीकरण"
+      ],
+      "summary": "Maharashtra-listed RKVY component for farm-pond plastic lining.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-039",
+      "name": "PMRKVY – Rainfed Area Development, Maharashtra",
+      "scope": "maharashtra",
+      "category": "integrated_farming",
+      "keywords": [
+        "PMRKVY RAD",
+        "rainfed",
+        "कोरडवाहू",
+        "एकात्मिक शेती"
+      ],
+      "summary": "Maharashtra implementation of rainfed-area development using integrated farming and allied activities.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-040",
+      "name": "National Food Security Mission – Maharashtra Components",
+      "scope": "maharashtra",
+      "category": "crop_production",
+      "keywords": [
+        "NFSM Maharashtra",
+        "food grains",
+        "oilseeds",
+        "sugarcane",
+        "cotton",
+        "कापूस",
+        "ऊस"
+      ],
+      "summary": "Maharashtra implementation of notified NFSM crop-production components.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-041",
+      "name": "MIDH – Maharashtra Horticulture Components",
+      "scope": "maharashtra",
+      "category": "horticulture",
+      "keywords": [
+        "MIDH Maharashtra",
+        "horticulture",
+        "protected cultivation",
+        "फळबाग",
+        "भाजीपाला"
+      ],
+      "summary": "Maharashtra implementation of notified MIDH horticulture components.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-042",
+      "name": "Gopinath Munde Shetkari Apghat Suraksha Sanugrah Anudan Yojana",
+      "scope": "maharashtra",
+      "category": "farmer_accident_support",
+      "keywords": [
+        "Gopinath Munde",
+        "Shetkari Apghat",
+        "शेतकरी अपघात"
+      ],
+      "summary": "Maharashtra farmer accident assistance scheme.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-043",
+      "name": "Dr. Shyamprasad Mukherjee Jan-Van Vikas Scheme",
+      "scope": "maharashtra",
+      "category": "forest_adjacent_livelihood",
+      "keywords": [
+        "Jan-Van Vikas",
+        "Shyamprasad Mukherjee",
+        "जन वन विकास"
+      ],
+      "summary": "Maharashtra scheme listed for eligible notified forest-adjacent development/livelihood activities.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-044",
+      "name": "Kaju Kalam Vatap Yojana",
+      "scope": "maharashtra",
+      "category": "horticulture",
+      "keywords": [
+        "Kaju Kalam Vatap",
+        "cashew sapling",
+        "काजू कलम वाटप",
+        "काजू"
+      ],
+      "summary": "Maharashtra horticulture component related to cashew planting material.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    },
+    {
+      "id": "SCM-045",
+      "name": "Rashtriya Krushi Vikas Yojana – Maharashtra",
+      "scope": "maharashtra",
+      "category": "agriculture_development",
+      "keywords": [
+        "RKVY Maharashtra",
+        "RAFTAAR",
+        "कृषी विकास"
+      ],
+      "summary": "Maharashtra implementation of RKVY agriculture-development interventions.",
+      "source_url": "https://mahadbt.maharashtra.gov.in/",
+      "source_name": "MahaDBT Maharashtra",
+      "verified_as_of": "2026-08-22"
+    }
+  ]
+}

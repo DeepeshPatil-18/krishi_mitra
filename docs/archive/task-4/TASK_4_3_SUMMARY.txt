@@ -1,0 +1,136 @@
+================================================================================
+TASK 4.3: FAILURE-DRIVEN OPTIMIZATION - COMPLETION SUMMARY
+================================================================================
+Date: August 22, 2026
+Status: COMPLETE (Parts 1-6, 7, 12) | Parts 8-11 BLOCKED by architecture issue
+
+================================================================================
+KEY ACHIEVEMENTS
+================================================================================
+
+✓ Established baseline: 46.8% entity accuracy (from TASK 4.2)
+✓ Created 12-category failure taxonomy framework
+✓ Calculated ROI for all potential fixes
+✓ Implemented 3 highest-ROI deterministic improvements
+✓ All unit tests passing: 24/24 (100%)
+✓ Code quality maintained: No regex explosion
+✓ Created comprehensive final report
+
+================================================================================
+DETERMINISTIC FIXES IMPLEMENTED
+================================================================================
+
+Fix #1: Land Size Conversion (ROI=175)
+  - Enhanced acre-to-hectare conversion (precise 0.404686 constant)
+  - Added Marathi fraction word support ("आधा एकर", "डेढ़ एकर")
+  - Decimal handling for Devanagari and Arabic numerals
+  - Tests: 9/9 passing
+
+Fix #2: Budget Ranges/Approximations (ROI=100)
+  - Range patterns: "50-100k" → 75000 (midpoint)
+  - Approximations: "around 50000", "लगभग 50000"
+  - Mixed format: "50 हजार" → 50000
+  - Tests: 6/6 passing
+
+Fix #3: Experience Level Thresholds (ROI=40)
+  - Clarified year thresholds: <2yr=beginner, 2-10yr=intermediate, >10yr=expert
+  - Enhanced Hindi/Marathi keyword matching
+  - Improved pattern priority
+  - Tests: 10/10 passing
+
+================================================================================
+CRITICAL ARCHITECTURAL ISSUE DISCOVERED
+================================================================================
+
+PROBLEM: EntityNormalizer NOT integrated into production orchestrator
+
+Evidence:
+  1. AIOrchestrator calls IntentRouter.extract_parameters()
+  2. IntentRouter does basic regex only - NO normalization
+  3. EntityNormalizer exists but isn't called in production flow
+  4. TASK 4.2's 46.8% was from custom eval script (EntityExtractor direct)
+  5. Production accuracy likely 0% or near-zero
+
+Impact:
+  - All improvements technically correct but architecturally disconnected
+  - Cannot measure actual improvement until integration
+  - Parts 8-11 of TASK 4.3 blocked
+
+================================================================================
+RECOMMENDATION
+================================================================================
+
+PRIORITY 1: Integrate EntityNormalizer into AIOrchestrator (2-4 hours)
+
+Steps:
+  1. Modify AIOrchestrator.orchestrate() to call:
+     - EntityExtractor.extract_all()
+     - EntityNormalizer.normalize_entity() for each entity
+  
+  2. Test integration:
+     - Run evaluate_farmer_dataset.py
+     - Verify entity accuracy improves from 0% to ~47%+
+  
+  3. THEN resume deterministic improvements if needed
+
+NEXT STEPS AFTER INTEGRATION:
+  - If improvement ≥ 2%: Continue deterministic approach
+  - If improvement < 2%: Consider hybrid (deterministic + ML)
+  - If diminishing returns: Recommend ML/SLM for semantic cases
+
+================================================================================
+FILES CREATED/MODIFIED
+================================================================================
+
+Modified:
+  - app/services/entity_normalizer.py (3 fixes, ~150 LOC added)
+
+Created:
+  - test_entity_fixes.py (24 unit tests)
+  - test_improvement.py (integration test - exposed architecture issue)
+  - data/evaluation/task_4_3_baseline.json (baseline metrics)
+  - data/evaluation/task_4_3_roi_analysis.json (ROI analysis)
+  - scripts/analyze_task_4_3_failures.py (failure analyzer)
+  - scripts/analyze_roi_deterministic_fixes.py (ROI calculator)
+  - scripts/create_task_4_3_baseline.py (baseline creator)
+  - TASK_4_3_ANALYSIS_PLAN.md (methodology framework)
+  - TASK_4_3_FINAL_REPORT.md (comprehensive 15-page report)
+  - TASK_4_3_SUMMARY.txt (this file)
+
+================================================================================
+METRICS SUMMARY
+================================================================================
+
+Baseline (TASK 4.2):
+  Intent:    61.7%
+  Entity:    46.8% (via custom script, NOT production)
+  Language:  71.7%
+
+Code Quality:
+  LOC Added:         ~150
+  Functions Added:   3 helpers
+  Tests:            24/24 passing
+  Regex Explosion:  None (✓ PASS)
+
+ROI Analysis:
+  #1 land_size:      ROI=175 ✓ IMPLEMENTED
+  #2 location:       ROI=uncertain (skipped - not in dataset)
+  #3 budget_rupees:  ROI=100 ✓ IMPLEMENTED
+  #4 experience:     ROI=40  ✓ IMPLEMENTED
+  #5 enterprise:     ROI=5   (skipped - diminishing returns)
+
+================================================================================
+DECISION: STOP AND FIX ARCHITECTURE
+================================================================================
+
+Do NOT implement more deterministic fixes until EntityNormalizer is properly
+integrated into the orchestrator. The improvements are correct but disconnected
+from production.
+
+Stopping condition met: ARCHITECTURAL BLOCKER DISCOVERED
+
+================================================================================
+END OF SUMMARY
+================================================================================
+
+For detailed information, see: TASK_4_3_FINAL_REPORT.md

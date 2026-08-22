@@ -1,0 +1,86 @@
+{"id": "norm_budget_001", "language": "marathi", "message": "50 हजार रुपये", "entity_type": "budget_rupees", "expected_raw": "50 हजार", "expected_normalized": 50000, "notes": "Arabic numeral with Marathi word"}
+{"id": "norm_budget_002", "language": "marathi", "message": "पन्नास हजार रुपये", "entity_type": "budget_rupees", "expected_raw": "पन्नास हजार", "expected_normalized": 50000, "notes": "Marathi number word - CRITICAL"}
+{"id": "norm_budget_003", "language": "marathi", "message": "१ लाख रुपये", "entity_type": "budget_rupees", "expected_raw": "१ लाख", "expected_normalized": 100000, "notes": "Devanagari numeral"}
+{"id": "norm_budget_004", "language": "hindi", "message": "50000 रुपये", "entity_type": "budget_rupees", "expected_raw": "50000", "expected_normalized": 50000, "notes": "Direct rupee amount"}
+{"id": "norm_budget_005", "language": "hindi", "message": "पचास हजार रुपये", "entity_type": "budget_rupees", "expected_raw": "पचास हजार", "expected_normalized": 50000, "notes": "Hindi number word"}
+{"id": "norm_budget_006", "language": "hindi", "message": "₹50,000", "entity_type": "budget_rupees", "expected_raw": "₹50,000", "expected_normalized": 50000, "notes": "Currency symbol with comma"}
+{"id": "norm_budget_007", "language": "english", "message": "50000 rupees", "entity_type": "budget_rupees", "expected_raw": "50000 rupees", "expected_normalized": 50000, "notes": "English format"}
+{"id": "norm_budget_008", "language": "marathi", "message": "2 लाख 50 हजार", "entity_type": "budget_rupees", "expected_raw": "2 लाख 50 हजार", "expected_normalized": 250000, "notes": "Compound lakh + thousand"}
+{"id": "norm_budget_009", "language": "hindi", "message": "Rs. 75000", "entity_type": "budget_rupees", "expected_raw": "Rs. 75000", "expected_normalized": 75000, "notes": "Rs abbreviation"}
+{"id": "norm_budget_010", "language": "marathi", "message": "लाख १", "entity_type": "budget_rupees", "expected_raw": null, "expected_normalized": null, "notes": "Malformed - ambiguous"}
+{"id": "norm_land_001", "language": "marathi", "message": "2 एकर जमीन", "entity_type": "land_size_hectares", "expected_raw": "2 एकर", "expected_normalized": 0.8094, "notes": "Standard acre"}
+{"id": "norm_land_002", "language": "marathi", "message": "२ एकर", "entity_type": "land_size_hectares", "expected_raw": "२ एकर", "expected_normalized": 0.8094, "notes": "Devanagari numeral"}
+{"id": "norm_land_003", "language": "hindi", "message": "2 एकड़", "entity_type": "land_size_hectares", "expected_raw": "2 एकड़", "expected_normalized": 0.8094, "notes": "Hindi spelling एकड़"}
+{"id": "norm_land_004", "language": "english", "message": "1 hectare", "entity_type": "land_size_hectares", "expected_raw": "1 hectare", "expected_normalized": 1.0, "notes": "English hectare"}
+{"id": "norm_land_005", "language": "marathi", "message": "1 हेक्टर", "entity_type": "land_size_hectares", "expected_raw": "1 हेक्टर", "expected_normalized": 1.0, "notes": "Marathi hectare"}
+{"id": "norm_land_006", "language": "hindi", "message": "0.5 हेक्टर", "entity_type": "land_size_hectares", "expected_raw": "0.5 हेक्टर", "expected_normalized": 0.5, "notes": "Decimal hectare"}
+{"id": "norm_land_007", "language": "english", "message": "1.5 acres", "entity_type": "land_size_hectares", "expected_raw": "1.5 acres", "expected_normalized": 0.6071, "notes": "Decimal acres"}
+{"id": "norm_land_008", "language": "marathi", "message": "आधा एकर", "entity_type": "land_size_hectares", "expected_raw": "आधा एकर", "expected_normalized": 0.2024, "notes": "Marathi half"}
+{"id": "norm_land_009", "language": "marathi", "message": "साडे 2 एकर", "entity_type": "land_size_hectares", "expected_raw": "साडे 2 एकर", "expected_normalized": 1.0118, "notes": "Marathi 2.5"}
+{"id": "norm_land_010", "language": "hindi", "message": "5 बीघा", "entity_type": "land_size_hectares", "expected_raw": "5 बीघा", "expected_normalized": null, "notes": "Unknown unit - should not guess"}
+{"id": "norm_location_001", "language": "marathi", "message": "नाशिकमध्ये", "entity_type": "location", "expected_raw": "नाशिकमध्ये", "expected_normalized": "nashik", "notes": "District Nashik - CRITICAL: currently returns maharashtra"}
+{"id": "norm_location_002", "language": "marathi", "message": "नाशिक जिल्ह्यात", "entity_type": "location", "expected_raw": "नाशिक जिल्ह्यात", "expected_normalized": "nashik", "notes": "With जिल्ह्यात"}
+{"id": "norm_location_003", "language": "hindi", "message": "नाशिक में", "entity_type": "location", "expected_raw": "नाशिक में", "expected_normalized": "nashik", "notes": "Hindi form"}
+{"id": "norm_location_004", "language": "english", "message": "Nashik", "entity_type": "location", "expected_raw": "Nashik", "expected_normalized": "nashik", "notes": "English form"}
+{"id": "norm_location_005", "language": "marathi", "message": "पुणेत", "entity_type": "location", "expected_raw": "पुणे", "expected_normalized": "pune", "notes": "Pune district"}
+{"id": "norm_location_006", "language": "hindi", "message": "औरंगाबाद", "entity_type": "location", "expected_raw": "औरंगाबाद", "expected_normalized": "aurangabad", "notes": "Aurangabad district"}
+{"id": "norm_location_007", "language": "marathi", "message": "बेलगाव जिल्ह्यात", "entity_type": "location", "expected_raw": "बेलगाव", "expected_normalized": "belgaum", "notes": "Old name Belgaum"}
+{"id": "norm_location_008", "language": "english", "message": "Punjab", "entity_type": "location", "expected_raw": "Punjab", "expected_normalized": "punjab", "notes": "Multi-district state"}
+{"id": "norm_location_009", "language": "marathi", "message": "महाराष्ट्र", "entity_type": "location", "expected_raw": "महाराष्ट्र", "expected_normalized": "maharashtra", "notes": "State name"}
+{"id": "norm_location_010", "language": "hindi", "message": "किसी जिले में नहीं पता", "entity_type": "location", "expected_raw": null, "expected_normalized": null, "notes": "Unknown location - no guess"}
+{"id": "norm_enterprise_001", "language": "marathi", "message": "मशरूम", "entity_type": "enterprise", "expected_raw": "मशरूम", "expected_normalized": "mushroom", "notes": "Standard"}
+{"id": "norm_enterprise_002", "language": "marathi", "message": "मशरूम शेती", "entity_type": "enterprise", "expected_raw": "मशरूम शेती", "expected_normalized": "mushroom", "notes": "With शेती"}
+{"id": "norm_enterprise_003", "language": "hindi", "message": "मशरूम की खेती", "entity_type": "enterprise", "expected_raw": "मशरूम", "expected_normalized": "mushroom", "notes": "Hindi form"}
+{"id": "norm_enterprise_004", "language": "english", "message": "mushroom farming", "entity_type": "enterprise", "expected_raw": "mushroom", "expected_normalized": "mushroom", "notes": "English form"}
+{"id": "norm_enterprise_005", "language": "marathi", "message": "बकरी पालन", "entity_type": "enterprise", "expected_raw": "बकरी पालन", "expected_normalized": "goat", "notes": "Goat farming Marathi"}
+{"id": "norm_enterprise_006", "language": "hindi", "message": "बकरी पालन", "entity_type": "enterprise", "expected_raw": "बकरी पालन", "expected_normalized": "goat", "notes": "Goat farming Hindi"}
+{"id": "norm_enterprise_007", "language": "english", "message": "goat farming", "entity_type": "enterprise", "expected_raw": "goat", "expected_normalized": "goat", "notes": "English goat"}
+{"id": "norm_enterprise_008", "language": "marathi", "message": "शहद", "entity_type": "enterprise", "expected_raw": "शहद", "expected_normalized": "apiculture", "notes": "Honey = apiculture"}
+{"id": "norm_enterprise_009", "language": "marathi", "message": "मधु पालन", "entity_type": "enterprise", "expected_raw": "मधु पालन", "expected_normalized": "apiculture", "notes": "Bee farming"}
+{"id": "norm_enterprise_010", "language": "marathi", "message": "टमाटर", "entity_type": "enterprise", "expected_raw": "टमाटर", "expected_normalized": null, "notes": "Unknown enterprise - not in list"}
+{"id": "norm_water_001", "language": "marathi", "message": "पाणी कमी आहे", "entity_type": "water_availability", "expected_raw": "पाणी कमी", "expected_normalized": "low", "notes": "Low water"}
+{"id": "norm_water_002", "language": "hindi", "message": "पानी कम है", "entity_type": "water_availability", "expected_raw": "पानी कम", "expected_normalized": "low", "notes": "Hindi low"}
+{"id": "norm_water_003", "language": "english", "message": "water is limited", "entity_type": "water_availability", "expected_raw": "water is limited", "expected_normalized": "low", "notes": "English low"}
+{"id": "norm_water_004", "language": "marathi", "message": "पाणी भरपूर आहे", "entity_type": "water_availability", "expected_raw": "पाणी भरपूर", "expected_normalized": "high", "notes": "High water"}
+{"id": "norm_water_005", "language": "hindi", "message": "पानी मध्यम है", "entity_type": "water_availability", "expected_raw": "पानी मध्यम", "expected_normalized": "medium", "notes": "Medium water"}
+{"id": "norm_water_006", "language": "english", "message": "water is abundant", "entity_type": "water_availability", "expected_raw": "water is abundant", "expected_normalized": "high", "notes": "High water English"}
+{"id": "norm_water_007", "language": "marathi", "message": "कुआँ आहे", "entity_type": "water_availability", "expected_raw": "कुआँ", "expected_normalized": "high", "notes": "Well = high"}
+{"id": "norm_water_008", "language": "hindi", "message": "बोरवेल है", "entity_type": "water_availability", "expected_raw": "बोरवेल", "expected_normalized": "high", "notes": "Borewell = high"}
+{"id": "norm_water_009", "language": "marathi", "message": "वर्षा पर निर्भर", "entity_type": "water_availability", "expected_raw": "वर्षा", "expected_normalized": "low", "notes": "Rain-dependent = low"}
+{"id": "norm_water_010", "language": "english", "message": "dry area", "entity_type": "water_availability", "expected_raw": "dry", "expected_normalized": "low", "notes": "Dry = low"}
+{"id": "norm_time_001", "language": "marathi", "message": "पूरे दिन काम करू शकते", "entity_type": "time_availability", "expected_raw": "पूरे दिन", "expected_normalized": "full_time", "notes": "Full time"}
+{"id": "norm_time_002", "language": "hindi", "message": "आधा दिन काम कर सकता हूँ", "entity_type": "time_availability", "expected_raw": "आधा दिन", "expected_normalized": "part_time", "notes": "Part time"}
+{"id": "norm_time_003", "language": "english", "message": "limited time available", "entity_type": "time_availability", "expected_raw": "limited time", "expected_normalized": "limited", "notes": "Limited time"}
+{"id": "norm_time_004", "language": "marathi", "message": "3 महीने समय आहे", "entity_type": "time_numeric", "expected_raw": "3 महीने", "expected_normalized": {"value": 3, "unit": "months"}, "notes": "Time with value - CRITICAL"}
+{"id": "norm_time_005", "language": "hindi", "message": "6 महीने के लिए", "entity_type": "time_numeric", "expected_raw": "6 महीने", "expected_normalized": {"value": 6, "unit": "months"}, "notes": "Time numeric"}
+{"id": "norm_experience_001", "language": "marathi", "message": "नया शेतकरी", "entity_type": "experience_level", "expected_raw": "नया", "expected_normalized": "beginner", "notes": "New farmer"}
+{"id": "norm_experience_002", "language": "marathi", "message": "शुरुवातीचा", "entity_type": "experience_level", "expected_raw": "शुरुवातीचा", "expected_normalized": "beginner", "notes": "Beginner Marathi"}
+{"id": "norm_experience_003", "language": "hindi", "message": "नया किसान", "entity_type": "experience_level", "expected_raw": "नया किसान", "expected_normalized": "beginner", "notes": "New farmer Hindi"}
+{"id": "norm_experience_004", "language": "english", "message": "beginner farmer", "entity_type": "experience_level", "expected_raw": "beginner", "expected_normalized": "beginner", "notes": "Beginner English"}
+{"id": "norm_experience_005", "language": "marathi", "message": "5 वर्षांचा अनुभव", "entity_type": "experience_level", "expected_raw": "5 वर्ष", "expected_normalized": "intermediate", "notes": "5 years"}
+{"id": "norm_experience_006", "language": "hindi", "message": "10 साल का अनुभव", "entity_type": "experience_level", "expected_raw": "10 साल", "expected_normalized": "expert", "notes": "10 years"}
+{"id": "norm_experience_007", "language": "english", "message": "20 years experience", "entity_type": "experience_level", "expected_raw": "20 years", "expected_normalized": "expert", "notes": "20 years"}
+{"id": "norm_risk_001", "language": "marathi", "message": "कम जोखीम चाहिए", "entity_type": "risk_tolerance", "expected_raw": "कम जोखीम", "expected_normalized": "low", "notes": "Low risk"}
+{"id": "norm_risk_002", "language": "hindi", "message": "कम जोखिम", "entity_type": "risk_tolerance", "expected_raw": "कम जोखिम", "expected_normalized": "low", "notes": "Low risk Hindi"}
+{"id": "norm_risk_003", "language": "english", "message": "safe business", "entity_type": "risk_tolerance", "expected_raw": "safe", "expected_normalized": "low", "notes": "Low risk English"}
+{"id": "norm_risk_004", "language": "marathi", "message": "मध्यम जोखीम ठीक है", "entity_type": "risk_tolerance", "expected_raw": "मध्यम जोखीम", "expected_normalized": "medium", "notes": "Medium risk"}
+{"id": "norm_risk_005", "language": "hindi", "message": "उच्च लाभ के लिए", "entity_type": "risk_tolerance", "expected_raw": "उच्च", "expected_normalized": "high", "notes": "High risk"}
+{"id": "norm_number_format_001", "language": "marathi", "message": "50,000", "entity_type": "budget_rupees", "expected_raw": "50,000", "expected_normalized": 50000, "notes": "Comma separation"}
+{"id": "norm_number_format_002", "language": "marathi", "message": "50.5", "entity_type": "budget_rupees", "expected_raw": "50.5", "expected_normalized": 50.5, "notes": "Decimal number"}
+{"id": "norm_ambiguous_001", "language": "marathi", "message": "50", "entity_type": "budget_rupees", "expected_raw": "50", "expected_normalized": null, "notes": "Just number - ambiguous (50 rupees? 50000?"}
+{"id": "norm_ambiguous_002", "language": "marathi", "message": "2", "entity_type": "land_size_hectares", "expected_raw": "2", "expected_normalized": null, "notes": "Just number - ambiguous (2 acres? 2 hectares?)"}
+{"id": "norm_ambiguous_003", "language": "marathi", "message": "कमी आहे", "entity_type": "water_availability", "expected_raw": "कमी", "expected_normalized": "low", "notes": "Context from sentence"}
+{"id": "norm_multi_entity_001", "language": "marathi", "message": "50 हजार आणि 2 एकर", "entity_type": "budget_rupees", "expected_raw": "50 हजार", "expected_normalized": 50000, "notes": "Multi-entity budget"}
+{"id": "norm_multi_entity_002", "language": "marathi", "message": "50 हजार आणि 2 एकर", "entity_type": "land_size_hectares", "expected_raw": "2 एकर", "expected_normalized": 0.8094, "notes": "Multi-entity land"}
+{"id": "norm_multi_entity_003", "language": "hindi", "message": "नाशिक में 1 एकड़ और 100000 रुपये", "entity_type": "location", "expected_raw": "नाशिक", "expected_normalized": "nashik", "notes": "Multi-entity location"}
+{"id": "norm_multi_entity_004", "language": "hindi", "message": "नाशिक में 1 एकड़ और 100000 रुपये", "entity_type": "land_size_hectares", "expected_raw": "1 एकड़", "expected_normalized": 0.4047, "notes": "Multi-entity land"}
+{"id": "norm_multi_entity_005", "language": "hindi", "message": "नाशिक में 1 एकड़ और 100000 रुपये", "entity_type": "budget_rupees", "expected_raw": "100000", "expected_normalized": 100000, "notes": "Multi-entity budget"}
+{"id": "norm_edge_case_001", "language": "marathi", "message": "", "entity_type": "budget_rupees", "expected_raw": null, "expected_normalized": null, "notes": "Empty message"}
+{"id": "norm_edge_case_002", "language": "marathi", "message": "xyz abc def", "entity_type": "budget_rupees", "expected_raw": null, "expected_normalized": null, "notes": "No entities"}
+{"id": "norm_edge_case_003", "language": "marathi", "message": "मी 50-60 हजार दे सकता हूँ", "entity_type": "budget_rupees", "expected_raw": "50-60 हजार", "expected_normalized": null, "notes": "Range - ambiguous, don't guess"}
+{"id": "norm_edge_case_004", "language": "marathi", "message": "लगभग 50 हजार", "entity_type": "budget_rupees", "expected_raw": "लगभग 50 हजार", "expected_normalized": null, "notes": "Approximately - uncertain"}
+{"id": "norm_mixed_language_001", "language": "mixed", "message": "मेरे पास 50000 rupees है और 2 एकड़ land", "entity_type": "budget_rupees", "expected_raw": "50000", "expected_normalized": 50000, "notes": "Hinglish mixed"}
+{"id": "norm_mixed_language_002", "language": "mixed", "message": "मेरे पास 50000 rupees है और 2 एकड़ land", "entity_type": "land_size_hectares", "expected_raw": "2 एकड़", "expected_normalized": 0.8094, "notes": "Hinglish land"}
+{"id": "norm_mixed_language_003", "language": "mixed", "message": "Nashik में 1 hectare है", "entity_type": "location", "expected_raw": "Nashik", "expected_normalized": "nashik", "notes": "English location in Hindi"}
+{"id": "norm_malformed_001", "language": "marathi", "message": "हजार 50", "entity_type": "budget_rupees", "expected_raw": null, "expected_normalized": null, "notes": "Wrong order"}
+{"id": "norm_malformed_002", "language": "marathi", "message": "एकर एकर 2", "entity_type": "land_size_hectares", "expected_raw": null, "expected_normalized": null, "notes": "Malformed"}

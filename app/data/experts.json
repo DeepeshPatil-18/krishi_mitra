@@ -1,0 +1,55 @@
+{
+  "data_source": "prototype",
+  "experts": [
+    {
+      "name": "Dr. Amit Sharma",
+      "expertise": ["apiculture", "honey production"],
+      "languages": ["english", "hindi", "marathi"],
+      "contact_email": "amit.sharma@agriculture.gov.in",
+      "contact_phone": null,
+      "bio": "15 years of experience in beekeeping and honey production",
+      "availability_status": "available",
+      "is_active": true
+    },
+    {
+      "name": "Rajesh Patel",
+      "expertise": ["poultry", "egg production", "disease management"],
+      "languages": ["english", "hindi", "gujarati"],
+      "contact_email": "rajesh.poultry@extension.gov.in",
+      "contact_phone": null,
+      "bio": "Certified poultry farm manager with 12 years experience",
+      "availability_status": "available",
+      "is_active": true
+    },
+    {
+      "name": "Priya Desai",
+      "expertise": ["mushroom cultivation", "organic farming"],
+      "languages": ["english", "marathi"],
+      "contact_email": "priya.mushroom@agriculture.gov.in",
+      "contact_phone": null,
+      "bio": "Expert in mushroom cultivation techniques and organic practices",
+      "availability_status": "available",
+      "is_active": true
+    },
+    {
+      "name": "Sunil Verma",
+      "expertise": ["goat farming", "dairy production", "breeding"],
+      "languages": ["english", "hindi", "punjabi"],
+      "contact_email": "sunil.goat@livestock.gov.in",
+      "contact_phone": null,
+      "bio": "Livestock specialist with focus on small ruminants",
+      "availability_status": "available",
+      "is_active": true
+    },
+    {
+      "name": "Meena Singh",
+      "expertise": ["vermicomposting", "soil health", "organic farming"],
+      "languages": ["english", "hindi"],
+      "contact_email": "meena.compost@agriculture.gov.in",
+      "contact_phone": null,
+      "bio": "Specializes in sustainable soil management and vermicomposting",
+      "availability_status": "available",
+      "is_active": true
+    }
+  ]
+}

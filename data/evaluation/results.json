@@ -1,0 +1,560 @@
+{
+  "metrics": {
+    "dataset_size": 60,
+    "error_count": 0,
+    "successful_evaluations": 60,
+    "overall_intent_accuracy": 0.6166666666666667,
+    "overall_capability_accuracy": 0.6,
+    "overall_language_accuracy": 1.0,
+    "overall_entity_accuracy": 0.5106382978723404,
+    "by_language": {
+      "marathi": {
+        "total": 26,
+        "errors": 0,
+        "intent_accuracy": 0.6923076923076923,
+        "capability_accuracy": 0.6538461538461539,
+        "language_accuracy": 1.0,
+        "entity_accuracy": 0.34615384615384615
+      },
+      "hindi": {
+        "total": 17,
+        "errors": 0,
+        "intent_accuracy": 0.5882352941176471,
+        "capability_accuracy": 0.5882352941176471,
+        "language_accuracy": 1.0,
+        "entity_accuracy": 0.4117647058823529
+      },
+      "english": {
+        "total": 17,
+        "errors": 0,
+        "intent_accuracy": 0.5294117647058824,
+        "capability_accuracy": 0.5294117647058824,
+        "language_accuracy": 1.0,
+        "entity_accuracy": 0.47058823529411764
+      }
+    },
+    "by_intent": {
+      "livelihood_recommendation": {
+        "total": 32,
+        "errors": 0,
+        "accuracy": 0.53125
+      },
+      "scheme_search": {
+        "total": 5,
+        "errors": 0,
+        "accuracy": 1.0
+      },
+      "training_request": {
+        "total": 8,
+        "errors": 0,
+        "accuracy": 0.5
+      },
+      "market_search": {
+        "total": 5,
+        "errors": 0,
+        "accuracy": 1.0
+      },
+      "expert_request": {
+        "total": 4,
+        "errors": 0,
+        "accuracy": 1.0
+      },
+      "community": {
+        "total": 1,
+        "errors": 0,
+        "accuracy": 1.0
+      },
+      "general_question": {
+        "total": 5,
+        "errors": 0,
+        "accuracy": 0.2
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "total": 17,
+        "errors": 0,
+        "intent_accuracy": 0.7647058823529411,
+        "capability_accuracy": 0.7647058823529411
+      },
+      "medium": {
+        "total": 29,
+        "errors": 0,
+        "intent_accuracy": 0.5862068965517241,
+        "capability_accuracy": 0.5862068965517241
+      },
+      "hard": {
+        "total": 14,
+        "errors": 0,
+        "intent_accuracy": 0.5,
+        "capability_accuracy": 0.42857142857142855
+      }
+    },
+    "entity_metrics": {
+      "budget_rupees": {
+        "total_expected": 17,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.5294117647058824
+      },
+      "land_size_hectares": {
+        "total_expected": 16,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.625
+      },
+      "location": {
+        "total_expected": 6,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.0
+      },
+      "enterprise": {
+        "total_expected": 21,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.9047619047619048
+      },
+      "water_availability": {
+        "total_expected": 6,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.6666666666666666
+      },
+      "experience_level": {
+        "total_expected": 6,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.3333333333333333
+      },
+      "time_availability": {
+        "total_expected": 3,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.0
+      },
+      "willingness_to_learn": {
+        "total_expected": 2,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 0.0
+      },
+      "risk_tolerance": {
+        "total_expected": 1,
+        "extraction_rate": 1.0,
+        "accuracy_when_extracted": 1.0
+      }
+    },
+    "failure_analysis": {
+      "total_failures": 23,
+      "by_language": {
+        "marathi": 8,
+        "hindi": 7,
+        "english": 8
+      },
+      "by_intent": {
+        "livelihood_recommendation": 15,
+        "training_request": 4,
+        "general_question": 4
+      },
+      "by_difficulty": {
+        "medium": 12,
+        "easy": 4,
+        "hard": 7
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "eval_001",
+      "message": "माझ्याकडे पन्नास हजार रुपये आहेत. मी काय सुरू करू?",
+      "language": "marathi",
+      "difficulty": "easy",
+      "category": "livelihood",
+      "expected_intent": "livelihood_recommendation",
+      "expected_capability": "advisory",
+      "expected_entities": {
+        "budget_rupees": 50000
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "livelihood_recommendation",
+      "predicted_capability": "advisory",
+      "predicted_entities": {},
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.8,
+      "language_match": true,
+      "intent_match": true,
+      "capability_match": true,
+      "entity_matches": {
+        "budget_rupees": {
+          "expected": 50000,
+          "predicted": null,
+          "match": false,
+          "partial": false
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "eval_002",
+      "message": "50 हजार आहेत आणि 2 एकर जमीन. मी काय सुरू करू?",
+      "language": "marathi",
+      "difficulty": "medium",
+      "category": "livelihood",
+      "expected_intent": "livelihood_recommendation",
+      "expected_capability": "advisory",
+      "expected_entities": {
+        "budget_rupees": 50000,
+        "land_size_hectares": 0.81
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "livelihood_recommendation",
+      "predicted_capability": "advisory",
+      "predicted_entities": {
+        "budget_rupees": 50000,
+        "land_size_hectares": 0.8094
+      },
+      "information_completeness": 0.6,
+      "missing_information": [
+        "water_availability",
+        "location",
+        "income_goal",
+        "time_availability"
+      ],
+      "intent_confidence": 0.8,
+      "language_match": true,
+      "intent_match": true,
+      "capability_match": true,
+      "entity_matches": {
+        "budget_rupees": {
+          "expected": 50000,
+          "predicted": 50000,
+          "match": true,
+          "partial": false
+        },
+        "land_size_hectares": {
+          "expected": 0.81,
+          "predicted": 0.8094,
+          "match": true,
+          "partial": false
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "eval_003",
+      "message": "नाशिकमध्ये 1 एकर जमीन आहे. मशरूम शेती चांगली आहे का?",
+      "language": "marathi",
+      "difficulty": "medium",
+      "category": "livelihood",
+      "expected_intent": "livelihood_recommendation",
+      "expected_capability": "advisory",
+      "expected_entities": {
+        "location": "nashik",
+        "land_size_hectares": 0.4047,
+        "enterprise": "mushroom"
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "training_request",
+      "predicted_capability": "training_request",
+      "predicted_entities": {
+        "land_size_hectares": 0.4047,
+        "enterprise": "mushroom",
+        "water_availability": "low"
+      },
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.85,
+      "language_match": true,
+      "intent_match": false,
+      "capability_match": false,
+      "entity_matches": {
+        "location": {
+          "expected": "nashik",
+          "predicted": null,
+          "match": false,
+          "partial": false
+        },
+        "land_size_hectares": {
+          "expected": 0.4047,
+          "predicted": 0.4047,
+          "match": true,
+          "partial": false
+        },
+        "enterprise": {
+          "expected": "mushroom",
+          "predicted": "mushroom",
+          "match": true,
+          "partial": false
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "eval_004",
+      "message": "माझ्याकडे पाणी कमी आहे. कोणता व्यवसाय चांगला होईल?",
+      "language": "marathi",
+      "difficulty": "medium",
+      "category": "livelihood",
+      "expected_intent": "livelihood_recommendation",
+      "expected_capability": "advisory",
+      "expected_entities": {
+        "water_availability": "low"
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "livelihood_recommendation",
+      "predicted_capability": "advisory",
+      "predicted_entities": {
+        "water_availability": "low",
+        "time_availability": "limited"
+      },
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.8,
+      "language_match": true,
+      "intent_match": true,
+      "capability_match": true,
+      "entity_matches": {
+        "water_availability": {
+          "expected": "low",
+          "predicted": "low",
+          "match": true,
+          "partial": false
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "eval_005",
+      "message": "मी शुरुवातीचा शेतकरी आहे. सरकारी योजना आहे का?",
+      "language": "marathi",
+      "difficulty": "medium",
+      "category": "scheme",
+      "expected_intent": "scheme_search",
+      "expected_capability": "scheme_search",
+      "expected_entities": {
+        "experience_level": "beginner"
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "scheme_search",
+      "predicted_capability": "scheme_search",
+      "predicted_entities": {},
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.9,
+      "language_match": true,
+      "intent_match": true,
+      "capability_match": true,
+      "entity_matches": {
+        "experience_level": {
+          "expected": "beginner",
+          "predicted": null,
+          "match": false,
+          "partial": false
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "eval_006",
+      "message": "मला शेती शिकायचे आहे. प्रशिक्षण आहे का?",
+      "language": "marathi",
+      "difficulty": "easy",
+      "category": "training",
+      "expected_intent": "training_request",
+      "expected_capability": "training_request",
+      "expected_entities": {},
+      "predicted_language": "marathi",
+      "predicted_intent": "general_question",
+      "predicted_capability": "general_qa",
+      "predicted_entities": {},
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.5,
+      "language_match": true,
+      "intent_match": false,
+      "capability_match": false,
+      "entity_matches": {},
+      "error": null
+    },
+    {
+      "id": "eval_007",
+      "message": "मशरूम कोणी विकून घेते?",
+      "language": "marathi",
+      "difficulty": "easy",
+      "category": "market",
+      "expected_intent": "market_search",
+      "expected_capability": "market_search",
+      "expected_entities": {
+        "enterprise": "mushroom"
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "market_search",
+      "predicted_capability": "market_search",
+      "predicted_entities": {
+        "enterprise": "mushroom"
+      },
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.9,
+      "language_match": true,
+      "intent_match": true,
+      "capability_match": true,
+      "entity_matches": {
+        "enterprise": {
+          "expected": "mushroom",
+          "predicted": "mushroom",
+          "match": true,
+          "partial": false
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "eval_008",
+      "message": "एखादा तज्ञ मला मदत करू शकतो का?",
+      "language": "marathi",
+      "difficulty": "easy",
+      "category": "expert",
+      "expected_intent": "expert_request",
+      "expected_capability": "expert_request",
+      "expected_entities": {},
+      "predicted_language": "marathi",
+      "predicted_intent": "expert_request",
+      "predicted_capability": "expert_request",
+      "predicted_entities": {
+        "enterprise": "vermicompost"
+      },
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.85,
+      "language_match": true,
+      "intent_match": true,
+      "capability_match": true,
+      "entity_matches": {},
+      "error": null
+    },
+    {
+      "id": "eval_009",
+      "message": "माझ्याकडे 100000 रुपये आहेत आणि मी पूर्णकाळ काम करू शकते. मशरूम किंवा शेळी?",
+      "language": "marathi",
+      "difficulty": "medium",
+      "category": "livelihood",
+      "expected_intent": "livelihood_recommendation",
+      "expected_capability": "advisory",
+      "expected_entities": {
+        "budget_rupees": 100000,
+        "time_availability": "full_time",
+        "enterprise": "mushroom"
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "general_question",
+      "predicted_capability": "general_qa",
+      "predicted_entities": {
+        "budget_rupees": 100000,
+        "enterprise": "mushroom"
+      },
+      "information_completeness": 0.7,
+      "missing_information": [],
+      "intent_confidence": 0.5,
+      "language_match": true,
+      "intent_match": false,
+      "capability_match": false,
+      "entity_matches": {
+        "budget_rupees": {
+          "expected": 100000,
+          "predicted": 100000,
+          "match": true,
+          "partial": false
+        },
+        "time_availability": {
+          "expected": "full_time",
+          "predicted": null,
+          "match": false,
+          "partial": false
+        },
+        "enterprise": {
+          "expected": "mushroom",
+          "predicted": "mushroom",
+          "match": true,
+          "partial": false
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "eval_010",
+      "message": "मी मधुमेखी पालन करू इच्छितो. काय करावे?",
+      "language": "marathi",
+      "difficulty": "easy",
+      "category": "livelihood",
+      "expected_intent": "livelihood_recommendation",
+      "expected_capability": "advisory",
+      "expected_entities": {
+        "enterprise": "apiculture"
+      },
+      "predicted_language": "marathi",
+      "predicted_intent": "livelihood_recommendation",
+      "predicted_capability": "advisory",
+      "predicted_entities": {
+        "enterprise": "apiculture"
+      },
+      "information_completeness": 0.0,
+      "missing_information": [
+        "budget",
+        "land_size",
+        "water_availability",
+        "experience",
+        "location"
+      ],
+      "intent_confidence": 0.8,
+      "language_match": true,
+      "intent_match": true,
+      "capability_match": true,
+      "entity_matches": {
+        "enterprise": {
+          "expected": "apiculture",
+          "predicted": "apiculture",
+          "match": true,
+          "partial": false
+        }
+      },
+      "error": null
+    }
+  ]
+}

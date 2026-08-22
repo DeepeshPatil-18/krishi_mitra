@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-08-21",
+  "test_cases_count": 86,
+  "summary": {
+    "success": 49,
+    "partial": 27,
+    "failure": 10,
+    "success_rate": 56.97674418604651,
+    "partial_rate": 31.3953488372093,
+    "failure_rate": 11.627906976744185,
+    "improvement_over_baseline": 2
+  },
+  "by_entity_type": {
+    "budget_rupees": {
+      "total": 21,
+      "success": 9,
+      "failure": 6,
+      "partial": 6
+    },
+    "land_size_hectares": {
+      "total": 15,
+      "success": 14,
+      "failure": 1,
+      "partial": 0
+    },
+    "location": {
+      "total": 12,
+      "success": 10,
+      "failure": 2,
+      "partial": 0
+    },
+    "enterprise": {
+      "total": 10,
+      "success": 2,
+      "failure": 1,
+      "partial": 7
+    },
+    "water_availability": {
+      "total": 11,
+      "success": 11,
+      "failure": 0,
+      "partial": 0
+    },
+    "time_availability": {
+      "total": 3,
+      "success": 0,
+      "failure": 0,
+      "partial": 3
+    },
+    "time_numeric": {
+      "total": 2,
+      "success": 2,
+      "failure": 0,
+      "partial": 0
+    },
+    "experience_level": {
+      "total": 7,
+      "success": 1,
+      "failure": 0,
+      "partial": 6
+    },
+    "risk_tolerance": {
+      "total": 5,
+      "success": 0,
+      "failure": 0,
+      "partial": 5
+    }
+  },
+  "critical_improvements": {
+    "marathi_number_words": "Now handling पन्नास, पचास, etc",
+    "location_normalization": "Returning district (nashik) instead of state (maharashtra)",
+    "hindi_spelling_variations": "Handling एकड़ vs एकर variations",
+    "time_numeric": "Now extracting 3 महीने as {value: 3, unit: months}"
+  }
+}

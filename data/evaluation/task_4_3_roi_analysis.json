@@ -1,0 +1,132 @@
+{
+  "analysis_date": "2026-08-22",
+  "baseline_entity_accuracy": 0.468,
+  "total_failures_detected": 32,
+  "fixes_by_roi_priority": [
+    {
+      "rank": 1,
+      "entity_type": "land_size_hectares",
+      "current_accuracy": 0.125,
+      "current_failures": 7,
+      "failure_rate": 87.5,
+      "estimated_fix_complexity": 2,
+      "estimated_impact": 0.5,
+      "root_cause": "Unit conversion (acres↔hectares) broken or missing edge cases",
+      "estimated_roi_score": 175.0,
+      "fix_strategy": [
+        "1. Verify acre-to-hectare conversion constant (1 acre = 0.404686 hectares)",
+        "2. Handle decimal hectares (e.g., 1.5 acres → 0.607 hectares)",
+        "3. Add tests for common values: 0.5, 1, 1.5, 2, 2.5, 3, 5 hectares",
+        "4. Test both 'hectare' and 'हेक्टेयर' variants"
+      ],
+      "estimated_time_minutes": 15,
+      "implementation_notes": "High confidence fix - purely mathematical conversion"
+    },
+    {
+      "rank": 2,
+      "entity_type": "location",
+      "current_accuracy": 0.0,
+      "current_failures": "unknown (0% means either not in dataset or all failed)",
+      "failure_rate": "100% (if in dataset)",
+      "estimated_fix_complexity": 3,
+      "estimated_impact": 0.4,
+      "root_cause": "District mapping incomplete; may return state instead of district",
+      "estimated_roi_score": "high_but_uncertain",
+      "fix_strategy": [
+        "1. Check if location entity is even in farmer_queries.jsonl",
+        "2. If present: Create comprehensive Marathi↔English district mapping",
+        "3. Handle Marathi variations (नाशिक vs नाशीक)",
+        "4. Verify mapper returns district, not state"
+      ],
+      "estimated_time_minutes": 30,
+      "implementation_notes": "HIGH UNCERTAINTY: Need to verify location is in dataset first"
+    },
+    {
+      "rank": 3,
+      "entity_type": "budget_rupees",
+      "current_accuracy": 0.529,
+      "current_failures": 8,
+      "failure_rate": 47.1,
+      "estimated_fix_complexity": 2,
+      "estimated_impact": 0.25,
+      "root_cause": "Range/approximation patterns missing (e.g., '50-100k', 'around 50k')",
+      "estimated_roi_score": 100.0,
+      "fix_strategy": [
+        "1. Add patterns for ranges: '50-100k', '50 to 100k'",
+        "2. Handle approximations: 'around', 'लगभग', 'करीब'",
+        "3. Extract boundaries and compute midpoint or range",
+        "4. Test with Marathi number words (पन्नास हजार)"
+      ],
+      "estimated_time_minutes": 20,
+      "implementation_notes": "Good ROI; relatively straightforward pattern extension"
+    },
+    {
+      "rank": 4,
+      "entity_type": "experience_level",
+      "current_accuracy": 0.333,
+      "current_failures": 2,
+      "failure_rate": 66.7,
+      "estimated_fix_complexity": 2,
+      "estimated_impact": 0.4,
+      "root_cause": "Year-based detection unreliable; thresholds unclear",
+      "estimated_roi_score": 40.0,
+      "fix_strategy": [
+        "1. Clarify thresholds: Beginner (<2yr), Intermediate (2-10yr), Expert (>10yr)",
+        "2. Handle Hindi variations: 'अनुभव', 'अनुभवी', 'नया', 'नई'",
+        "3. Look for year indicators: '1 year', '5 साल', '10 वर्ष'",
+        "4. Fallback: If no years mentioned, use keywords only"
+      ],
+      "estimated_time_minutes": 15,
+      "implementation_notes": "Small dataset (3 samples) means lower confidence in gain estimates"
+    },
+    {
+      "rank": 5,
+      "entity_type": "enterprise",
+      "current_accuracy": 0.905,
+      "current_failures": 2,
+      "failure_rate": 9.5,
+      "estimated_fix_complexity": 3,
+      "estimated_impact": 0.08,
+      "root_cause": "Rare business types or spelling variants not covered",
+      "estimated_roi_score": 5.333333333333333,
+      "fix_strategy": [
+        "1. Analyze the 2 failures - likely rare business types",
+        "2. Add missing keywords or Marathi/Hindi variants",
+        "3. Do NOT add complex rules; keep keyword matching simple"
+      ],
+      "estimated_time_minutes": 10,
+      "implementation_notes": "LOW ROI - already high accuracy; diminishing returns; risk of regex explosion"
+    }
+  ],
+  "critical_questions_before_implementation": [
+    "Q1: Is 'location' entity actually in the farmer_queries.jsonl evaluation set?",
+    "    → If NO: Skip location fixes entirely (zero impact)",
+    "    → If YES: Location becomes rank 2 priority",
+    "",
+    "Q2: Are the current test failures representative of real-world queries?",
+    "    → If test set is skewed toward edge cases: Impact estimates may be pessimistic",
+    "    → If test set is skewed toward easy cases: Impact estimates may be optimistic",
+    "",
+    "Q3: What is the cost of false positives?",
+    "    → If false positives are harmful: Be conservative in normalization",
+    "    → If false positives are benign: Can be more aggressive"
+  ],
+  "stopping_criteria": {
+    "stop_if_improvement_less_than": "2-3 percentage points per fix",
+    "stop_if_special_cases_exceed": "5-10 per entity type (regex explosion risk)",
+    "stop_if_false_positives_increase": "More than 5% of non-failures become false positives",
+    "stop_if_complexity_becomes_high": "Normalizer code becomes hard to understand/maintain"
+  },
+  "summary": {
+    "recommended_fix_order": [
+      "1. land_size_hectares (ROI=175, HIGH CONFIDENCE)",
+      "2. Check location dataset presence (HIGH IMPACT IF PRESENT)",
+      "3. budget_rupees (ROI=100, MEDIUM CONFIDENCE)",
+      "4. experience_level (ROI=40, but small sample size)",
+      "5. Skip enterprise (ROI=5.3, DIMINISHING RETURNS)"
+    ],
+    "estimated_total_effort": "45-60 minutes",
+    "estimated_accuracy_improvement": "5-15% total (cumulative across fixes)",
+    "confidence_level": "MEDIUM (small test dataset, need real-world validation)"
+  }
+}

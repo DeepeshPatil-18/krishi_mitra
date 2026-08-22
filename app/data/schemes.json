@@ -1,0 +1,127 @@
+{
+  "data_source": "prototype",
+  "last_verified": null,
+  "schemes": [
+    {
+      "name": "PM-KISAN",
+      "department": "Ministry of Agriculture & Farmers Welfare",
+      "state": "all_india",
+      "enterprise": "general",
+      "description": "Direct income support scheme for all land-holding farmer families",
+      "subsidy_percentage": null,
+      "subsidy_amount_rupees": 6000,
+      "eligibility_criteria": [
+        "Land holder farmer",
+        "Annual income below threshold",
+        "Indian citizen"
+      ],
+      "required_documents": [
+        "Land ownership proof",
+        "Aadhaar card",
+        "Bank account details"
+      ],
+      "application_process": "Apply through government portal or local agriculture office",
+      "application_deadline": null,
+      "processing_time_days": 45,
+      "official_source_url": "https://pmkisan.gov.in",
+      "is_active": true
+    },
+    {
+      "name": "National Bee Board Scheme",
+      "department": "Ministry of Agriculture",
+      "state": "maharashtra",
+      "enterprise": "apiculture",
+      "description": "Subsidy for beekeeping and honey production setup",
+      "subsidy_percentage": 50,
+      "subsidy_amount_rupees": 25000,
+      "eligibility_criteria": [
+        "Small or marginal farmer",
+        "Minimum 0.1 hectare land",
+        "Training certificate"
+      ],
+      "required_documents": [
+        "Land documents",
+        "Training certificate",
+        "Farmer ID"
+      ],
+      "application_process": "Submit application to Apiary Development Officer",
+      "application_deadline": "Ongoing",
+      "processing_time_days": 30,
+      "official_source_url": "https://bee.gov.in",
+      "is_active": true
+    },
+    {
+      "name": "Integrated Horticulture Development Mission",
+      "department": "Ministry of Agriculture",
+      "state": "maharashtra",
+      "enterprise": "general",
+      "description": "Support for horticulture including mushroom cultivation",
+      "subsidy_percentage": 40,
+      "subsidy_amount_rupees": 20000,
+      "eligibility_criteria": [
+        "Individual or group farmer",
+        "Land available for cultivation",
+        "Completed training"
+      ],
+      "required_documents": [
+        "Land ownership/lease deed",
+        "Training completion certificate",
+        "Project report"
+      ],
+      "application_process": "Submit through district horticulture office",
+      "application_deadline": null,
+      "processing_time_days": 60,
+      "official_source_url": "https://midh.gov.in",
+      "is_active": true
+    },
+    {
+      "name": "Poultry Development Scheme",
+      "department": "State Animal Husbandry Department",
+      "state": "maharashtra",
+      "enterprise": "poultry",
+      "description": "Grant and subsidized credit for poultry farming setup",
+      "subsidy_percentage": 50,
+      "subsidy_amount_rupees": 30000,
+      "eligibility_criteria": [
+        "Own land or lease agreement",
+        "Capacity for minimum 500 birds",
+        "No existing poultry unit"
+      ],
+      "required_documents": [
+        "Land documents",
+        "Lease agreement if applicable",
+        "Identity proof"
+      ],
+      "application_process": "Apply through district animal husbandry office",
+      "application_deadline": null,
+      "processing_time_days": 45,
+      "official_source_url": null,
+      "is_active": true
+    },
+    {
+      "name": "Goat Rearing Subsidy Scheme",
+      "department": "State Animal Husbandry Department",
+      "state": "maharashtra",
+      "enterprise": "goat_farming",
+      "description": "Subsidy for establishing goat farms with 20+ animals",
+      "subsidy_percentage": 50,
+      "subsidy_amount_rupees": 50000,
+      "eligibility_criteria": [
+        "Minimum 0.5 hectare land",
+        "Purchase of 20+ quality goats",
+        "Completion of training"
+      ],
+      "required_documents": [
+        "Land proof",
+        "Training certificate",
+        "Purchase bills",
+        "Identity proof"
+      ],
+      "application_process": "Submit application to Veterinary Officer",
+      "application_deadline": null,
+      "processing_time_days": 60,
+      "official_source_url": null,
+      "is_active": true
+    }
+  ]
+}

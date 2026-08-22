@@ -1,0 +1,942 @@
+{
+  "timestamp": "2026-08-21",
+  "test_cases_count": 86,
+  "summary": {
+    "success": 47,
+    "partial": 15,
+    "failure": 24,
+    "success_rate": 54.65116279069767,
+    "partial_rate": 17.441860465116278,
+    "failure_rate": 27.906976744186046
+  },
+  "by_entity_type": {
+    "budget_rupees": {
+      "total": 21,
+      "success": 12,
+      "failure": 7,
+      "partial": 2
+    },
+    "land_size_hectares": {
+      "total": 15,
+      "success": 9,
+      "failure": 5,
+      "partial": 1
+    },
+    "location": {
+      "total": 12,
+      "success": 3,
+      "failure": 1,
+      "partial": 8
+    },
+    "enterprise": {
+      "total": 10,
+      "success": 10,
+      "failure": 0,
+      "partial": 0
+    },
+    "water_availability": {
+      "total": 11,
+      "success": 5,
+      "failure": 4,
+      "partial": 2
+    },
+    "time_availability": {
+      "total": 3,
+      "success": 1,
+      "failure": 2,
+      "partial": 0
+    },
+    "time_numeric": {
+      "total": 2,
+      "success": 0,
+      "failure": 2,
+      "partial": 0
+    },
+    "experience_level": {
+      "total": 7,
+      "success": 4,
+      "failure": 1,
+      "partial": 2
+    },
+    "risk_tolerance": {
+      "total": 5,
+      "success": 3,
+      "failure": 2,
+      "partial": 0
+    }
+  },
+  "detailed_results": [
+    {
+      "id": "norm_budget_001",
+      "message": "50 हजार रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": 50000,
+      "result": "SUCCESS",
+      "notes": "Arabic numeral with Marathi word"
+    },
+    {
+      "id": "norm_budget_002",
+      "message": "पन्नास हजार रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Marathi number word - CRITICAL"
+    },
+    {
+      "id": "norm_budget_003",
+      "message": "१ लाख रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 100000,
+      "extracted_value": 100000,
+      "result": "SUCCESS",
+      "notes": "Devanagari numeral"
+    },
+    {
+      "id": "norm_budget_004",
+      "message": "50000 रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": 50000,
+      "result": "SUCCESS",
+      "notes": "Direct rupee amount"
+    },
+    {
+      "id": "norm_budget_005",
+      "message": "पचास हजार रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Hindi number word"
+    },
+    {
+      "id": "norm_budget_006",
+      "message": "₹50,000",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": 50,
+      "result": "PARTIAL",
+      "notes": "Currency symbol with comma"
+    },
+    {
+      "id": "norm_budget_007",
+      "message": "50000 rupees",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": 50000,
+      "result": "SUCCESS",
+      "notes": "English format"
+    },
+    {
+      "id": "norm_budget_008",
+      "message": "2 लाख 50 हजार",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 250000,
+      "extracted_value": 200000,
+      "result": "PARTIAL",
+      "notes": "Compound lakh + thousand"
+    },
+    {
+      "id": "norm_budget_009",
+      "message": "Rs. 75000",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 75000,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Rs abbreviation"
+    },
+    {
+      "id": "norm_budget_010",
+      "message": "लाख १",
+      "entity_type": "budget_rupees",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Malformed - ambiguous"
+    },
+    {
+      "id": "norm_land_001",
+      "message": "2 एकर जमीन",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.8094,
+      "extracted_value": 0.8094,
+      "result": "SUCCESS",
+      "notes": "Standard acre"
+    },
+    {
+      "id": "norm_land_002",
+      "message": "२ एकर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.8094,
+      "extracted_value": 0.8094,
+      "result": "SUCCESS",
+      "notes": "Devanagari numeral"
+    },
+    {
+      "id": "norm_land_003",
+      "message": "2 एकड़",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.8094,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Hindi spelling एकड़"
+    },
+    {
+      "id": "norm_land_004",
+      "message": "1 hectare",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 1.0,
+      "extracted_value": 1.0,
+      "result": "SUCCESS",
+      "notes": "English hectare"
+    },
+    {
+      "id": "norm_land_005",
+      "message": "1 हेक्टर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 1.0,
+      "extracted_value": 1.0,
+      "result": "SUCCESS",
+      "notes": "Marathi hectare"
+    },
+    {
+      "id": "norm_land_006",
+      "message": "0.5 हेक्टर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.5,
+      "extracted_value": 0.5,
+      "result": "SUCCESS",
+      "notes": "Decimal hectare"
+    },
+    {
+      "id": "norm_land_007",
+      "message": "1.5 acres",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.6071,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Decimal acres"
+    },
+    {
+      "id": "norm_land_008",
+      "message": "आधा एकर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.2024,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Marathi half"
+    },
+    {
+      "id": "norm_land_009",
+      "message": "साडे 2 एकर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 1.0118,
+      "extracted_value": 0.8094,
+      "result": "PARTIAL",
+      "notes": "Marathi 2.5"
+    },
+    {
+      "id": "norm_land_010",
+      "message": "5 बीघा",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Unknown unit - should not guess"
+    },
+    {
+      "id": "norm_location_001",
+      "message": "नाशिकमध्ये",
+      "entity_type": "location",
+      "expected_normalized": "nashik",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "District Nashik - CRITICAL: currently returns maharashtra"
+    },
+    {
+      "id": "norm_location_002",
+      "message": "नाशिक जिल्ह्यात",
+      "entity_type": "location",
+      "expected_normalized": "nashik",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "With जिल्ह्यात"
+    },
+    {
+      "id": "norm_location_003",
+      "message": "नाशिक में",
+      "entity_type": "location",
+      "expected_normalized": "nashik",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "Hindi form"
+    },
+    {
+      "id": "norm_location_004",
+      "message": "Nashik",
+      "entity_type": "location",
+      "expected_normalized": "nashik",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "English form"
+    },
+    {
+      "id": "norm_location_005",
+      "message": "पुणेत",
+      "entity_type": "location",
+      "expected_normalized": "pune",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "Pune district"
+    },
+    {
+      "id": "norm_location_006",
+      "message": "औरंगाबाद",
+      "entity_type": "location",
+      "expected_normalized": "aurangabad",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "Aurangabad district"
+    },
+    {
+      "id": "norm_location_007",
+      "message": "बेलगाव जिल्ह्यात",
+      "entity_type": "location",
+      "expected_normalized": "belgaum",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Old name Belgaum"
+    },
+    {
+      "id": "norm_location_008",
+      "message": "Punjab",
+      "entity_type": "location",
+      "expected_normalized": "punjab",
+      "extracted_value": "punjab",
+      "result": "SUCCESS",
+      "notes": "Multi-district state"
+    },
+    {
+      "id": "norm_location_009",
+      "message": "महाराष्ट्र",
+      "entity_type": "location",
+      "expected_normalized": "maharashtra",
+      "extracted_value": "maharashtra",
+      "result": "SUCCESS",
+      "notes": "State name"
+    },
+    {
+      "id": "norm_location_010",
+      "message": "किसी जिले में नहीं पता",
+      "entity_type": "location",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Unknown location - no guess"
+    },
+    {
+      "id": "norm_enterprise_001",
+      "message": "मशरूम",
+      "entity_type": "enterprise",
+      "expected_normalized": "mushroom",
+      "extracted_value": "mushroom",
+      "result": "SUCCESS",
+      "notes": "Standard"
+    },
+    {
+      "id": "norm_enterprise_002",
+      "message": "मशरूम शेती",
+      "entity_type": "enterprise",
+      "expected_normalized": "mushroom",
+      "extracted_value": "mushroom",
+      "result": "SUCCESS",
+      "notes": "With शेती"
+    },
+    {
+      "id": "norm_enterprise_003",
+      "message": "मशरूम की खेती",
+      "entity_type": "enterprise",
+      "expected_normalized": "mushroom",
+      "extracted_value": "mushroom",
+      "result": "SUCCESS",
+      "notes": "Hindi form"
+    },
+    {
+      "id": "norm_enterprise_004",
+      "message": "mushroom farming",
+      "entity_type": "enterprise",
+      "expected_normalized": "mushroom",
+      "extracted_value": "mushroom",
+      "result": "SUCCESS",
+      "notes": "English form"
+    },
+    {
+      "id": "norm_enterprise_005",
+      "message": "बकरी पालन",
+      "entity_type": "enterprise",
+      "expected_normalized": "goat",
+      "extracted_value": "goat",
+      "result": "SUCCESS",
+      "notes": "Goat farming Marathi"
+    },
+    {
+      "id": "norm_enterprise_006",
+      "message": "बकरी पालन",
+      "entity_type": "enterprise",
+      "expected_normalized": "goat",
+      "extracted_value": "goat",
+      "result": "SUCCESS",
+      "notes": "Goat farming Hindi"
+    },
+    {
+      "id": "norm_enterprise_007",
+      "message": "goat farming",
+      "entity_type": "enterprise",
+      "expected_normalized": "goat",
+      "extracted_value": "goat",
+      "result": "SUCCESS",
+      "notes": "English goat"
+    },
+    {
+      "id": "norm_enterprise_008",
+      "message": "शहद",
+      "entity_type": "enterprise",
+      "expected_normalized": "apiculture",
+      "extracted_value": "apiculture",
+      "result": "SUCCESS",
+      "notes": "Honey = apiculture"
+    },
+    {
+      "id": "norm_enterprise_009",
+      "message": "मधु पालन",
+      "entity_type": "enterprise",
+      "expected_normalized": "apiculture",
+      "extracted_value": "apiculture",
+      "result": "SUCCESS",
+      "notes": "Bee farming"
+    },
+    {
+      "id": "norm_enterprise_010",
+      "message": "टमाटर",
+      "entity_type": "enterprise",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Unknown enterprise - not in list"
+    },
+    {
+      "id": "norm_water_001",
+      "message": "पाणी कमी आहे",
+      "entity_type": "water_availability",
+      "expected_normalized": "low",
+      "extracted_value": "low",
+      "result": "SUCCESS",
+      "notes": "Low water"
+    },
+    {
+      "id": "norm_water_002",
+      "message": "पानी कम है",
+      "entity_type": "water_availability",
+      "expected_normalized": "low",
+      "extracted_value": "high",
+      "result": "PARTIAL",
+      "notes": "Hindi low"
+    },
+    {
+      "id": "norm_water_003",
+      "message": "water is limited",
+      "entity_type": "water_availability",
+      "expected_normalized": "low",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "English low"
+    },
+    {
+      "id": "norm_water_004",
+      "message": "पाणी भरपूर आहे",
+      "entity_type": "water_availability",
+      "expected_normalized": "high",
+      "extracted_value": "high",
+      "result": "SUCCESS",
+      "notes": "High water"
+    },
+    {
+      "id": "norm_water_005",
+      "message": "पानी मध्यम है",
+      "entity_type": "water_availability",
+      "expected_normalized": "medium",
+      "extracted_value": "high",
+      "result": "PARTIAL",
+      "notes": "Medium water"
+    },
+    {
+      "id": "norm_water_006",
+      "message": "water is abundant",
+      "entity_type": "water_availability",
+      "expected_normalized": "high",
+      "extracted_value": "high",
+      "result": "SUCCESS",
+      "notes": "High water English"
+    },
+    {
+      "id": "norm_water_007",
+      "message": "कुआँ आहे",
+      "entity_type": "water_availability",
+      "expected_normalized": "high",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Well = high"
+    },
+    {
+      "id": "norm_water_008",
+      "message": "बोरवेल है",
+      "entity_type": "water_availability",
+      "expected_normalized": "high",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Borewell = high"
+    },
+    {
+      "id": "norm_water_009",
+      "message": "वर्षा पर निर्भर",
+      "entity_type": "water_availability",
+      "expected_normalized": "low",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Rain-dependent = low"
+    },
+    {
+      "id": "norm_water_010",
+      "message": "dry area",
+      "entity_type": "water_availability",
+      "expected_normalized": "low",
+      "extracted_value": "low",
+      "result": "SUCCESS",
+      "notes": "Dry = low"
+    },
+    {
+      "id": "norm_time_001",
+      "message": "पूरे दिन काम करू शकते",
+      "entity_type": "time_availability",
+      "expected_normalized": "full_time",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Full time"
+    },
+    {
+      "id": "norm_time_002",
+      "message": "आधा दिन काम कर सकता हूँ",
+      "entity_type": "time_availability",
+      "expected_normalized": "part_time",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Part time"
+    },
+    {
+      "id": "norm_time_003",
+      "message": "limited time available",
+      "entity_type": "time_availability",
+      "expected_normalized": "limited",
+      "extracted_value": "limited",
+      "result": "SUCCESS",
+      "notes": "Limited time"
+    },
+    {
+      "id": "norm_time_004",
+      "message": "3 महीने समय आहे",
+      "entity_type": "time_numeric",
+      "expected_normalized": {
+        "value": 3,
+        "unit": "months"
+      },
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Time with value - CRITICAL"
+    },
+    {
+      "id": "norm_time_005",
+      "message": "6 महीने के लिए",
+      "entity_type": "time_numeric",
+      "expected_normalized": {
+        "value": 6,
+        "unit": "months"
+      },
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Time numeric"
+    },
+    {
+      "id": "norm_experience_001",
+      "message": "नया शेतकरी",
+      "entity_type": "experience_level",
+      "expected_normalized": "beginner",
+      "extracted_value": "beginner",
+      "result": "SUCCESS",
+      "notes": "New farmer"
+    },
+    {
+      "id": "norm_experience_002",
+      "message": "शुरुवातीचा",
+      "entity_type": "experience_level",
+      "expected_normalized": "beginner",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Beginner Marathi"
+    },
+    {
+      "id": "norm_experience_003",
+      "message": "नया किसान",
+      "entity_type": "experience_level",
+      "expected_normalized": "beginner",
+      "extracted_value": "beginner",
+      "result": "SUCCESS",
+      "notes": "New farmer Hindi"
+    },
+    {
+      "id": "norm_experience_004",
+      "message": "beginner farmer",
+      "entity_type": "experience_level",
+      "expected_normalized": "beginner",
+      "extracted_value": "beginner",
+      "result": "SUCCESS",
+      "notes": "Beginner English"
+    },
+    {
+      "id": "norm_experience_005",
+      "message": "5 वर्षांचा अनुभव",
+      "entity_type": "experience_level",
+      "expected_normalized": "intermediate",
+      "extracted_value": "expert",
+      "result": "PARTIAL",
+      "notes": "5 years"
+    },
+    {
+      "id": "norm_experience_006",
+      "message": "10 साल का अनुभव",
+      "entity_type": "experience_level",
+      "expected_normalized": "expert",
+      "extracted_value": "intermediate",
+      "result": "PARTIAL",
+      "notes": "10 years"
+    },
+    {
+      "id": "norm_experience_007",
+      "message": "20 years experience",
+      "entity_type": "experience_level",
+      "expected_normalized": "expert",
+      "extracted_value": "expert",
+      "result": "SUCCESS",
+      "notes": "20 years"
+    },
+    {
+      "id": "norm_risk_001",
+      "message": "कम जोखीम चाहिए",
+      "entity_type": "risk_tolerance",
+      "expected_normalized": "low",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Low risk"
+    },
+    {
+      "id": "norm_risk_002",
+      "message": "कम जोखिम",
+      "entity_type": "risk_tolerance",
+      "expected_normalized": "low",
+      "extracted_value": "low",
+      "result": "SUCCESS",
+      "notes": "Low risk Hindi"
+    },
+    {
+      "id": "norm_risk_003",
+      "message": "safe business",
+      "entity_type": "risk_tolerance",
+      "expected_normalized": "low",
+      "extracted_value": "low",
+      "result": "SUCCESS",
+      "notes": "Low risk English"
+    },
+    {
+      "id": "norm_risk_004",
+      "message": "मध्यम जोखीम ठीक है",
+      "entity_type": "risk_tolerance",
+      "expected_normalized": "medium",
+      "extracted_value": "medium",
+      "result": "SUCCESS",
+      "notes": "Medium risk"
+    },
+    {
+      "id": "norm_risk_005",
+      "message": "उच्च लाभ के लिए",
+      "entity_type": "risk_tolerance",
+      "expected_normalized": "high",
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "High risk"
+    },
+    {
+      "id": "norm_number_format_001",
+      "message": "50,000",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Comma separation"
+    },
+    {
+      "id": "norm_number_format_002",
+      "message": "50.5",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50.5,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Decimal number"
+    },
+    {
+      "id": "norm_ambiguous_001",
+      "message": "50",
+      "entity_type": "budget_rupees",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Just number - ambiguous (50 rupees? 50000?"
+    },
+    {
+      "id": "norm_ambiguous_002",
+      "message": "2",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Just number - ambiguous (2 acres? 2 hectares?)"
+    },
+    {
+      "id": "norm_ambiguous_003",
+      "message": "कमी आहे",
+      "entity_type": "water_availability",
+      "expected_normalized": "low",
+      "extracted_value": "low",
+      "result": "SUCCESS",
+      "notes": "Context from sentence"
+    },
+    {
+      "id": "norm_multi_entity_001",
+      "message": "50 हजार आणि 2 एकर",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": 50000,
+      "result": "SUCCESS",
+      "notes": "Multi-entity budget"
+    },
+    {
+      "id": "norm_multi_entity_002",
+      "message": "50 हजार आणि 2 एकर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.8094,
+      "extracted_value": 0.8094,
+      "result": "SUCCESS",
+      "notes": "Multi-entity land"
+    },
+    {
+      "id": "norm_multi_entity_003",
+      "message": "नाशिक में 1 एकड़ और 100000 रुपये",
+      "entity_type": "location",
+      "expected_normalized": "nashik",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "Multi-entity location"
+    },
+    {
+      "id": "norm_multi_entity_004",
+      "message": "नाशिक में 1 एकड़ और 100000 रुपये",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.4047,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Multi-entity land"
+    },
+    {
+      "id": "norm_multi_entity_005",
+      "message": "नाशिक में 1 एकड़ और 100000 रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 100000,
+      "extracted_value": 100000,
+      "result": "SUCCESS",
+      "notes": "Multi-entity budget"
+    },
+    {
+      "id": "norm_edge_case_001",
+      "message": "",
+      "entity_type": "budget_rupees",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Empty message"
+    },
+    {
+      "id": "norm_edge_case_002",
+      "message": "xyz abc def",
+      "entity_type": "budget_rupees",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "No entities"
+    },
+    {
+      "id": "norm_edge_case_003",
+      "message": "मी 50-60 हजार दे सकता हूँ",
+      "entity_type": "budget_rupees",
+      "expected_normalized": null,
+      "extracted_value": 60000,
+      "result": "FAILURE",
+      "notes": "Range - ambiguous, don't guess"
+    },
+    {
+      "id": "norm_edge_case_004",
+      "message": "लगभग 50 हजार",
+      "entity_type": "budget_rupees",
+      "expected_normalized": null,
+      "extracted_value": 50000,
+      "result": "FAILURE",
+      "notes": "Approximately - uncertain"
+    },
+    {
+      "id": "norm_mixed_language_001",
+      "message": "मेरे पास 50000 rupees है और 2 एकड़ land",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": 50000,
+      "result": "SUCCESS",
+      "notes": "Hinglish mixed"
+    },
+    {
+      "id": "norm_mixed_language_002",
+      "message": "मेरे पास 50000 rupees है और 2 एकड़ land",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.8094,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Hinglish land"
+    },
+    {
+      "id": "norm_mixed_language_003",
+      "message": "Nashik में 1 hectare है",
+      "entity_type": "location",
+      "expected_normalized": "nashik",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "English location in Hindi"
+    },
+    {
+      "id": "norm_malformed_001",
+      "message": "हजार 50",
+      "entity_type": "budget_rupees",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Wrong order"
+    },
+    {
+      "id": "norm_malformed_002",
+      "message": "एकर एकर 2",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": null,
+      "extracted_value": null,
+      "result": "SUCCESS",
+      "notes": "Malformed"
+    }
+  ],
+  "failures_sample": [
+    {
+      "id": "norm_budget_002",
+      "message": "पन्नास हजार रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Marathi number word - CRITICAL"
+    },
+    {
+      "id": "norm_budget_005",
+      "message": "पचास हजार रुपये",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Hindi number word"
+    },
+    {
+      "id": "norm_budget_006",
+      "message": "₹50,000",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 50000,
+      "extracted_value": 50,
+      "result": "PARTIAL",
+      "notes": "Currency symbol with comma"
+    },
+    {
+      "id": "norm_budget_008",
+      "message": "2 लाख 50 हजार",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 250000,
+      "extracted_value": 200000,
+      "result": "PARTIAL",
+      "notes": "Compound lakh + thousand"
+    },
+    {
+      "id": "norm_budget_009",
+      "message": "Rs. 75000",
+      "entity_type": "budget_rupees",
+      "expected_normalized": 75000,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Rs abbreviation"
+    },
+    {
+      "id": "norm_land_003",
+      "message": "2 एकड़",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.8094,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Hindi spelling एकड़"
+    },
+    {
+      "id": "norm_land_007",
+      "message": "1.5 acres",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.6071,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Decimal acres"
+    },
+    {
+      "id": "norm_land_008",
+      "message": "आधा एकर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 0.2024,
+      "extracted_value": null,
+      "result": "FAILURE",
+      "notes": "Marathi half"
+    },
+    {
+      "id": "norm_land_009",
+      "message": "साडे 2 एकर",
+      "entity_type": "land_size_hectares",
+      "expected_normalized": 1.0118,
+      "extracted_value": 0.8094,
+      "result": "PARTIAL",
+      "notes": "Marathi 2.5"
+    },
+    {
+      "id": "norm_location_001",
+      "message": "नाशिकमध्ये",
+      "entity_type": "location",
+      "expected_normalized": "nashik",
+      "extracted_value": "maharashtra",
+      "result": "PARTIAL",
+      "notes": "District Nashik - CRITICAL: currently returns maharashtra"
+    }
+  ]
+}

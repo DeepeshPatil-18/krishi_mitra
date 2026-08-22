@@ -1,0 +1,101 @@
+{
+  "data_source": "prototype",
+  "training_modules": [
+    {
+      "enterprise": "apiculture",
+      "title": "Beekeeping Basics",
+      "description": "Introduction to beekeeping including hive management and honey extraction",
+      "language": "marathi",
+      "content": "Learn the fundamentals of beekeeping including bee biology, hive types, and seasonal management.",
+      "sequence": 1,
+      "duration_minutes": 60,
+      "difficulty_level": "beginner",
+      "resources": ["Hive manual", "Protective equipment guide"],
+      "practical_exercises": ["Setting up a hive", "Inspecting colonies", "Basic honey extraction"]
+    },
+    {
+      "enterprise": "apiculture",
+      "title": "Disease Management in Apiaries",
+      "description": "Prevention and treatment of common honeybee diseases",
+      "language": "marathi",
+      "content": "Comprehensive guide to identifying and managing bee diseases.",
+      "sequence": 2,
+      "duration_minutes": 45,
+      "difficulty_level": "intermediate",
+      "resources": ["Disease identification chart", "Treatment protocols"],
+      "practical_exercises": ["Colony health assessment", "Treatment application"]
+    },
+    {
+      "enterprise": "poultry",
+      "title": "Poultry Farm Setup",
+      "description": "Establishing a small-scale poultry farm",
+      "language": "marathi",
+      "content": "Step-by-step guide to setting up poultry infrastructure.",
+      "sequence": 1,
+      "duration_minutes": 90,
+      "difficulty_level": "beginner",
+      "resources": ["Construction guide", "Equipment list"],
+      "practical_exercises": ["Site selection", "Shed design", "Cost estimation"]
+    },
+    {
+      "enterprise": "poultry",
+      "title": "Feed Management and Nutrition",
+      "description": "Optimal feeding strategies for poultry",
+      "language": "marathi",
+      "content": "Learn about feed composition, feeding schedules, and nutritional requirements.",
+      "sequence": 2,
+      "duration_minutes": 60,
+      "difficulty_level": "beginner",
+      "resources": ["Feed composition charts", "Cost calculators"],
+      "practical_exercises": ["Feed calculation", "Ration balancing"]
+    },
+    {
+      "enterprise": "mushroom",
+      "title": "Mushroom Cultivation Fundamentals",
+      "description": "Introduction to edible mushroom varieties and cultivation techniques",
+      "language": "marathi",
+      "content": "Overview of mushroom biology and basic cultivation methods.",
+      "sequence": 1,
+      "duration_minutes": 75,
+      "difficulty_level": "beginner",
+      "resources": ["Variety guide", "Spawn suppliers list"],
+      "practical_exercises": ["Spawn preparation", "Substrate preparation", "Harvesting"]
+    },
+    {
+      "enterprise": "mushroom",
+      "title": "Contamination Prevention",
+      "description": "Sterilization techniques and contamination control",
+      "language": "marathi",
+      "content": "Best practices for maintaining sterile conditions in mushroom cultivation.",
+      "sequence": 2,
+      "duration_minutes": 60,
+      "difficulty_level": "intermediate",
+      "resources": ["Sterilization equipment guide", "Hygiene protocols"],
+      "practical_exercises": ["Equipment sterilization", "Environment monitoring"]
+    },
+    {
+      "enterprise": "goat_farming",
+      "title": "Goat Selection and Breeding",
+      "description": "Choosing quality goats and managing breeding programs",
+      "language": "marathi",
+      "content": "Guide to selecting productive goat breeds and establishing breeding plans.",
+      "sequence": 1,
+      "duration_minutes": 80,
+      "difficulty_level": "beginner",
+      "resources": ["Breed characteristics", "Health checking guide"],
+      "practical_exercises": ["Breed identification", "Health assessment", "Record keeping"]
+    },
+    {
+      "enterprise": "vermicomposting",
+      "title": "Vermicomposting System Setup",
+      "description": "Building and maintaining vermicompost bins",
+      "language": "marathi",
+      "content": "Complete guide to setting up vermicomposting systems.",
+      "sequence": 1,
+      "duration_minutes": 50,
+      "difficulty_level": "beginner",
+      "resources": ["Bin design templates", "Worm species guide"],
+      "practical_exercises": ["Bin construction", "Bedding preparation", "Worm introduction"]
+    }
+  ]
+}

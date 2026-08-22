@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-08-21",
+  "dataset_size": 60,
+  "metrics": {
+    "language_accuracy": 0.7166666666666667,
+    "intent_accuracy": 0.6166666666666667,
+    "entity_accuracy": 0.46808510638297873
+  },
+  "by_entity_type": {
+    "budget_rupees": 0.5294117647058824,
+    "land_size_hectares": 0.125,
+    "location": 0.0,
+    "enterprise": 0.9047619047619048,
+    "water_availability": 0.6666666666666666,
+    "experience_level": 0.3333333333333333,
+    "time_availability": 0.0,
+    "willingness_to_learn": 0.0,
+    "risk_tolerance": 1.0
+  },
+  "comparison": {
+    "task_4_0_intent": 0.4666666666666667,
+    "task_4_1_intent": 0.6166666666666667,
+    "task_4_2_intent": 0.6166666666666667,
+    "task_4_0_entity": 0.0,
+    "task_4_1_entity": 0.0,
+    "task_4_2_entity": 0.46808510638297873
+  }
+}

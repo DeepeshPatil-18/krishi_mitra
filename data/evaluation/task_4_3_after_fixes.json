@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-08-22",
+  "phase": "after_part5_fixes",
+  "metrics_after": {
+    "intent_accuracy": 0.6166666666666667,
+    "entity_accuracy": 0.0,
+    "language_accuracy": 1.0
+  },
+  "comparison": {
+    "intent_change_percent": 0.0,
+    "entity_change_percent": -46.808510638297875,
+    "language_change_percent": 28.333333333333332
+  },
+  "by_entity_type": {
+    "budget_rupees": {
+      "total_expected": 17,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    },
+    "land_size_hectares": {
+      "total_expected": 16,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.125
+    },
+    "location": {
+      "total_expected": 6,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    },
+    "enterprise": {
+      "total_expected": 21,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    },
+    "water_availability": {
+      "total_expected": 6,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    },
+    "experience_level": {
+      "total_expected": 6,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    },
+    "time_availability": {
+      "total_expected": 3,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    },
+    "willingness_to_learn": {
+      "total_expected": 2,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    },
+    "risk_tolerance": {
+      "total_expected": 1,
+      "extraction_rate": 1.0,
+      "accuracy_when_extracted": 0.0
+    }
+  }
+}

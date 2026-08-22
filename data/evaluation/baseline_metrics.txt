@@ -1,0 +1,256 @@
+================================================================================
+KRISHIMITRA BASELINE EVALUATION - RESULTS
+================================================================================
+
+Date: August 19, 2026
+Dataset: farmer_queries.jsonl (60 realistic examples)
+System: Current KrishiMitra (TASK 3 complete)
+
+================================================================================
+OVERALL PERFORMANCE
+================================================================================
+
+Dataset Size: 60 examples
+Successful Evaluations: 60 (100.0%)
+Errors: 0 (0.0%)
+
+ACCURACY METRICS:
+  Intent Detection Accuracy:      46.7%  (28/60 correct)
+  Capability Routing Accuracy:    41.7%  (25/60 correct)
+  Language Detection Accuracy:   100.0%  (60/60 correct) ✓
+  Entity Extraction Accuracy:      0.0%  (0/60 with all entities correct)
+
+================================================================================
+RESULTS BY LANGUAGE
+================================================================================
+
+MARATHI (26 examples):
+  Intent Detection:       53.8%  (14/26)
+  Capability Routing:     53.8%  (14/26)
+  Language Detection:    100.0%  ✓
+  Entity Extraction:       0.0%
+
+HINDI (17 examples):
+  Intent Detection:       41.2%  (7/17)
+  Capability Routing:     35.3%  (6/17)
+  Language Detection:    100.0%  ✓
+  Entity Extraction:       0.0%
+
+ENGLISH (17 examples):
+  Intent Detection:       41.2%  (7/17)
+  Capability Routing:     29.4%  (5/17)
+  Language Detection:    100.0%  ✓
+  Entity Extraction:       0.0%
+
+KEY FINDING: Marathi performs 12-24% better than Hindi/English on intent detection.
+
+================================================================================
+RESULTS BY INTENT
+================================================================================
+
+livelihood_recommendation (32 examples):
+  Accuracy: 28.1%  (9/32)
+  Status: ⚠️ NEEDS IMPROVEMENT
+
+scheme_search (5 examples):
+  Accuracy: 100.0%  (5/5) ✓
+  Status: EXCELLENT
+
+training_request (8 examples):
+  Accuracy: 37.5%  (3/8)
+  Status: NEEDS IMPROVEMENT
+
+market_search (5 examples):
+  Accuracy: 60.0%  (3/5)
+  Status: ACCEPTABLE
+
+expert_request (4 examples):
+  Accuracy: 100.0%  (4/4) ✓
+  Status: EXCELLENT
+
+community (1 example):
+  Accuracy: 100.0%  (1/1) ✓
+  Status: EXCELLENT
+
+general_question (5 examples):
+  Accuracy: 60.0%  (3/5)
+  Status: ACCEPTABLE
+
+KEY FINDING: Scheme/Expert/Community routing is perfect. Livelihood recommendation has lowest accuracy.
+
+================================================================================
+RESULTS BY DIFFICULTY
+================================================================================
+
+EASY (17 examples):
+  Intent Accuracy: 76.5%  (13/17)
+  Status: GOOD
+
+MEDIUM (29 examples):
+  Intent Accuracy: 37.9%  (11/29)
+  Status: NEEDS IMPROVEMENT
+
+HARD (14 examples):
+  Intent Accuracy: 28.6%  (4/14)
+  Status: POOR
+
+KEY FINDING: Performance degrades significantly with query complexity.
+             Easy queries: 77% → Medium: 38% → Hard: 29% (48 percentage point drop)
+
+================================================================================
+ENTITY EXTRACTION RESULTS
+================================================================================
+
+Per-Entity Analysis:
+
+budget_rupees:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  Status: EXTRACTED BUT INCORRECT
+
+land_size_hectares:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 12.5%  ⚠️
+  Status: PARTIALLY INCORRECT (conversion issues?)
+
+location:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  Status: EXTRACTED BUT INCORRECT
+
+enterprise:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  Status: EXTRACTED BUT INCORRECT
+
+water_availability:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  Status: EXTRACTED BUT INCORRECT
+
+experience_level:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  Status: EXTRACTED BUT INCORRECT
+
+time_availability:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  STATUS: EXTRACTED BUT INCORRECT
+
+willingness_to_learn:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  Status: EXTRACTED BUT INCORRECT
+
+risk_tolerance:
+  Extraction Rate: 100.0%
+  Accuracy (when extracted): 0.0%  ⚠️
+  Status: EXTRACTED BUT INCORRECT
+
+KEY FINDING: Entity extraction has severe accuracy problems.
+             System extracts SOMETHING for every entity type, but accuracies are 0-12%.
+             This suggests: extracted entities are WRONG ENTITIES or WRONG VALUES.
+
+================================================================================
+COMMON FAILURE PATTERNS
+================================================================================
+
+LIVELIHOOD INTENT FAILURES:
+- Queries with complex context (multiple constraints) → classified as general_question
+- Queries with secondary entities emphasized → misrouted
+- Hindi/English queries → lower success than Marathi
+- "What can I do?" patterns → sometimes routed to expert_request
+
+ENTITY EXTRACTION FAILURES:
+- Expected "budget": system extracts budget but WRONG VALUE
+- Expected "location": system extracts but WRONG LOCATION
+- Ace/Acre conversions: partially working (12.5% accuracy)
+- Missing entities: system extracts ANY entities instead of REQUIRED ones
+
+LANGUAGE-SPECIFIC PATTERNS:
+- Marathi: Better intent detection but entity extraction still fails
+- Hindi: Mixed-language (Hinglish) queries confuse the system
+- English: Fails on technical/complex phrasing
+
+================================================================================
+WHAT'S WORKING WELL
+================================================================================
+
+✓ Language Detection: 100% accuracy (Devanagari vs English detection perfect)
+✓ Scheme Search Intent: 100% accuracy
+✓ Expert Request Intent: 100% accuracy
+✓ Community Intent: 100% (only 1 example, but perfect)
+✓ Easy Queries: 77% intent accuracy
+✓ Marathi Overall: 54% intent accuracy (best of three languages)
+
+================================================================================
+WHAT NEEDS WORK
+================================================================================
+
+⚠️ CRITICAL - Entity Extraction: 0% overall accuracy
+⚠️ CRITICAL - Livelihood Intent: 28% accuracy (most important intent)
+⚠️ CRITICAL - Hard/Medium Difficulty: 29-38% accuracy
+⚠️ HIGH - Hindi/English Languages: 29-41% accuracy
+⚠️ HIGH - Training Request Intent: 38% accuracy
+⚠️ MEDIUM - Complex multi-entity queries: frequently misrouted
+
+================================================================================
+STATISTICAL SUMMARY
+================================================================================
+
+Total Examples Evaluated: 60
+Success Rate (no errors): 100%
+Intent Detection Success Rate: 46.7%
+Capability Routing Success Rate: 41.7%
+
+Accuracy Distribution:
+  Perfect (100%): scheme_search, expert_request, community, language detection
+  Good (60-99%): market_search, general_question
+  Acceptable (40-59%): training_request, Marathi language
+  Poor (0-39%): livelihood_recommendation, Hindi/English, hard/medium difficulty, ALL entities
+
+Mean Intent Accuracy: 46.7%
+Median Intent Accuracy: 46.7%
+
+================================================================================
+NEXT STEPS RECOMMENDATIONS
+================================================================================
+
+IMMEDIATE (High Impact, Low Effort):
+1. Fix entity extraction accuracy (currently 0% overall)
+2. Improve livelihood_recommendation detection (28% → target 70%+)
+3. Review Hindi/English patterns (currently 29-41%)
+
+MEDIUM-TERM (High Impact, Medium Effort):
+4. Improve handling of complex/hard queries (currently 29%)
+5. Better entity matching for locations (currently 0% accurate)
+
+LONG-TERM (Depends on findings from #1-4):
+6. Consider ML/SLM for entity extraction (if deterministic fails)
+7. Consider specialized intent classifier for livelihood (if current fails)
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+- Entity extraction shows 0% accuracy DESPITE 100% extraction rate
+  This means: entities ARE BEING EXTRACTED, but they're WRONG VALUES/TYPES
+  This is NOT a missing data problem - it's a VALUE CORRECTNESS problem.
+
+- Language detection is PERFECT (100%)
+  The system correctly identifies Marathi vs Hindi vs English every time.
+
+- Marathi outperforms Hindi/English by 12-24 percentage points
+  Suggests: Hindi/English regex patterns or dictionaries need improvement
+  OR: mixed-language/Hinglish cases are confusing the system
+
+- Easy queries reach 77% accuracy
+  Hard queries drop to 29%
+  This 48-point gap suggests: deterministic patterns work for simple cases,
+  but fail when context becomes complex
+
+- The 0% entity extraction accuracy is the biggest red flag
+  This warrants investigation into what values ARE being extracted.
+
+================================================================================

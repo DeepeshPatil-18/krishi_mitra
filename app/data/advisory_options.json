@@ -1,0 +1,910 @@
+{
+  "metadata": {
+    "description": "TASK 7: Verified livelihood options for Farmer Advisory capability",
+    "version": "1.0",
+    "created": "2026-08-22",
+    "source": "Curated from agricultural extension research and Maharashtra farming data",
+    "note": "All options are rule-based matches. No fabricated income or profit claims. Conservative estimates only.",
+    "total_options": 13
+  },
+  "options": [
+    {
+      "id": "mushroom_cultivation",
+      "name_en": "Mushroom Cultivation",
+      "name_hi": "मशरूम खेती",
+      "name_marathi": "कुकुरमुत्त्याची शेती",
+      "description_en": "Indoor mushroom farming requiring minimal space and controlled conditions",
+      "description_hi": "न्यूनतम स्थान में इनडोर मशरूम खेती",
+      "description_marathi": "कमी जागेत इनडोर मशरूम शेती",
+      "land_requirement": {
+        "min_hectares": 0.01,
+        "max_hectares": 0.1,
+        "category": "very_small",
+        "note": "Can be done in sheds, rooms, tunnels"
+      },
+      "budget_requirement": {
+        "min_rupees": 15000,
+        "max_rupees": 50000,
+        "category": "low",
+        "note": "Setup cost for basic mushroom cultivation unit"
+      },
+      "water_requirement": "low",
+      "water_note": "Regular misting, not irrigation-dependent",
+      "experience_level": "beginner_friendly",
+      "experience_note": "Can start without farming background; needs basic training",
+      "time_requirement": "part_time",
+      "time_note": "4-6 hours per day for monitoring and harvest",
+      "risk_category": "low",
+      "risk_factors": [
+        "Contamination risk if hygiene not maintained",
+        "Market fluctuation for mushrooms",
+        "Temperature sensitivity"
+      ],
+      "suitable_for": [
+        "Very small farms",
+        "Landless farmers",
+        "Beginners",
+        "Part-time farmers",
+        "Urban/peri-urban areas"
+      ],
+      "unsuitable_for": [
+        "Farmers unwilling to learn new techniques",
+        "Areas with extreme heat"
+      ],
+      "training_modules": [
+        "Basic Mushroom Cultivation",
+        "Compost Preparation",
+        "Disease Management in Mushrooms"
+      ],
+      "schemes": [
+        "Pradhan Mantri Krishi Sinchayee Yojana",
+        "State Agricultural Department Support",
+        "NABARD Subsidies"
+      ],
+      "market_opportunities": [
+        "Local vegetable vendors",
+        "Hotels and restaurants",
+        "Direct consumer sales",
+        "Agricultural mandis"
+      ]
+    },
+    {
+      "id": "goat_farming",
+      "name_en": "Goat Farming",
+      "name_hi": "बकरी पालन",
+      "name_marathi": "बकरी पालन",
+      "description_en": "Small ruminant farming for meat and milk production",
+      "description_hi": "मांस और दूध उत्पादन के लिए छोटे पशुपालन",
+      "description_marathi": "मांस आणि दूध उत्पादनासाठी लहान पशुपालन",
+      "land_requirement": {
+        "min_hectares": 0.5,
+        "max_hectares": 5.0,
+        "category": "small",
+        "note": "1-2 hectares suitable for 5-10 goats"
+      },
+      "budget_requirement": {
+        "min_rupees": 30000,
+        "max_rupees": 150000,
+        "category": "medium",
+        "note": "Cost per goat ₹6000-15000, plus shelter"
+      },
+      "water_requirement": "low",
+      "water_note": "Lower water needs than cattle; seasonal grazing water",
+      "experience_level": "beginner_friendly",
+      "experience_note": "Traditional practice, but needs basic animal husbandry knowledge",
+      "time_requirement": "full_time",
+      "time_note": "Daily feeding, milking, health monitoring (6-8 hours)",
+      "risk_category": "medium",
+      "risk_factors": [
+        "Disease outbreaks (FMD, PPR)",
+        "Market price volatility",
+        "Predator attacks",
+        "Weather impact on fodder availability"
+      ],
+      "suitable_for": [
+        "Farmers with 0.5-2 hectares",
+        "Semi-arid regions",
+        "Farmers with animal husbandry interest",
+        "Part of diversified farming"
+      ],
+      "unsuitable_for": [
+        "Urban/peri-urban without proper enclosure",
+        "Farmers unwilling to invest in healthcare"
+      ],
+      "training_modules": [
+        "Goat Rearing Basics",
+        "Fodder Production",
+        "Disease Prevention and Health",
+        "Dairy Goat Management"
+      ],
+      "schemes": [
+        "National Livestock Mission",
+        "State Livestock Development Scheme",
+        "NABARD Pashu Kisan",
+        "Dairy Subsidy Schemes"
+      ],
+      "market_opportunities": [
+        "Meat sales at mandis",
+        "Milk cooperative societies",
+        "Direct buyer relationships",
+        "Cheese/value-added products"
+      ]
+    },
+    {
+      "id": "dairy_farming",
+      "name_en": "Dairy Farming (Buffalo/Cow)",
+      "name_hi": "डेयरी खेती (भैंस/गाय)",
+      "name_marathi": "दुग्धव्यवसाय (म्हैस/गाय)",
+      "description_en": "Milk production through cattle or buffalo rearing",
+      "description_hi": "मवेशी या भैंस पालन के माध्यम से दूध उत्पादन",
+      "description_marathi": "गाय किंवा म्हैस पालन द्वारे दूध उत्पादन",
+      "land_requirement": {
+        "min_hectares": 1.0,
+        "max_hectares": 10.0,
+        "category": "medium",
+        "note": "1 hectare per 2-3 animals (fodder self-sufficiency)"
+      },
+      "budget_requirement": {
+        "min_rupees": 80000,
+        "max_rupees": 300000,
+        "category": "medium_to_high",
+        "note": "₹40000-100000 per animal + shelter + equipment"
+      },
+      "water_requirement": "high",
+      "water_note": "High daily water requirement (40-60 liters per animal)",
+      "experience_level": "intermediate",
+      "experience_note": "Needs prior animal husbandry experience or training",
+      "time_requirement": "full_time",
+      "time_note": "Twice daily milking, feeding, monitoring (8-10 hours)",
+      "risk_category": "medium_to_high",
+      "risk_factors": [
+        "High capital investment",
+        "Disease risk (Mastitis, FMD)",
+        "Market price fluctuation",
+        "High feed and fodder costs",
+        "Water scarcity impact"
+      ],
+      "suitable_for": [
+        "Farmers with 1-3 hectares",
+        "High water availability areas",
+        "Farmers near cooperative collection centers",
+        "Experienced livestock farmers"
+      ],
+      "unsuitable_for": [
+        "Low water availability regions",
+        "Small landholdings (<1 hectare)",
+        "Beginners without experience"
+      ],
+      "training_modules": [
+        "Dairy Farming Fundamentals",
+        "Fodder Production and Nutrition",
+        "Dairy Hygiene and Milk Quality",
+        "Animal Health and Reproduction",
+        "Cooperative Membership and Management"
+      ],
+      "schemes": [
+        "PMMSY (Pradhan Mantri Matsya Sampada Yojana)",
+        "Dairy Processing and Infrastructure",
+        "State Dairy Mission",
+        "Bank Loans for Dairy at 4-6% interest"
+      ],
+      "market_opportunities": [
+        "Milk cooperative societies",
+        "Dairy collection centers",
+        "Direct consumer (urban areas)",
+        "Cheese/Ghee production",
+        "Institutional buyers"
+      ]
+    },
+    {
+      "id": "poultry_farming",
+      "name_en": "Poultry Farming",
+      "name_hi": "पोल्ट्री पालन",
+      "name_marathi": "कोळी पालन",
+      "description_en": "Chicken or duck rearing for eggs and meat",
+      "description_hi": "अंडे और मांस के लिए मुर्गी या बत्तख पालन",
+      "description_marathi": "अंडे आणि मांसासाठी कोळी किंवा बदक पालन",
+      "land_requirement": {
+        "min_hectares": 0.05,
+        "max_hectares": 1.0,
+        "category": "small",
+        "note": "Intensive indoor systems need minimal space"
+      },
+      "budget_requirement": {
+        "min_rupees": 20000,
+        "max_rupees": 100000,
+        "category": "low_to_medium",
+        "note": "Depends on scale (100-1000 birds)"
+      },
+      "water_requirement": "medium",
+      "water_note": "Moderate water for drinking and cleaning",
+      "experience_level": "beginner_friendly",
+      "experience_note": "Relatively simple management; good for beginners",
+      "time_requirement": "part_time",
+      "time_note": "2-4 hours daily (feeding, water, egg collection)",
+      "risk_category": "low_to_medium",
+      "risk_factors": [
+        "Disease outbreak potential (Avian Flu, Newcastle)",
+        "Feed cost variability",
+        "Market price for eggs/meat fluctuates",
+        "Biosecurity required"
+      ],
+      "suitable_for": [
+        "Small landholders",
+        "Part-time farmers",
+        "Beginners with interest",
+        "Peri-urban areas",
+        "Women farmers"
+      ],
+      "unsuitable_for": [
+        "Disease-prone areas without biosecurity setup",
+        "Farmers unwilling to learn health protocols"
+      ],
+      "training_modules": [
+        "Poultry Farming Basics",
+        "Feed and Nutrition Management",
+        "Disease Prevention (Biosecurity)",
+        "Egg and Meat Quality Standards"
+      ],
+      "schemes": [
+        "State Poultry Promotion Scheme",
+        "NABARD Poultry Support",
+        "Women-Focused Poultry Programs",
+        "Bank Loans at Subsidized Rates"
+      ],
+      "market_opportunities": [
+        "Local retail shops",
+        "Restaurants and hotels",
+        "Direct neighborhood sales",
+        "Egg collection centers",
+        "Organized retail chains"
+      ]
+    },
+    {
+      "id": "nursery_plants",
+      "name_en": "Plant Nursery (Ornamental/Fruit)",
+      "name_hi": "पौधशाला (सजावटी/फल)",
+      "name_marathi": "नर्सरी (सजावट/फळ)",
+      "description_en": "Growing and selling ornamental plants, saplings, or fruit plants",
+      "description_hi": "सजावटी पौधे, पौधे या फल के पौधे उगाना और बेचना",
+      "description_marathi": "सजावटीचे पौधे, रोपे किंवा फळांचे रोपे वाढवणे आणि विक्रय करणे",
+      "land_requirement": {
+        "min_hectares": 0.1,
+        "max_hectares": 1.0,
+        "category": "small",
+        "note": "0.1-0.5 hectares good for starting"
+      },
+      "budget_requirement": {
+        "min_rupees": 25000,
+        "max_rupees": 80000,
+        "category": "low_to_medium",
+        "note": "Shade nets, pots, seeds/saplings, watering system"
+      },
+      "water_requirement": "medium_to_high",
+      "water_note": "Regular drip irrigation or watering needed",
+      "experience_level": "beginner_friendly",
+      "experience_note": "Plant knowledge helpful but learnable",
+      "time_requirement": "part_time",
+      "time_note": "3-5 hours daily for watering and maintenance",
+      "risk_category": "low",
+      "risk_factors": [
+        "Plant disease susceptibility",
+        "Pest management needed",
+        "Seasonal demand variations",
+        "Weather damage (hail, frost)"
+      ],
+      "suitable_for": [
+        "Small landholders",
+        "Part-time entrepreneurs",
+        "Peri-urban locations",
+        "Farmers with aesthetic interest",
+        "Women farmers"
+      ],
+      "unsuitable_for": [
+        "Low water availability areas",
+        "Frost-prone regions (without protection)"
+      ],
+      "training_modules": [
+        "Nursery Management",
+        "Plant Propagation",
+        "Pest and Disease Management",
+        "Greenhouse/Shade Net Management"
+      ],
+      "schemes": [
+        "State Horticulture Mission",
+        "NABARD Nursery Support",
+        "Organic Certification Programs"
+      ],
+      "market_opportunities": [
+        "Garden centers and landscaping companies",
+        "Direct consumer sales",
+        "Municipal beautification projects",
+        "Corporate office plantations",
+        "Online plant sales"
+      ]
+    },
+    {
+      "id": "vegetable_cultivation",
+      "name_en": "Vegetable Cultivation",
+      "name_hi": "सब्जी की खेती",
+      "name_marathi": "भाज्यांची शेती",
+      "description_en": "Growing vegetables (seasonal and off-season) for market sale",
+      "description_hi": "बाजार बिक्री के लिए सब्जियां उगाना",
+      "description_marathi": "बाजार विक्रयासाठी भाज्या वाढवणे",
+      "land_requirement": {
+        "min_hectares": 0.25,
+        "max_hectares": 5.0,
+        "category": "small_to_medium",
+        "note": "0.25-1 hectare good for diversified vegetables"
+      },
+      "budget_requirement": {
+        "min_rupees": 30000,
+        "max_rupees": 100000,
+        "category": "medium",
+        "note": "Seeds, fertilizer, labor, irrigation setup"
+      },
+      "water_requirement": "high",
+      "water_note": "Regular irrigation needed for most vegetables",
+      "experience_level": "beginner_friendly",
+      "experience_note": "Traditional practice; knowledge easily gained through training",
+      "time_requirement": "full_time",
+      "time_note": "Daily weeding, pest monitoring, harvesting (6-8 hours)",
+      "risk_category": "medium",
+      "risk_factors": [
+        "Price volatility in mandis",
+        "Pest and disease outbreaks",
+        "Weather dependency",
+        "Post-harvest waste"
+      ],
+      "suitable_for": [
+        "Farmers with 0.25-2 hectares",
+        "Water-available regions",
+        "Near urban markets",
+        "Farmers with market access"
+      ],
+      "unsuitable_for": [
+        "Water-scarce regions",
+        "Extremely hot/cold climates"
+      ],
+      "training_modules": [
+        "Vegetable Cultivation Practices",
+        "Organic Farming Methods",
+        "Integrated Pest Management",
+        "Post-Harvest Management",
+        "Market-Oriented Production"
+      ],
+      "schemes": [
+        "Pradhan Mantri Krishi Sinchayee Yojana",
+        "Horticulture Mission",
+        "Organic Farming Scheme",
+        "Price Support Schemes"
+      ],
+      "market_opportunities": [
+        "Mandis (wholesale markets)",
+        "Direct consumer sales (weekly markets)",
+        "Restaurants and hotels",
+        "Organized retail chains",
+        "Cooperative marketing"
+      ]
+    },
+    {
+      "id": "fruit_cultivation",
+      "name_en": "Fruit Cultivation (Citrus, Mango, etc.)",
+      "name_hi": "फल की खेती (संतरा, आम, आदि)",
+      "name_marathi": "फळ शेती (संत्री, आंबा इत्यादी)",
+      "description_en": "Growing fruit trees for commercial production",
+      "description_hi": "वाणिज्यिक उत्पादन के लिए फल के पेड़ उगाना",
+      "description_marathi": "व्यावसायिक उत्पादनासाठी फळांच्या झाडांची लागवड",
+      "land_requirement": {
+        "min_hectares": 1.0,
+        "max_hectares": 10.0,
+        "category": "medium",
+        "note": "1-5 hectares typical for viable farm"
+      },
+      "budget_requirement": {
+        "min_rupees": 100000,
+        "max_rupees": 500000,
+        "category": "high",
+        "note": "High initial cost; returns spread over 3-5 years"
+      },
+      "water_requirement": "medium_to_high",
+      "water_note": "Drip irrigation essential; seasonal variations acceptable",
+      "experience_level": "intermediate_to_expert",
+      "experience_note": "Needs horticulture knowledge; long-term commitment",
+      "time_requirement": "full_time",
+      "time_note": "Regular pruning, pest management, harvesting (8 hours)",
+      "risk_category": "medium_to_high",
+      "risk_factors": [
+        "Long gestation period (3-5 years for returns)",
+        "Weather-dependent yields",
+        "Disease management costs",
+        "Market access critical",
+        "Capital-intensive"
+      ],
+      "suitable_for": [
+        "Farmers with 1-5 hectares",
+        "Medium experience farmers",
+        "Good water access",
+        "Market-connected farmers"
+      ],
+      "unsuitable_for": [
+        "Beginner farmers",
+        "Low water availability regions",
+        "Small landholdings (<1 hectare)"
+      ],
+      "training_modules": [
+        "Orchard Establishment and Management",
+        "Soil and Nutrient Management",
+        "Pest and Disease Management in Fruit Crops",
+        "Irrigation Management",
+        "Harvesting and Post-Harvest"
+      ],
+      "schemes": [
+        "Horticulture Mission",
+        "Pradhan Mantri Krishi Sinchayee Yojana",
+        "State Fruit Promotion Schemes",
+        "Long-term Agricultural Credit"
+      ],
+      "market_opportunities": [
+        "Wholesale mandis",
+        "Export quality produce",
+        "Food processing units",
+        "Direct consumer sales",
+        "Cooperatives and aggregators"
+      ]
+    },
+    {
+      "id": "beekeeping",
+      "name_en": "Beekeeping (Apiculture)",
+      "name_hi": "मधुमक्खी पालन",
+      "name_marathi": "मधु पालन",
+      "description_en": "Honey production through beehive management",
+      "description_hi": "मधुमक्खी के पालन के माध्यम से शहद का उत्पादन",
+      "description_marathi": "मधु पालन द्वारे मधाचे उत्पादन",
+      "land_requirement": {
+        "min_hectares": 0.0,
+        "max_hectares": 2.0,
+        "category": "minimal",
+        "note": "Can be done on terraces, no land needed"
+      },
+      "budget_requirement": {
+        "min_rupees": 15000,
+        "max_rupees": 60000,
+        "category": "low",
+        "note": "Hive, equipment, queen bee, starter colony"
+      },
+      "water_requirement": "low",
+      "water_note": "Minimal water; forage requirement is key",
+      "experience_level": "beginner_friendly",
+      "experience_note": "Training essential; manageable for beginners",
+      "time_requirement": "part_time",
+      "time_note": "2-3 hours per week for monitoring and harvest",
+      "risk_category": "low",
+      "risk_factors": [
+        "Colony collapse risk",
+        "Pesticide spray impact",
+        "Seasonal forage availability",
+        "Bee stings (safety concern)"
+      ],
+      "suitable_for": [
+        "Landless farmers",
+        "Farmers with low income",
+        "Part-time entrepreneurs",
+        "Farmers in forested areas",
+        "Women farmers"
+      ],
+      "unsuitable_for": [
+        "Urban areas with no green cover",
+        "Heavy pesticide use regions",
+        "Farmers fearful of bees"
+      ],
+      "training_modules": [
+        "Beekeeping Fundamentals",
+        "Hive Management",
+        "Honey Extraction and Processing",
+        "Bee Health and Disease",
+        "Marketing Honey and Byproducts"
+      ],
+      "schemes": [
+        "National Beekeeping Mission",
+        "State Apiculture Support",
+        "NABARD Beekeeping Subsidy",
+        "Organic Beekeeping Programs"
+      ],
+      "market_opportunities": [
+        "Direct consumer sales (high price)",
+        "Online honey sales",
+        "Organic stores and health shops",
+        "Restaurants and cafes",
+        "Export opportunities"
+      ]
+    },
+    {
+      "id": "floriculture",
+      "name_en": "Floriculture (Cut Flowers)",
+      "name_hi": "पुष्पकृषि (कटे फूल)",
+      "name_marathi": "फुलांची शेती (कापलेली फुले)",
+      "description_en": "Growing cut flowers for commercial sale",
+      "description_hi": "वाणिज्यिक बिक्री के लिए कटे फूल उगाना",
+      "description_marathi": "व्यावसायिक विक्रयासाठी कापलेली फुले वाढवणे",
+      "land_requirement": {
+        "min_hectares": 0.05,
+        "max_hectares": 1.0,
+        "category": "small",
+        "note": "0.1-0.5 hectares good for small farm"
+      },
+      "budget_requirement": {
+        "min_rupees": 30000,
+        "max_rupees": 150000,
+        "category": "medium",
+        "note": "Greenhouse/shade nets, irrigation, seeds/saplings"
+      },
+      "water_requirement": "high",
+      "water_note": "Regular drip irrigation essential",
+      "experience_level": "intermediate",
+      "experience_note": "Needs horticulture knowledge and skills",
+      "time_requirement": "full_time",
+      "time_note": "Daily care: 6-8 hours for monitoring and harvest",
+      "risk_category": "medium_to_high",
+      "risk_factors": [
+        "High investment in infrastructure",
+        "Seasonal demand fluctuations",
+        "Pest and disease management needed",
+        "Perishable product (quick sale needed)",
+        "Market linkage critical"
+      ],
+      "suitable_for": [
+        "Farmers with 0.1-0.5 hectares",
+        "Peri-urban locations",
+        "Farmers near flower mandis",
+        "With irrigation access",
+        "Market-oriented approach"
+      ],
+      "unsuitable_for": [
+        "Beginner farmers",
+        "Remote areas without market access",
+        "Low water availability"
+      ],
+      "training_modules": [
+        "Floriculture Techniques",
+        "Flower Variety Selection",
+        "Greenhouse/Shade Net Management",
+        "Post-Harvest and Packaging",
+        "Export Quality Standards"
+      ],
+      "schemes": [
+        "Horticulture Mission",
+        "Pradhan Mantri Krishi Sinchayee Yojana",
+        "Export Promotion Support"
+      ],
+      "market_opportunities": [
+        "Flower mandis in cities",
+        "Direct institutional sales (marriages, events)",
+        "Florist shops",
+        "Online flower delivery services",
+        "Export to other states/countries"
+      ]
+    },
+    {
+      "id": "vermicomposting",
+      "name_en": "Vermicomposting (Worm Composting)",
+      "name_hi": "वर्मीकम्पोस्ट (कृमि खाद)",
+      "name_marathi": "शेणखत (केचूचे खत)",
+      "description_en": "Organic waste conversion to fertilizer using worms",
+      "description_hi": "कीड़ों का उपयोग करके जैव अपशिष्ट को खाद में परिवर्तित करना",
+      "description_marathi": "केच्या वापरून जैव कचरा खतेत रूपांतरित करणे",
+      "land_requirement": {
+        "min_hectares": 0.01,
+        "max_hectares": 0.2,
+        "category": "minimal",
+        "note": "Can be done in sheds, backyards"
+      },
+      "budget_requirement": {
+        "min_rupees": 10000,
+        "max_rupees": 40000,
+        "category": "very_low",
+        "note": "Beds, worms, organic waste collection setup"
+      },
+      "water_requirement": "low",
+      "water_note": "Moisture management; limited water needed",
+      "experience_level": "beginner_friendly",
+      "experience_note": "Very suitable for beginners; simple process",
+      "time_requirement": "part_time",
+      "time_note": "1-2 hours daily for waste addition and monitoring",
+      "risk_category": "low",
+      "risk_factors": [
+        "Odor issues if not managed well",
+        "Worm disease (rare)",
+        "Market saturation for vermicompost"
+      ],
+      "suitable_for": [
+        "Landless farmers",
+        "Beginners",
+        "Part-time entrepreneurs",
+        "Waste management conscious farmers",
+        "Women farmers"
+      ],
+      "unsuitable_for": [
+        "Areas with no access to organic waste",
+        "Very cold climates"
+      ],
+      "training_modules": [
+        "Vermicomposting Fundamentals",
+        "Bed Management",
+        "Worm Species Selection",
+        "Packaging and Marketing",
+        "Quality Standards"
+      ],
+      "schemes": [
+        "State Organic Farming Mission",
+        "NABARD Support",
+        "Waste Management Schemes"
+      ],
+      "market_opportunities": [
+        "Farmers (direct sale)",
+        "Nurseries and horticulture centers",
+        "Organic stores",
+        "Agricultural input dealers",
+        "Online organic product platforms"
+      ]
+    },
+    {
+      "id": "food_processing",
+      "name_en": "Food Processing (Jams, Pickles, etc.)",
+      "name_hi": "खाद्य प्रसंस्करण (जैम, अचार, आदि)",
+      "name_marathi": "खाद्य प्रक्रिया (मुरब्बे, अचार इत्यादी)",
+      "description_en": "Value addition through processing agricultural produce into ready-made products",
+      "description_hi": "कृषि उत्पादों को तैयार उत्पादों में प्रसंस्करण के माध्यम से मूल्य संवर्धन",
+      "description_marathi": "कृषी उत्पादनाचे प्रक्रिया करून तयार उत्पादने बनवणे",
+      "land_requirement": {
+        "min_hectares": 0.0,
+        "max_hectares": 0.1,
+        "category": "minimal",
+        "note": "Processing unit only; no agricultural land needed"
+      },
+      "budget_requirement": {
+        "min_rupees": 40000,
+        "max_rupees": 200000,
+        "category": "medium",
+        "note": "Equipment, licenses (FSSAI), packaging"
+      },
+      "water_requirement": "low_to_medium",
+      "water_note": "Needed for processing and cleaning",
+      "experience_level": "intermediate",
+      "experience_note": "Needs food safety knowledge and basic processing skills",
+      "time_requirement": "full_time",
+      "time_note": "6-8 hours daily for processing and packaging",
+      "risk_category": "medium",
+      "risk_factors": [
+        "Regulatory compliance (FSSAI, health)",
+        "Market competition",
+        "Product quality consistency",
+        "Seasonal raw material availability",
+        "Investment in licensing"
+      ],
+      "suitable_for": [
+        "Farmers with entrepreneurial mindset",
+        "Areas with good produce availability",
+        "Women groups and collectives",
+        "With access to market"
+      ],
+      "unsuitable_for": [
+        "Farmers unwilling to follow regulations",
+        "Areas with no raw material source"
+      ],
+      "training_modules": [
+        "Food Processing Basics",
+        "FSSAI Compliance",
+        "Quality Standards",
+        "Hygiene and Sanitation",
+        "Packaging and Labeling",
+        "Business Management"
+      ],
+      "schemes": [
+        "Pradhan Mantri Kisan Sampada Yojana",
+        "State Food Processing Mission",
+        "Women Entrepreneur Programs",
+        "NABARD Support"
+      ],
+      "market_opportunities": [
+        "Direct consumer sales",
+        "Local retail shops",
+        "Online organic platforms",
+        "Export (with certification)",
+        "Bulk orders from institutions"
+      ]
+    },
+    {
+      "id": "spice_cultivation",
+      "name_en": "Spice Cultivation (Turmeric, Coriander, etc.)",
+      "name_hi": "मसाला की खेती (हल्दी, धनिया, आदि)",
+      "name_marathi": "मसाल्यांची शेती (हळद, धनिया इत्यादी)",
+      "description_en": "Growing high-value spices for commercial sale",
+      "description_hi": "वाणिज्यिक बिक्री के लिए उच्च मूल्य वाले मसाले उगाना",
+      "description_marathi": "व्यावसायिक विक्रयासाठी उच्च किमतीचे मसाले वाढवणे",
+      "land_requirement": {
+        "min_hectares": 0.25,
+        "max_hectares": 2.0,
+        "category": "small",
+        "note": "0.25-1 hectare good for diverse spices"
+      },
+      "budget_requirement": {
+        "min_rupees": 40000,
+        "max_rupees": 150000,
+        "category": "medium",
+        "note": "Seeds, fertilizer, labor, storage"
+      },
+      "water_requirement": "medium",
+      "water_note": "Seasonal rains often sufficient",
+      "experience_level": "intermediate",
+      "experience_note": "Needs spice farming techniques knowledge",
+      "time_requirement": "full_time",
+      "time_note": "Regular care, harvesting, drying (6-8 hours)",
+      "risk_category": "medium",
+      "risk_factors": [
+        "Price volatility in spice markets",
+        "Pest management complexity",
+        "Post-harvest drying challenges",
+        "Long storage times required"
+      ],
+      "suitable_for": [
+        "Farmers with 0.25-2 hectares",
+        "Medium experience level",
+        "Access to processing facilities",
+        "Market awareness"
+      ],
+      "unsuitable_for": [
+        "Beginner farmers",
+        "High water requirement regions"
+      ],
+      "training_modules": [
+        "Spice Crop Selection",
+        "Cultivation Techniques",
+        "Post-Harvest Processing",
+        "Storage and Quality",
+        "Export Standards"
+      ],
+      "schemes": [
+        "Spice Development Scheme",
+        "Export Promotion",
+        "Quality Certification"
+      ],
+      "market_opportunities": [
+        "Spice mandis",
+        "Export markets",
+        "Food processing units",
+        "Organic stores",
+        "Direct consumer sales"
+      ]
+    },
+    {
+      "id": "sericulture",
+      "name_en": "Sericulture (Silk Farming)",
+      "name_hi": "रेशम पालन",
+      "name_marathi": "रेशीम पालन",
+      "description_en": "Silk production through mulberry cultivation and silkworm rearing",
+      "description_hi": "शहतूत की खेती और रेशमकीट पालन के माध्यम से रेशम उत्पादन",
+      "description_marathi": "शहतूत लागवड आणि रेशीम कीटपालन द्वारे रेशीम उत्पादन",
+      "land_requirement": {
+        "min_hectares": 0.5,
+        "max_hectares": 5.0,
+        "category": "small_to_medium",
+        "note": "0.5-2 hectares typical for viable operation"
+      },
+      "budget_requirement": {
+        "min_rupees": 50000,
+        "max_rupees": 200000,
+        "category": "medium",
+        "note": "Mulberry plantation, rearing house, equipment"
+      },
+      "water_requirement": "medium",
+      "water_note": "Needed for mulberry trees",
+      "experience_level": "intermediate_to_expert",
+      "experience_note": "Specialized skill; training mandatory",
+      "time_requirement": "full_time",
+      "time_note": "Daily silkworm tending, mulberry care (8 hours)",
+      "risk_category": "medium",
+      "risk_factors": [
+        "Disease in silkworm colonies",
+        "Mulberry tree pests",
+        "Market price variations",
+        "Specialized knowledge required"
+      ],
+      "suitable_for": [
+        "Farmers with 0.5-2 hectares",
+        "Medium to experienced farmers",
+        "Sericulture cluster regions",
+        "With training access"
+      ],
+      "unsuitable_for": [
+        "Beginner farmers",
+        "Without sericulture training",
+        "Urban areas"
+      ],
+      "training_modules": [
+        "Mulberry Cultivation",
+        "Silkworm Rearing",
+        "Cocoon Production",
+        "Disease Management",
+        "Cocoon Trading"
+      ],
+      "schemes": [
+        "State Sericulture Development",
+        "Subsidized Training",
+        "Cocoon Purchase Guarantee",
+        "Infrastructure Support"
+      ],
+      "market_opportunities": [
+        "Silk board collection centers",
+        "Direct buyer relationships",
+        "Cocoon auctions",
+        "Value-added silk products"
+      ]
+    },
+    {
+      "id": "organic_farming",
+      "name_en": "Organic Farming (Vegetables/Cereals)",
+      "name_hi": "जैव खेती (सब्जियां/अनाज)",
+      "name_marathi": "जैव खेती (भाज्या/धान्य)",
+      "description_en": "Certified organic production without synthetic inputs",
+      "description_hi": "सिंथेटिक इनपुट के बिना प्रमाणित जैव उत्पादन",
+      "description_marathi": "कृत्रिम इनपुट व्यतिरिक्त प्रमाणित जैव उत्पादन",
+      "land_requirement": {
+        "min_hectares": 0.5,
+        "max_hectares": 5.0,
+        "category": "small_to_medium",
+        "note": "Any size; requires certification process"
+      },
+      "budget_requirement": {
+        "min_rupees": 30000,
+        "max_rupees": 100000,
+        "category": "medium",
+        "note": "Compost, certification, label, initial yield loss"
+      },
+      "water_requirement": "medium",
+      "water_note": "Depends on crop chosen",
+      "experience_level": "intermediate",
+      "experience_note": "Needs understanding of organic practices",
+      "time_requirement": "full_time",
+      "time_note": "Same as conventional + organic management time",
+      "risk_category": "medium",
+      "risk_factors": [
+        "Initial yield reduction",
+        "Certification timeline (2-3 years)",
+        "Higher pest management cost",
+        "Market premium needed for viability"
+      ],
+      "suitable_for": [
+        "Environmentally conscious farmers",
+        "Access to organic market premium",
+        "Export-oriented farms",
+        "Niche market farmers"
+      ],
+      "unsuitable_for": [
+        "Low market access regions",
+        "Farmers needing immediate high yields",
+        "Without certification interest"
+      ],
+      "training_modules": [
+        "Organic Farming Principles",
+        "Compost and Manure Management",
+        "Organic Pest Management",
+        "Certification Process",
+        "Organic Market Access"
+      ],
+      "schemes": [
+        "Paramparagat Krishi Vikas Yojana",
+        "Organic Certification Subsidy",
+        "Organic Farming Premium Schemes"
+      ],
+      "market_opportunities": [
+        "Premium markets (25-40% above conventional)",
+        "Export markets",
+        "Organic retail chains",
+        "Direct consumer (urban)",
+        "Certification adds value"
+      ]
+    }
+  ],
+  "usage_note": "This knowledge base should be used by AdvisoryService for deterministic rule-based matching. Never present income estimates as guarantees. Always include appropriate disclaimers."
+}

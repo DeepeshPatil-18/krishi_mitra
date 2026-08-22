@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-08-22",
+  "task": "TASK 4.3 Baseline - Current State Before Modifications",
+  "source": "TASK 4.2 evaluation results",
+  "note": "This baseline records current system performance. No modifications have been made yet.",
+  "dataset_size": 60,
+  "overall_metrics": {
+    "intent_accuracy": 0.6166666666666667,
+    "entity_accuracy": 0.46808510638297873,
+    "language_accuracy": 0.7166666666666667,
+    "test_pass_rate": 0.923
+  },
+  "by_entity_type": {
+    "budget_rupees": {
+      "accuracy": 0.5294117647058824,
+      "total": 17,
+      "correct": 9,
+      "status": "partial - number parsing works for Arabic, struggles with ranges/approximations"
+    },
+    "land_size_hectares": {
+      "accuracy": 0.125,
+      "total": 8,
+      "correct": 1,
+      "status": "critical - unit conversion not working reliably"
+    },
+    "location": {
+      "accuracy": 0.0,
+      "total": 0,
+      "correct": 0,
+      "status": "not in dataset or completely failing"
+    },
+    "enterprise": {
+      "accuracy": 0.9047619047619048,
+      "total": 21,
+      "correct": 19,
+      "status": "excellent - entity normalization works well"
+    },
+    "water_availability": {
+      "accuracy": 0.6666666666666666,
+      "total": 3,
+      "correct": 2,
+      "status": "acceptable - pattern matching effective"
+    },
+    "experience_level": {
+      "accuracy": 0.3333333333333333,
+      "total": 3,
+      "correct": 1,
+      "status": "poor - year-based detection not robust"
+    },
+    "time_availability": {
+      "accuracy": 0.0,
+      "total": 0,
+      "correct": 0,
+      "status": "not in dataset"
+    },
+    "willingness_to_learn": {
+      "accuracy": 0.0,
+      "total": 0,
+      "correct": 0,
+      "status": "not in dataset"
+    },
+    "risk_tolerance": {
+      "accuracy": 1.0,
+      "total": 8,
+      "correct": 8,
+      "status": "perfect - keyword matching works"
+    }
+  },
+  "task_4_comparison": {
+    "task_4_baseline_entity": 0.0,
+    "task_4_1_entity": 0.0,
+    "task_4_2_entity": 0.46808510638297873,
+    "improvement_from_4_1_to_4_2": 0.46808510638297873,
+    "improvement_percentage": "+9x improvement (0% -> 46.8%)"
+  },
+  "key_findings": {
+    "working_well": [
+      "Enterprise extraction (90.5% accuracy)",
+      "Risk tolerance (100% accuracy)",
+      "Water availability (66.7% accuracy)"
+    ],
+    "needs_work": [
+      "Land size conversion (12.5% accuracy) - unit conversion failing",
+      "Experience level (33.3% accuracy) - year-based detection unreliable",
+      "Location (0% accuracy) - either not in dataset or complete failure",
+      "Budget/numeric (52.9% accuracy) - range/approximation patterns missing"
+    ]
+  },
+  "deterministic_normalizer_status": {
+    "created_in_task": "4.2",
+    "test_success_rate": 0.733,
+    "test_cases_total": 86,
+    "test_cases_successful": 63,
+    "entity_normalizer_methods": [
+      "normalize_number() - Marathi/Hindi word numbers",
+      "normalize_land_size() - acre/hectare conversion",
+      "normalize_location() - district mapping",
+      "normalize_time_numeric() - parse duration",
+      "normalize_water_availability() - pattern matching",
+      "normalize_experience_level() - keyword + year-based",
+      "normalize_risk_tolerance() - keyword matching",
+      "normalize_time_availability() - keyword matching"
+    ]
+  }
+}
