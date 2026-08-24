@@ -1,0 +1,691 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-7.4.3, pluggy-1.6.0 -- C:\Users\MSi\AppData\Local\Programs\Python\Python311\python.exe
+cachedir: .pytest_cache
+rootdir: d:\krishimitra_backend
+configfile: pytest.ini
+plugins: anyio-3.7.1, asyncio-0.21.1, cov-4.1.0
+asyncio: mode=Mode.STRICT
+collecting ... collected 395 items
+
+tests/test_advisory_engine.py::test_recommend_enterprises_basic FAILED   [  0%]
+tests/test_advisory_engine.py::test_recommend_enterprises_low_budget FAILED [  0%]
+tests/test_advisory_engine.py::test_recommend_enterprises_large_land FAILED [  0%]
+tests/test_advisory_engine.py::test_recommendations_have_required_fields FAILED [  1%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_high_budget_farmer PASSED [  1%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_low_budget_farmer PASSED [  1%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_limited_land_farmer PASSED [  1%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_limited_water_farmer PASSED [  2%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_beginner_farmer FAILED [  2%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_experienced_farmer FAILED [  2%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_farmer_with_existing_livestock PASSED [  2%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_income_goal_fit PASSED [  3%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_partial_information FAILED [  3%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_all_six_enterprises_evaluated PASSED [  3%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_deterministic_scoring PASSED [  3%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_score_breakdown_provided FAILED [  4%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_positive_negative_factors PASSED [  4%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_training_recommendations_connected PASSED [  4%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_scheme_recommendations_connected PASSED [  4%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_market_opportunities_connected PASSED [  5%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_missing_information_identified FAILED [  5%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_information_completeness_score PASSED [  5%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_multilingual_training_request PASSED [  5%]
+tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_ranking_explanation_provided PASSED [  6%]
+tests/test_advisory_engine_v2.py::TestScoringFactors::test_budget_fit_perfect_match PASSED [  6%]
+tests/test_advisory_engine_v2.py::TestScoringFactors::test_budget_fit_below_minimum PASSED [  6%]
+tests/test_advisory_engine_v2.py::TestScoringFactors::test_land_fit_optimal PASSED [  6%]
+tests/test_advisory_engine_v2.py::TestScoringFactors::test_experience_fit PASSED [  7%]
+tests/test_advisory_engine_v2.py::TestScoringFactors::test_water_fit_exact_match PASSED [  7%]
+tests/test_advisory_task7.py::TestBasicRecommendations::test_low_budget_beginner PASSED [  7%]
+tests/test_advisory_task7.py::TestBasicRecommendations::test_medium_budget_intermediate PASSED [  7%]
+tests/test_advisory_task7.py::TestBasicRecommendations::test_high_budget_experienced PASSED [  8%]
+tests/test_advisory_task7.py::TestBasicRecommendations::test_with_water_constraint PASSED [  8%]
+tests/test_advisory_task7.py::TestBasicRecommendations::test_with_multiple_constraints PASSED [  8%]
+tests/test_advisory_task7.py::TestMissingInformation::test_minimal_data_only_budget PASSED [  8%]
+tests/test_advisory_task7.py::TestMissingInformation::test_minimal_data_budget_and_land PASSED [  9%]
+tests/test_advisory_task7.py::TestRecommendationStructure::test_recommendation_has_fields PASSED [  9%]
+tests/test_advisory_task7.py::TestRecommendationStructure::test_ranking_is_consistent PASSED [  9%]
+tests/test_advisory_task7.py::TestNoFabrication::test_no_guaranteed_income PASSED [  9%]
+tests/test_advisory_task7.py::TestNoFabrication::test_investment_has_ranges PASSED [ 10%]
+tests/test_advisory_task7.py::TestNoFabrication::test_risks_included PASSED [ 10%]
+tests/test_advisory_task7.py::TestEntityExtraction::test_extract_budget PASSED [ 10%]
+tests/test_advisory_task7.py::TestEntityExtraction::test_extract_land PASSED [ 10%]
+tests/test_advisory_task7.py::TestEntityExtraction::test_extract_experience PASSED [ 11%]
+tests/test_advisory_task7.py::TestKnowledgeBase::test_knowledge_base_exists PASSED [ 11%]
+tests/test_advisory_task7.py::TestKnowledgeBase::test_knowledge_base_is_valid PASSED [ 11%]
+tests/test_advisory_task7.py::TestKnowledgeBase::test_knowledge_base_has_required_fields PASSED [ 11%]
+tests/test_advisory_task7.py::TestMultilingualSupport::test_english_query PASSED [ 12%]
+tests/test_advisory_task7.py::TestMultilingualSupport::test_hindi_query PASSED [ 12%]
+tests/test_advisory_task7.py::TestMultilingualSupport::test_marathi_query PASSED [ 12%]
+tests/test_advisory_task7.py::TestConflictingConstraints::test_very_high_income_low_budget PASSED [ 12%]
+tests/test_advisory_task7.py::TestConflictingConstraints::test_large_land_beginner_high_risk PASSED [ 13%]
+tests/test_advisory_task7.py::TestRealWorldQueries::test_small_farmer_low_budget PASSED [ 13%]
+tests/test_advisory_task7.py::TestRealWorldQueries::test_established_farmer_good_resources PASSED [ 13%]
+tests/test_advisory_task7.py::TestRealWorldQueries::test_part_time_farmer_low_risk PASSED [ 13%]
+tests/test_api_integration.py::TestHealthEndpoints::test_root_endpoint PASSED [ 14%]
+tests/test_api_integration.py::TestHealthEndpoints::test_health_endpoint PASSED [ 14%]
+tests/test_api_integration.py::TestHealthEndpoints::test_docs_endpoint PASSED [ 14%]
+tests/test_api_integration.py::TestHealthEndpoints::test_openapi_schema PASSED [ 14%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_market_search_english FAILED [ 15%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_scheme_search_hindi FAILED [ 15%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_training_request_marathi FAILED [ 15%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_expert_request FAILED [ 15%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_livelihood_recommendation FAILED [ 16%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_empty_message FAILED [ 16%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_invalid_language FAILED [ 16%]
+tests/test_api_integration.py::TestIntentDetection::test_intent_auto_language_detection FAILED [ 16%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_basic_recommendation FAILED [ 17%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_low_budget FAILED [ 17%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_large_land FAILED [ 17%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_invalid_budget FAILED [ 17%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_invalid_land FAILED [ 18%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_enterprise_details PASSED [ 18%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_enterprise_details_not_found PASSED [ 18%]
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_schemes_endpoint PASSED [ 18%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_livelihood_recommendation PASSED [ 19%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_marathi_livelihood PASSED [ 19%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_scheme_search PASSED [ 19%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_training_request PASSED [ 20%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_market_search PASSED [ 20%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_expert_request PASSED [ 20%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_empty_message FAILED [ 20%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_auto_language_detection PASSED [ 21%]
+tests/test_api_integration.py::TestAssistantChat::test_assistant_response_format PASSED [ 21%]
+tests/test_api_integration.py::TestExistingUnitTests::test_advisory_engine_integration FAILED [ 21%]
+tests/test_api_integration.py::TestExistingUnitTests::test_intent_router_integration PASSED [ 21%]
+tests/test_api_integration.py::TestDataProviders::test_enterprise_provider PASSED [ 22%]
+tests/test_api_integration.py::TestDataProviders::test_scheme_provider PASSED [ 22%]
+tests/test_api_integration.py::TestDataProviders::test_training_provider PASSED [ 22%]
+tests/test_api_integration.py::TestDataProviders::test_market_provider PASSED [ 22%]
+tests/test_api_integration.py::TestDataProviders::test_expert_provider PASSED [ 23%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_50k_english PASSED [ 23%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_100k_english PASSED [ 23%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_50k_marathi PASSED [ 23%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_50k_mixed PASSED [ 24%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_budget_range_k PASSED [ 24%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_budget_range_full PASSED [ 24%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_budget_keyword_then_number_marathi PASSED [ 24%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_budget_keyword_then_number_marathi2 PASSED [ 25%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_number_then_budget_keyword_marathi PASSED [ 25%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_hindi_bajat_keyword PASSED [ 25%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_hajar_pattern PASSED [ 25%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_lakh_pattern PASSED [ 26%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_rupees_direct PASSED [ 26%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_no_budget PASSED [ 26%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_budget_not_from_land PASSED [ 26%]
+tests/test_entity_extractor_task45.py::TestBudgetFixes::test_budget_not_from_experience PASSED [ 27%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_acres_plural_english PASSED [ 27%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_acre_singular_english PASSED [ 27%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_hindi_ekaad_nukta PASSED [ 27%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_hindi_decimal_ekaad PASSED [ 28%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_marathi_ekar PASSED [ 28%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_fraction_aadha_marathi PASSED [ 28%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_fraction_dedh_hindi PASSED [ 28%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_fraction_dhai PASSED [ 29%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_fraction_half_english PASSED [ 29%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_hectares PASSED [ 29%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_ha_abbr PASSED [ 29%]
+tests/test_entity_extractor_task45.py::TestLandFixes::test_no_land PASSED [ 30%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_nashik_locative_marathi PASSED [ 30%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_pune_locative_marathi PASSED [ 30%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_maharashtra_locative_marathi PASSED [ 30%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_nashik_hindi_locative PASSED [ 31%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_pune_english PASSED [ 31%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_kerala_hindi PASSED [ 31%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_kerala_english PASSED [ 31%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_maharashtra_base PASSED [ 32%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_no_location PASSED [ 32%]
+tests/test_entity_extractor_task45.py::TestLocationFixes::test_false_positive_guard PASSED [ 32%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_shuruvatica_marathi PASSED [ 32%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_naveen_alone_marathi PASSED [ 33%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_naveen_sheti_marathi PASSED [ 33%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_1_year_beginner PASSED [ 33%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_2_years_intermediate PASSED [ 33%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_5_years_intermediate PASSED [ 34%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_9_years_intermediate PASSED [ 34%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_10_years_intermediate PASSED [ 34%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_15_years_expert PASSED [ 34%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_25_years_expert PASSED [ 35%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_expert_request_not_experience PASSED [ 35%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_beginner_english PASSED [ 35%]
+tests/test_entity_extractor_task45.py::TestExperienceFixes::test_no_experience PASSED [ 35%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_purnakaal_marathi PASSED [ 36%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_full_time_hyphen PASSED [ 36%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_full_time_space PASSED [ 36%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_part_time_marathi PASSED [ 36%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_part_time_english PASSED [ 37%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_limited_explicit PASSED [ 37%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_no_time_from_budget_low PASSED [ 37%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_no_time_from_water_low PASSED [ 37%]
+tests/test_entity_extractor_task45.py::TestTimeFixes::test_no_time_from_question PASSED [ 38%]
+tests/test_entity_extractor_task45.py::TestEnterpriseFixes::test_vermicompost_hindi_alt PASSED [ 38%]
+tests/test_entity_extractor_task45.py::TestEnterpriseFixes::test_shenakhat_marathi PASSED [ 38%]
+tests/test_entity_extractor_task45.py::TestEnterpriseFixes::test_vermicompost_english PASSED [ 38%]
+tests/test_entity_extractor_task45.py::TestEnterpriseFixes::test_mushroom_still_works PASSED [ 39%]
+tests/test_entity_extractor_task45.py::TestEnterpriseFixes::test_goat_still_works PASSED [ 39%]
+tests/test_entity_extractor_task45.py::TestWaterFixes::test_low_water_hindi PASSED [ 39%]
+tests/test_entity_extractor_task45.py::TestWaterFixes::test_very_limited_water_english PASSED [ 40%]
+tests/test_entity_extractor_task45.py::TestWaterFixes::test_high_water_explicit PASSED [ 40%]
+tests/test_entity_extractor_task45.py::TestWaterFixes::test_low_explicit_marathi PASSED [ 40%]
+tests/test_entity_extractor_task45.py::TestWaterFixes::test_no_water_from_risk PASSED [ 40%]
+tests/test_entity_extractor_task45.py::TestWaterFixes::test_no_water_from_budget_low PASSED [ 41%]
+tests/test_entity_extractor_task45.py::TestWaterFixes::test_no_water_no_mention PASSED [ 41%]
+tests/test_entity_extractor_task45.py::TestRiskFixes::test_high_risk_explicit PASSED [ 41%]
+tests/test_entity_extractor_task45.py::TestRiskFixes::test_high_risk_hindi PASSED [ 41%]
+tests/test_entity_extractor_task45.py::TestRiskFixes::test_no_risk_from_high_water PASSED [ 42%]
+tests/test_entity_extractor_task45.py::TestRiskFixes::test_no_risk_standalone_high PASSED [ 42%]
+tests/test_entity_extractor_task45.py::TestRegressions::test_eval_002_budget_land PASSED [ 42%]
+tests/test_entity_extractor_task45.py::TestRegressions::test_eval_009_budget_enterprise PASSED [ 42%]
+tests/test_entity_extractor_task45.py::TestRegressions::test_marathi_water_low_paani_kami PASSED [ 43%]
+tests/test_entity_extractor_task45.py::TestRegressions::test_marathi_water_high_bharpoor PASSED [ 43%]
+tests/test_entity_extractor_task45.py::TestRegressions::test_beginner_english_still_works PASSED [ 43%]
+tests/test_entity_extractor_task45.py::TestRegressions::test_multi_entity_mixed PASSED [ 43%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_english_budget PASSED [ 44%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_hindi_budget PASSED [ 44%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_marathi_budget PASSED [ 44%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_english_land PASSED [ 44%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_hindi_land PASSED [ 45%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_marathi_land PASSED [ 45%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_mixed_language_query PASSED [ 45%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_multiple_entities_in_query PASSED [ 45%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_ambiguous_entity PASSED [ 46%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_no_entities PASSED [ 46%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_farmer_context_receives_normalized_values PASSED [ 46%]
+tests/test_entity_pipeline_integration.py::TestEntityPipelineIntegration::test_orchestrator_response_still_works PASSED [ 46%]
+tests/test_entity_pipeline_integration.py::TestTask43Improvements::test_land_fraction_marathi PASSED [ 47%]
+tests/test_entity_pipeline_integration.py::TestTask43Improvements::test_land_fraction_hindi PASSED [ 47%]
+tests/test_entity_pipeline_integration.py::TestTask43Improvements::test_budget_range PASSED [ 47%]
+tests/test_entity_pipeline_integration.py::TestTask43Improvements::test_budget_approximation_hindi PASSED [ 47%]
+tests/test_entity_pipeline_integration.py::TestTask43Improvements::test_budget_approximation_english PASSED [ 48%]
+tests/test_entity_pipeline_integration.py::TestTask43Improvements::test_experience_years_threshold PASSED [ 48%]
+tests/test_intent_router.py::test_detect_market_search_intent PASSED     [ 48%]
+tests/test_intent_router.py::test_detect_scheme_search_intent PASSED     [ 48%]
+tests/test_intent_router.py::test_detect_training_request_intent FAILED  [ 49%]
+tests/test_intent_router.py::test_detect_expert_request_intent PASSED    [ 49%]
+tests/test_intent_router.py::test_detect_livelihood_recommendation_intent PASSED [ 49%]
+tests/test_intent_router.py::test_english_intent_detection PASSED        [ 49%]
+tests/test_intent_router.py::test_extract_budget_parameter PASSED        [ 50%]
+tests/test_intent_router.py::test_default_to_general_question PASSED     [ 50%]
+tests/test_market_service_task6.py::TestMarketDataLoading::test_cached_data_loads PASSED [ 50%]
+tests/test_market_service_task6.py::TestMarketDataLoading::test_cached_data_has_required_fields PASSED [ 50%]
+tests/test_market_service_task6.py::TestMarketDataLoading::test_no_fabricated_prices_in_cache PASSED [ 51%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_english_onion PASSED [ 51%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_hindi_onion PASSED [ 51%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_marathi_onion PASSED [ 51%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_tomato_english PASSED [ 52%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_tomato_hindi PASSED [ 52%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_potato_english PASSED [ 52%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_wheat_english PASSED [ 52%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_soybean_english PASSED [ 53%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_unknown_commodity PASSED [ 53%]
+tests/test_market_service_task6.py::TestCommodityNormalization::test_case_insensitive PASSED [ 53%]
+tests/test_market_service_task6.py::TestLocationNormalization::test_nashik_english PASSED [ 53%]
+tests/test_market_service_task6.py::TestLocationNormalization::test_nashik_marathi PASSED [ 54%]
+tests/test_market_service_task6.py::TestLocationNormalization::test_maharashtra_english PASSED [ 54%]
+tests/test_market_service_task6.py::TestLocationNormalization::test_maharashtra_marathi PASSED [ 54%]
+tests/test_market_service_task6.py::TestLocationNormalization::test_pune_english PASSED [ 54%]
+tests/test_market_service_task6.py::TestLocationNormalization::test_mumbai_english PASSED [ 55%]
+tests/test_market_service_task6.py::TestCachedSearch::test_search_onion_nashik PASSED [ 55%]
+tests/test_market_service_task6.py::TestCachedSearch::test_search_tomato_pune PASSED [ 55%]
+tests/test_market_service_task6.py::TestCachedSearch::test_search_respects_limit PASSED [ 55%]
+tests/test_market_service_task6.py::TestCachedSearch::test_search_with_marathi_commodity FAILED [ 56%]
+tests/test_market_service_task6.py::TestCachedSearch::test_search_with_hindi_commodity FAILED [ 56%]
+tests/test_market_service_task6.py::TestCachedSearch::test_search_empty_commodity PASSED [ 56%]
+tests/test_market_service_task6.py::TestCachedSearch::test_search_unknown_commodity PASSED [ 56%]
+tests/test_market_service_task6.py::TestResultFormatting::test_format_english PASSED [ 57%]
+tests/test_market_service_task6.py::TestResultFormatting::test_format_hindi PASSED [ 57%]
+tests/test_market_service_task6.py::TestResultFormatting::test_format_marathi PASSED [ 57%]
+tests/test_market_service_task6.py::TestResultFormatting::test_format_empty_results_english PASSED [ 57%]
+tests/test_market_service_task6.py::TestResultFormatting::test_format_empty_results_hindi PASSED [ 58%]
+tests/test_market_service_task6.py::TestResultFormatting::test_format_empty_results_marathi PASSED [ 58%]
+tests/test_market_service_task6.py::TestResultFormatting::test_formatted_output_has_source_label PASSED [ 58%]
+tests/test_market_service_task6.py::TestResultFormatting::test_formatted_output_has_prices PASSED [ 58%]
+tests/test_market_service_task6.py::TestResultFormatting::test_formatted_output_includes_market_info PASSED [ 59%]
+tests/test_market_service_task6.py::TestDataSourceLabelling::test_cached_results_labeled_cached PASSED [ 59%]
+tests/test_market_service_task6.py::TestDataSourceLabelling::test_cached_results_not_called_live PASSED [ 59%]
+tests/test_market_service_task6.py::TestDataSourceLabelling::test_source_name_provided PASSED [ 60%]
+tests/test_market_service_task6.py::TestRealWorldQueries::test_query_onion_price_nashik PASSED [ 60%]
+tests/test_market_service_task6.py::TestRealWorldQueries::test_query_marathi_\u0915\u093e\u0902\u0926\u093e_\u0928\u093e\u0936\u093f\u0915 FAILED [ 60%]
+tests/test_market_service_task6.py::TestRealWorldQueries::test_query_hindi_\u092a\u094d\u092f\u093e\u091c_\u0928\u093e\u0938\u093f\u0915 FAILED [ 60%]
+tests/test_market_service_task6.py::TestRealWorldQueries::test_query_tomato_price_today PASSED [ 61%]
+tests/test_market_service_task6.py::TestRealWorldQueries::test_query_soybean_nashik PASSED [ 61%]
+tests/test_market_service_task6.py::TestRealWorldQueries::test_query_multiple_markets_maharashtra PASSED [ 61%]
+tests/test_market_service_task6.py::TestNoFabrication::test_all_prices_from_cache PASSED [ 61%]
+tests/test_market_service_task6.py::TestNoFabrication::test_prices_are_numbers PASSED [ 62%]
+tests/test_market_service_task6.py::TestNoFabrication::test_min_max_modal_relationships PASSED [ 62%]
+tests/test_market_service_task6.py::TestDeterministicResults::test_same_query_same_results PASSED [ 62%]
+tests/test_market_service_task6.py::TestDeterministicResults::test_results_consistent_across_calls PASSED [ 62%]
+tests/test_orchestrator_simple.py::TestEntityExtraction::test_extract_budget PASSED [ 63%]
+tests/test_orchestrator_simple.py::TestEntityExtraction::test_extract_budget_thousand PASSED [ 63%]
+tests/test_orchestrator_simple.py::TestEntityExtraction::test_extract_location PASSED [ 63%]
+tests/test_orchestrator_simple.py::TestEntityExtraction::test_extract_land PASSED [ 63%]
+tests/test_orchestrator_simple.py::TestEntityExtraction::test_extract_enterprise PASSED [ 64%]
+tests/test_orchestrator_simple.py::TestEntityExtraction::test_extract_multiple PASSED [ 64%]
+tests/test_orchestrator_simple.py::TestOrchestratorDetection::test_detect_english PASSED [ 64%]
+tests/test_orchestrator_simple.py::TestOrchestratorDetection::test_detect_intent_livelihood PASSED [ 64%]
+tests/test_orchestrator_simple.py::TestOrchestratorDetection::test_detect_intent_scheme PASSED [ 65%]
+tests/test_orchestrator_simple.py::TestOrchestratorDetection::test_detect_intent_training PASSED [ 65%]
+tests/test_orchestrator_simple.py::TestOrchestratorDetection::test_detect_intent_market PASSED [ 65%]
+tests/test_orchestrator_simple.py::TestCapabilityExecution::test_advisory_executable FAILED [ 65%]
+tests/test_orchestrator_simple.py::TestCapabilityExecution::test_advisory_returns_recommendations PASSED [ 66%]
+tests/test_orchestrator_simple.py::TestCapabilityExecution::test_scheme_search_executable PASSED [ 66%]
+tests/test_orchestrator_simple.py::TestCapabilityExecution::test_expert_not_implemented PASSED [ 66%]
+tests/test_orchestrator_simple.py::TestCapabilityExecution::test_community_not_implemented PASSED [ 66%]
+tests/test_orchestrator_simple.py::TestMissingInformation::test_complete_info FAILED [ 67%]
+tests/test_orchestrator_simple.py::TestMissingInformation::test_minimal_info PASSED [ 67%]
+tests/test_orchestrator_simple.py::TestMissingInformation::test_information_completeness_ranges PASSED [ 67%]
+tests/test_orchestrator_simple.py::TestContextBuilding::test_context_from_extraction PASSED [ 67%]
+tests/test_orchestrator_simple.py::TestContextBuilding::test_provided_context_merged PASSED [ 68%]
+tests/test_orchestrator_simple.py::TestDeterminism::test_same_input_same_intent PASSED [ 68%]
+tests/test_orchestrator_simple.py::TestDeterminism::test_same_input_same_completeness PASSED [ 68%]
+tests/test_orchestrator_simple.py::TestMultilingual::test_marathi_detected PASSED [ 68%]
+tests/test_orchestrator_simple.py::TestMultilingual::test_english_detected PASSED [ 69%]
+tests/test_orchestrator_simple.py::TestMultilingual::test_language_override PASSED [ 69%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_budget_english PASSED [ 69%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_budget_marathi PASSED [ 69%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_budget_with_thousand_keyword PASSED [ 70%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_location_maharashtra PASSED [ 70%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_location_marathi PASSED [ 70%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_land_hectares PASSED [ 70%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_land_small PASSED [ 71%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_all_entities FAILED [ 71%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_enterprise_mushroom PASSED [ 71%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_enterprise_marathi PASSED [ 71%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_risk_tolerance PASSED [ 72%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_time_availability PASSED [ 72%]
+tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_no_entities PASSED [ 72%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_english_livelihood FAILED [ 72%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_marathi_livelihood PASSED [ 73%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_hindi_livelihood PASSED [ 73%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_scheme_search PASSED [ 73%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_training_request PASSED [ 73%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_market_search PASSED [ 74%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_with_provided_context PASSED [ 74%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_missing_information_advisory PASSED [ 74%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_complete_information_advisory PASSED [ 74%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_auto_language_detection PASSED [ 75%]
+tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_language_override PASSED [ 75%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_advisory_capability PASSED [ 75%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_advisory_with_no_context PASSED [ 75%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_scheme_search_capability FAILED [ 76%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_training_capability PASSED [ 76%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_market_search_capability FAILED [ 76%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_expert_request_capability PASSED [ 76%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_community_capability PASSED [ 77%]
+tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_general_qa_capability PASSED [ 77%]
+tests/test_orchestrator_task3.py::TestResponseGrounding::test_ground_advisory_response FAILED [ 77%]
+tests/test_orchestrator_task3.py::TestResponseGrounding::test_fabrication_risk_detection PASSED [ 77%]
+tests/test_orchestrator_task3.py::TestResponseGrounding::test_no_fabrication_risk FAILED [ 78%]
+tests/test_orchestrator_task3.py::TestResponseGrounding::test_grounding_unavailable_capability PASSED [ 78%]
+tests/test_orchestrator_task3.py::TestKrishiMitraPrompts::test_get_base_system_prompt PASSED [ 78%]
+tests/test_orchestrator_task3.py::TestKrishiMitraPrompts::test_get_english_prompt PASSED [ 78%]
+tests/test_orchestrator_task3.py::TestKrishiMitraPrompts::test_get_marathi_prompt PASSED [ 79%]
+tests/test_orchestrator_task3.py::TestKrishiMitraPrompts::test_get_hindi_prompt PASSED [ 79%]
+tests/test_orchestrator_task3.py::TestKrishiMitraPrompts::test_safety_constraints PASSED [ 79%]
+tests/test_orchestrator_task3.py::TestMultilingualResponses::test_english_response_generation PASSED [ 80%]
+tests/test_orchestrator_task3.py::TestMultilingualResponses::test_marathi_response_generation PASSED [ 80%]
+tests/test_orchestrator_task3.py::TestMultilingualResponses::test_hindi_response_generation PASSED [ 80%]
+tests/test_orchestrator_task3.py::TestMultilingualResponses::test_language_auto_detection_marathi PASSED [ 80%]
+tests/test_orchestrator_task3.py::TestMultilingualResponses::test_language_auto_detection_english PASSED [ 81%]
+tests/test_orchestrator_task3.py::TestIntegration::test_full_orchestration_flow FAILED [ 81%]
+tests/test_orchestrator_task3.py::TestIntegration::test_no_hallucination_fabrication PASSED [ 81%]
+tests/test_orchestrator_task3.py::TestIntegration::test_missing_information_identification PASSED [ 81%]
+tests/test_orchestrator_task3.py::TestIntegration::test_deterministic_scoring PASSED [ 82%]
+tests/test_scheme_e2e_task5.py::TestEndToEndSchemeSearch::test_e2e_marathi_government_schemes PASSED [ 82%]
+tests/test_scheme_e2e_task5.py::TestEndToEndSchemeSearch::test_e2e_marathi_goat_farming_scheme PASSED [ 82%]
+tests/test_scheme_e2e_task5.py::TestEndToEndSchemeSearch::test_e2e_marathi_irrigation_nashik PASSED [ 82%]
+tests/test_scheme_e2e_task5.py::TestEndToEndSchemeSearch::test_e2e_hindi_budget_scheme PASSED [ 83%]
+tests/test_scheme_e2e_task5.py::TestEndToEndSchemeSearch::test_e2e_english_farm_machinery PASSED [ 83%]
+tests/test_scheme_e2e_task5.py::TestEndToEndSchemeSearch::test_e2e_english_mushroom_farming PASSED [ 83%]
+tests/test_scheme_e2e_task5.py::TestEndToEndSchemeSearch::test_e2e_marathi_solar_pump PASSED [ 83%]
+tests/test_scheme_e2e_task5.py::TestCapabilityExecution::test_capability_returns_schemes PASSED [ 84%]
+tests/test_scheme_e2e_task5.py::TestCapabilityExecution::test_marathi_response_formatting PASSED [ 84%]
+tests/test_scheme_e2e_task5.py::TestCapabilityExecution::test_hindi_response_formatting PASSED [ 84%]
+tests/test_scheme_e2e_task5.py::TestCapabilityExecution::test_english_response_formatting PASSED [ 84%]
+tests/test_scheme_e2e_task5.py::TestMultilingualE2E::test_mixed_marathi_english PASSED [ 85%]
+tests/test_scheme_e2e_task5.py::TestMultilingualE2E::test_mixed_hindi_english PASSED [ 85%]
+tests/test_scheme_e2e_task5.py::TestMultilingualE2E::test_hindi_keywords_in_marathi_query PASSED [ 85%]
+tests/test_scheme_e2e_task5.py::TestEntityExtractionE2E::test_budget_extraction_e2e PASSED [ 85%]
+tests/test_scheme_e2e_task5.py::TestEntityExtractionE2E::test_land_extraction_e2e PASSED [ 86%]
+tests/test_scheme_e2e_task5.py::TestEntityExtractionE2E::test_enterprise_extraction_e2e PASSED [ 86%]
+tests/test_scheme_e2e_task5.py::TestEntityExtractionE2E::test_location_extraction_e2e PASSED [ 86%]
+tests/test_scheme_e2e_task5.py::TestIntentConfidence::test_scheme_intent_confidence_high PASSED [ 86%]
+tests/test_scheme_e2e_task5.py::TestIntentConfidence::test_clear_english_scheme_query PASSED [ 87%]
+tests/test_scheme_e2e_task5.py::TestRealWorldScenarios::test_beginner_nashik_farmer_goat PASSED [ 87%]
+tests/test_scheme_e2e_task5.py::TestRealWorldScenarios::test_irrigated_farming_maharashtra PASSED [ 87%]
+tests/test_scheme_e2e_task5.py::TestRealWorldScenarios::test_low_budget_hindi_farmer PASSED [ 87%]
+tests/test_scheme_e2e_task5.py::TestRealWorldScenarios::test_young_farmer_english PASSED [ 88%]
+tests/test_scheme_service_task5.py::TestDatasetLoading::test_dataset_loads PASSED [ 88%]
+tests/test_scheme_service_task5.py::TestDatasetLoading::test_dataset_has_45_schemes PASSED [ 88%]
+tests/test_scheme_service_task5.py::TestDatasetLoading::test_scheme_count_method PASSED [ 88%]
+tests/test_scheme_service_task5.py::TestDatasetLoading::test_all_schemes_have_required_fields PASSED [ 89%]
+tests/test_scheme_service_task5.py::TestDatasetLoading::test_scheme_scopes PASSED [ 89%]
+tests/test_scheme_service_task5.py::TestDatasetLoading::test_central_and_maharashtra_breakdown PASSED [ 89%]
+tests/test_scheme_service_task5.py::TestDatasetLoading::test_categories_exist PASSED [ 89%]
+tests/test_scheme_service_task5.py::TestBasicSearch::test_search_returns_list PASSED [ 90%]
+tests/test_scheme_service_task5.py::TestBasicSearch::test_search_limit PASSED [ 90%]
+tests/test_scheme_service_task5.py::TestBasicSearch::test_empty_query_returns_schemes PASSED [ 90%]
+tests/test_scheme_service_task5.py::TestBasicSearch::test_nonexistent_query_returns_few_or_none PASSED [ 90%]
+tests/test_scheme_service_task5.py::TestBasicSearch::test_results_have_relevance_scores PASSED [ 91%]
+tests/test_scheme_service_task5.py::TestBasicSearch::test_results_have_match_signals PASSED [ 91%]
+tests/test_scheme_service_task5.py::TestKeywordMatching::test_irrigation_keyword_match PASSED [ 91%]
+tests/test_scheme_service_task5.py::TestKeywordMatching::test_livestock_keyword_match PASSED [ 91%]
+tests/test_scheme_service_task5.py::TestKeywordMatching::test_goat_keyword_match PASSED [ 92%]
+tests/test_scheme_service_task5.py::TestKeywordMatching::test_mushroom_keyword_match PASSED [ 92%]
+tests/test_scheme_service_task5.py::TestKeywordMatching::test_hindi_keyword_match PASSED [ 92%]
+tests/test_scheme_service_task5.py::TestKeywordMatching::test_marathi_keyword_match PASSED [ 92%]
+tests/test_scheme_service_task5.py::TestEntityMatching::test_enterprise_matching PASSED [ 93%]
+tests/test_scheme_service_task5.py::TestEntityMatching::test_water_availability_irrigation_match PASSED [ 93%]
+tests/test_scheme_service_task5.py::TestEntityMatching::test_beginner_training_match PASSED [ 93%]
+tests/test_scheme_service_task5.py::TestEntityMatching::test_livestock_enterprise_match PASSED [ 93%]
+tests/test_scheme_service_task5.py::TestLocationPreference::test_maharashtra_location_preference PASSED [ 94%]
+tests/test_scheme_service_task5.py::TestLocationPreference::test_nashik_location_preference PASSED [ 94%]
+tests/test_scheme_service_task5.py::TestLocationPreference::test_central_schemes_always_available PASSED [ 94%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_hindi_query PASSED [ 94%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_marathi_query PASSED [ 95%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_mixed_language_query PASSED [ 95%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_format_english PASSED [ 95%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_format_hindi PASSED [ 95%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_format_marathi PASSED [ 96%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_format_empty_results_english PASSED [ 96%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_format_empty_results_hindi PASSED [ 96%]
+tests/test_scheme_service_task5.py::TestMultilingualSupport::test_format_empty_results_marathi PASSED [ 96%]
+tests/test_scheme_service_task5.py::TestNoFalseInformation::test_results_never_invent_subsidy PASSED [ 97%]
+tests/test_scheme_service_task5.py::TestNoFalseInformation::test_results_never_invent_deadline PASSED [ 97%]
+tests/test_scheme_service_task5.py::TestNoFalseInformation::test_all_results_have_source_url PASSED [ 97%]
+tests/test_scheme_service_task5.py::TestNoFalseInformation::test_formatted_results_include_source PASSED [ 97%]
+tests/test_scheme_service_task5.py::TestRankingQuality::test_exact_keyword_ranked_high PASSED [ 98%]
+tests/test_scheme_service_task5.py::TestRankingQuality::test_irrigation_query_returns_irrigation_schemes PASSED [ 98%]
+tests/test_scheme_service_task5.py::TestRankingQuality::test_livestock_query_returns_livestock PASSED [ 98%]
+tests/test_scheme_service_task5.py::TestRankingQuality::test_results_are_sorted_by_relevance PASSED [ 98%]
+tests/test_scheme_service_task5.py::TestSpecificScenarios::test_scenario_farmer_with_2_acres_goat_farming PASSED [ 99%]
+tests/test_scheme_service_task5.py::TestSpecificScenarios::test_scenario_irrigation_query PASSED [ 99%]
+tests/test_scheme_service_task5.py::TestSpecificScenarios::test_scenario_beginner_farmer PASSED [ 99%]
+tests/test_scheme_service_task5.py::TestSpecificScenarios::test_scenario_budget_constrained PASSED [100%]
+
+================================== FAILURES ===================================
+______________________ test_recommend_enterprises_basic _______________________
+tests\test_advisory_engine.py:9: in test_recommend_enterprises_basic
+    recommendations = AdvisoryEngine.recommend_enterprises(
+app\services\advisory_engine.py:134: in recommend_enterprises
+    rec = RecommendedEnterprise(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for RecommendedEnterprise
+E   estimated_investment_min
+E     Field required [type=missing, input_value={'enterprise_code': 'apic...or government schemes']}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.5/v/missing
+____________________ test_recommend_enterprises_low_budget ____________________
+tests\test_advisory_engine.py:25: in test_recommend_enterprises_low_budget
+    recommendations = AdvisoryEngine.recommend_enterprises(
+app\services\advisory_engine.py:134: in recommend_enterprises
+    rec = RecommendedEnterprise(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for RecommendedEnterprise
+E   estimated_investment_min
+E     Field required [type=missing, input_value={'enterprise_code': 'apic...or government schemes']}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.5/v/missing
+____________________ test_recommend_enterprises_large_land ____________________
+tests\test_advisory_engine.py:41: in test_recommend_enterprises_large_land
+    recommendations = AdvisoryEngine.recommend_enterprises(
+app\services\advisory_engine.py:134: in recommend_enterprises
+    rec = RecommendedEnterprise(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for RecommendedEnterprise
+E   estimated_investment_min
+E     Field required [type=missing, input_value={'enterprise_code': 'apic...or government schemes']}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.5/v/missing
+__________________ test_recommendations_have_required_fields __________________
+tests\test_advisory_engine.py:53: in test_recommendations_have_required_fields
+    recommendations = AdvisoryEngine.recommend_enterprises(
+app\services\advisory_engine.py:134: in recommend_enterprises
+    rec = RecommendedEnterprise(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for RecommendedEnterprise
+E   estimated_investment_min
+E     Field required [type=missing, input_value={'enterprise_code': 'apic...or government schemes']}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.5/v/missing
+__________________ TestAdvisoryEngineV2.test_beginner_farmer __________________
+tests\test_advisory_engine_v2.py:88: in test_beginner_farmer
+    assert all(rec.suitability_score > 30 for rec in recommendations)
+E   assert False
+E    +  where False = all(<generator object TestAdvisoryEngineV2.test_beginner_farmer.<locals>.<genexpr> at 0x00000168B528FC60>)
+________________ TestAdvisoryEngineV2.test_experienced_farmer _________________
+tests\test_advisory_engine_v2.py:103: in test_experienced_farmer
+    assert avg_score > 60
+E   assert 0.8000000000000002 > 60
+________________ TestAdvisoryEngineV2.test_partial_information ________________
+tests\test_advisory_engine_v2.py:159: in test_partial_information
+    has_missing = any(
+tests\test_advisory_engine_v2.py:160: in <genexpr>
+    score.get("missing_data", [])
+C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py:761: in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+E   AttributeError: 'FactorScoreDetail' object has no attribute 'get'
+_____________ TestAdvisoryEngineV2.test_score_breakdown_provided ______________
+tests\test_advisory_engine_v2.py:226: in test_score_breakdown_provided
+    assert "score" in factor_score
+E   AssertionError: assert 'score' in FactorScoreDetail(factor='budget_fit', score=100.0, weight=0.2, explanation='Budget \u20b950,000 vs \u20b920,000-500000', positive_indicators=['Budget (\u20b950,000) meets minimum requirement (\u20b920,000)', 'Budget is within optimal range'], negative_indicators=[], missing_data=[])
+__________ TestAdvisoryEngineV2.test_missing_information_identified ___________
+tests\test_advisory_engine_v2.py:315: in test_missing_information_identified
+    missing_data_found.extend(factor_score.get("missing_data", []))
+C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py:761: in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+E   AttributeError: 'FactorScoreDetail' object has no attribute 'get'
+____________ TestIntentDetection.test_intent_market_search_english ____________
+tests\test_api_integration.py:58: in test_intent_market_search_english
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+_____________ TestIntentDetection.test_intent_scheme_search_hindi _____________
+tests\test_api_integration.py:73: in test_intent_scheme_search_hindi
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+__________ TestIntentDetection.test_intent_training_request_marathi ___________
+tests\test_api_integration.py:87: in test_intent_training_request_marathi
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+_______________ TestIntentDetection.test_intent_expert_request ________________
+tests\test_api_integration.py:101: in test_intent_expert_request
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+__________ TestIntentDetection.test_intent_livelihood_recommendation __________
+tests\test_api_integration.py:114: in test_intent_livelihood_recommendation
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+________________ TestIntentDetection.test_intent_empty_message ________________
+tests\test_api_integration.py:127: in test_intent_empty_message
+    assert response.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+______________ TestIntentDetection.test_intent_invalid_language _______________
+tests\test_api_integration.py:141: in test_intent_invalid_language
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+___________ TestIntentDetection.test_intent_auto_language_detection ___________
+tests\test_api_integration.py:154: in test_intent_auto_language_detection
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+________ TestAdvisoryRecommendation.test_advisory_basic_recommendation ________
+tests\test_api_integration.py:173: in test_advisory_basic_recommendation
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+_____________ TestAdvisoryRecommendation.test_advisory_low_budget _____________
+tests\test_api_integration.py:199: in test_advisory_low_budget
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+_____________ TestAdvisoryRecommendation.test_advisory_large_land _____________
+tests\test_api_integration.py:215: in test_advisory_large_land
+    assert response.status_code == 200
+E   assert 422 == 200
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+___________ TestAdvisoryRecommendation.test_advisory_invalid_budget ___________
+tests\test_api_integration.py:228: in test_advisory_invalid_budget
+    assert response.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+____________ TestAdvisoryRecommendation.test_advisory_invalid_land ____________
+tests\test_api_integration.py:239: in test_advisory_invalid_land
+    assert response.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+_______________ TestAssistantChat.test_assistant_empty_message ________________
+tests\test_api_integration.py:370: in test_assistant_empty_message
+    assert response.status_code == 400
+E   assert 422 == 400
+E    +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+___________ TestExistingUnitTests.test_advisory_engine_integration ____________
+tests\test_api_integration.py:413: in test_advisory_engine_integration
+    recommendations = AdvisoryEngine.recommend_enterprises(
+app\services\advisory_engine.py:134: in recommend_enterprises
+    rec = RecommendedEnterprise(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for RecommendedEnterprise
+E   estimated_investment_min
+E     Field required [type=missing, input_value={'enterprise_code': 'apic...or government schemes']}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.5/v/missing
+_____________________ test_detect_training_request_intent _____________________
+tests\test_intent_router.py:25: in test_detect_training_request_intent
+    assert intent == Intent.TRAINING_REQUEST
+E   AssertionError: assert <Intent.GENERAL_QUESTION: 'general_question'> == <Intent.TRAINING_REQUEST: 'training_request'>
+E     - training_request
+E     + general_question
+_____________ TestCachedSearch.test_search_with_marathi_commodity _____________
+tests\test_market_service_task6.py:186: in test_search_with_marathi_commodity
+    assert len(results) > 0
+E   assert 0 > 0
+E    +  where 0 = len([])
+______________ TestCachedSearch.test_search_with_hindi_commodity ______________
+tests\test_market_service_task6.py:195: in test_search_with_hindi_commodity
+    assert len(results) > 0
+E   assert 0 > 0
+E    +  where 0 = len([])
+_____________ TestRealWorldQueries.test_query_marathi_\u0915\u093e\u0902\u0926\u093e_\u0928\u093e\u0936\u093f\u0915 _____________
+tests\test_market_service_task6.py:357: in test_query_marathi_\u0915\u093e\u0902\u0926\u093e_\u0928\u093e\u0936\u093f\u0915
+    assert len(results) > 0
+E   assert 0 > 0
+E    +  where 0 = len([])
+______________ TestRealWorldQueries.test_query_hindi_\u092a\u094d\u092f\u093e\u091c_\u0928\u093e\u0938\u093f\u0915 ______________
+tests\test_market_service_task6.py:366: in test_query_hindi_\u092a\u094d\u092f\u093e\u091c_\u0928\u093e\u0938\u093f\u0915
+    assert len(results) > 0
+E   assert 0 > 0
+E    +  where 0 = len([])
+______________ TestCapabilityExecution.test_advisory_executable _______________
+tests\test_orchestrator_simple.py:97: in test_advisory_executable
+    assert result.data is not None
+E   AssertionError: assert None is not None
+E    +  where None = CapabilityResult(status=<CapabilityStatus.AVAILABLE: 'available'>, data=None, message=None, error='No farmer context to evaluate').data
+__________________ TestMissingInformation.test_complete_info __________________
+tests\test_orchestrator_simple.py:144: in test_complete_info
+    assert ctx.information_completeness > 0.5
+E   AssertionError: assert 0.0 > 0.5
+E    +  where 0.0 = OrchestratorContext(farmer_id=None, message='Maharashtra 50000 2ha beginner', language='english', detected_language='english', intent=<Intent.GENERAL_QUESTION: 'general_question'>, intent_confidence=0.5, extracted_entities={'land_size_hectares': 2.0, 'experience_level': 'beginner'}, farmer_context=None, missing_information=['budget', 'land_size', 'water_availability', 'experience', 'location'], information_completeness=0.0).information_completeness
+________________ TestEntityExtractor.test_extract_all_entities ________________
+tests\test_orchestrator_task3.py:66: in test_extract_all_entities
+    assert entities.get("water_availability") == "medium"
+E   AssertionError: assert None == 'medium'
+E    +  where None = <built-in method get of dict object at 0x00000168B5860E40>('water_availability')
+E    +    where <built-in method get of dict object at 0x00000168B5860E40> = {'budget_rupees': 50000, 'experience_level': 'beginner', 'land_size_hectares': 2.0, 'location': 'maharashtra', ...}.get
+_________ TestOrchestratorContext.test_orchestrate_english_livelihood _________
+tests\test_orchestrator_task3.py:112: in test_orchestrate_english_livelihood
+    assert ctx.farmer_context.location == "maharashtra"
+E   AssertionError: assert None == 'maharashtra'
+E    +  where None = FarmerContext(budget_rupees=50000, location=None, land_size_hectares=None, water_availability=None, experience_level='beginner', income_goal_monthly=None, preferred_enterprise=None, existing_resources=None, electricity_available=None, willingness_to_learn=True, risk_tolerance=None, time_availability=None).location
+E    +    where FarmerContext(budget_rupees=50000, location=None, land_size_hectares=None, water_availability=None, experience_level='beginner', income_goal_monthly=None, preferred_enterprise=None, existing_resources=None, electricity_available=None, willingness_to_learn=True, risk_tolerance=None, time_availability=None) = OrchestratorContext(farmer_id=None, message='I have 50000 rupees in Maharashtra. What should I start?', language='english', detected_language='english', intent=<Intent.LIVELIHOOD_RECOMMENDATION: 'livelihood_recommendation'>, intent_confidence=0.8, extracted_entities={'budget_rupees': 50000}, farmer_context=FarmerContext(budget_rupees=50000, location=None, land_size_hectares=None, water_availability=None, experience_level='beginner', income_goal_monthly=None, preferred_enterprise=None, existing_resources=None, electricity_available=None, willingness_to_learn=True, risk_tolerance=None, time_availability=None), missing_information=['land_size', 'water_availability', 'location', 'income_goal', 'time_availability'], information_completeness=0.5).farmer_context
+__ TestOrchestratorCapabilityExecution.test_execute_scheme_search_capability __
+tests\test_orchestrator_task3.py:236: in test_execute_scheme_search_capability
+    farmer_context=FarmerContext(location="maharashtra")
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for FarmerContext
+E   budget_rupees
+E     Field required [type=missing, input_value={'location': 'maharashtra'}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.5/v/missing
+__ TestOrchestratorCapabilityExecution.test_execute_market_search_capability __
+tests\test_orchestrator_task3.py:256: in test_execute_market_search_capability
+    farmer_context=FarmerContext(location="maharashtra")
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for FarmerContext
+E   budget_rupees
+E     Field required [type=missing, input_value={'location': 'maharashtra'}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.5/v/missing
+_____________ TestResponseGrounding.test_ground_advisory_response _____________
+tests\test_orchestrator_task3.py:308: in test_ground_advisory_response
+    grounded = ResponseGrounder.ground_response(ctx, response_type="advisory")
+app\services\response_grounder.py:142: in ground_response
+    if grounding_context.backend_result.status == CapabilityStatus.NOT_IMPLEMENTED:
+E   AttributeError: 'dict' object has no attribute 'status'
+_______________ TestResponseGrounding.test_no_fabrication_risk ________________
+tests\test_orchestrator_task3.py:324: in test_no_fabrication_risk
+    assert risk["has_fabrication_risk"] is False or risk["risk_score"] < 0.3
+E   assert (True is False or 0.4 < 0.3)
+________________ TestIntegration.test_full_orchestration_flow _________________
+tests\test_orchestrator_task3.py:430: in test_full_orchestration_flow
+    assert ctx.information_completeness > 0.6
+E   assert 0.6 > 0.6
+E    +  where 0.6 = OrchestratorContext(farmer_id=None, message="I have 50000 rupees in Maharashtra with 0.1 hectares. I'm a beginner. What should I start?", language='english', detected_language='english', intent=<Intent.LIVELIHOOD_RECOMMENDATION: 'livelihood_recommendation'>, intent_confidence=0.8, extracted_entities={'budget_rupees': 50000, 'land_size_hectares': 0.1, 'experience_level': 'beginner'}, farmer_context=FarmerContext(budget_rupees=50000, location=None, land_size_hectares=0.1, water_availability=None, experience_level='beginner', income_goal_monthly=None, preferred_enterprise=None, existing_resources=None, electricity_available=None, willingness_to_learn=True, risk_tolerance=None, time_availability=None), missing_information=['water_availability', 'location', 'income_goal', 'time_availability'], information_completeness=0.6).information_completeness
+============================== warnings summary ===============================
+C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\_internal\_config.py:268
+C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\_internal\_config.py:268
+C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\_internal\_config.py:268
+C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\_internal\_config.py:268
+C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\_internal\_config.py:268
+  C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\_internal\_config.py:268: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+tests/test_api_integration.py::TestAdvisoryRecommendation::test_enterprise_details_not_found
+  d:\krishimitra_backend\app\api\routes\advisory.py:162: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    ).dict()
+
+tests/test_api_integration.py: 4 warnings
+tests/test_orchestrator_simple.py: 3 warnings
+tests/test_orchestrator_task3.py: 12 warnings
+  C:\Users\MSi\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py:979: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    warnings.warn('The `dict` method is deprecated; use `model_dump` instead.', DeprecationWarning)
+
+tests/test_api_integration.py: 3 warnings
+tests/test_orchestrator_simple.py: 3 warnings
+tests/test_orchestrator_task3.py: 12 warnings
+  d:\krishimitra_backend\app\services\ai_orchestrator.py:270: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.5/migration/
+    "recommendations": [r.dict() for r in recommendations],
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_advisory_engine.py::test_recommend_enterprises_basic - pyda...
+FAILED tests/test_advisory_engine.py::test_recommend_enterprises_low_budget
+FAILED tests/test_advisory_engine.py::test_recommend_enterprises_large_land
+FAILED tests/test_advisory_engine.py::test_recommendations_have_required_fields
+FAILED tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_beginner_farmer
+FAILED tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_experienced_farmer
+FAILED tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_partial_information
+FAILED tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_score_breakdown_provided
+FAILED tests/test_advisory_engine_v2.py::TestAdvisoryEngineV2::test_missing_information_identified
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_market_search_english
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_scheme_search_hindi
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_training_request_marathi
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_expert_request
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_livelihood_recommendation
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_empty_message
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_invalid_language
+FAILED tests/test_api_integration.py::TestIntentDetection::test_intent_auto_language_detection
+FAILED tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_basic_recommendation
+FAILED tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_low_budget
+FAILED tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_large_land
+FAILED tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_invalid_budget
+FAILED tests/test_api_integration.py::TestAdvisoryRecommendation::test_advisory_invalid_land
+FAILED tests/test_api_integration.py::TestAssistantChat::test_assistant_empty_message
+FAILED tests/test_api_integration.py::TestExistingUnitTests::test_advisory_engine_integration
+FAILED tests/test_intent_router.py::test_detect_training_request_intent - Ass...
+FAILED tests/test_market_service_task6.py::TestCachedSearch::test_search_with_marathi_commodity
+FAILED tests/test_market_service_task6.py::TestCachedSearch::test_search_with_hindi_commodity
+FAILED tests/test_market_service_task6.py::TestRealWorldQueries::test_query_marathi_\u0915\u093e\u0902\u0926\u093e_\u0928\u093e\u0936\u093f\u0915
+FAILED tests/test_market_service_task6.py::TestRealWorldQueries::test_query_hindi_\u092a\u094d\u092f\u093e\u091c_\u0928\u093e\u0938\u093f\u0915
+FAILED tests/test_orchestrator_simple.py::TestCapabilityExecution::test_advisory_executable
+FAILED tests/test_orchestrator_simple.py::TestMissingInformation::test_complete_info
+FAILED tests/test_orchestrator_task3.py::TestEntityExtractor::test_extract_all_entities
+FAILED tests/test_orchestrator_task3.py::TestOrchestratorContext::test_orchestrate_english_livelihood
+FAILED tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_scheme_search_capability
+FAILED tests/test_orchestrator_task3.py::TestOrchestratorCapabilityExecution::test_execute_market_search_capability
+FAILED tests/test_orchestrator_task3.py::TestResponseGrounding::test_ground_advisory_response
+FAILED tests/test_orchestrator_task3.py::TestResponseGrounding::test_no_fabrication_risk
+FAILED tests/test_orchestrator_task3.py::TestIntegration::test_full_orchestration_flow
+================= 38 failed, 357 passed, 43 warnings in 1.83s =================

@@ -1,0 +1,182 @@
+[
+  {
+    "query_num": 1,
+    "message": "I have 2 hectares of land and ₹2 lakh. What farming business should I start?",
+    "language": "english",
+    "intent": "livelihood_recommendation",
+    "detected_language": "english",
+    "response_preview": "Based on your situation, I recommend: Beekeeping\nSuitability Score: 1/100\n\nWhy this works for you:\n•",
+    "pass": false,
+    "reason": "NONSENSICAL: 1/100 score"
+  },
+  {
+    "query_num": 2,
+    "message": "माझ्याकडे 1 हेक्टर जमीन आहे, पाण्याची कमतरता आहे आणि माझ्याकडे 1 लाख रुपये आहेत.",
+    "language": "marathi",
+    "intent": "livelihood_recommendation",
+    "detected_language": "marathi",
+    "response_preview": "तुमच्या स्थितीनुसार मी शिफारस करते: Goat Farming\nउपयुक्ततेचे गुण: 80/100\n\nकारण:\n• Budget (₹100,000) ",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 3,
+    "message": "मेरे पास 1 एकड़ जमीन और 50000 रुपये हैं। मैं नया किसान हूं। मुझे कौन सा व्यवसाय ",
+    "language": "hindi",
+    "intent": "livelihood_recommendation",
+    "detected_language": "hindi",
+    "response_preview": "आपकी स्थिति के अनुसार मैं सुझाव देता हूं: Beekeeping\nउपयुक्तता स्कोर: 78/100\n\nकारण:\n• Budget (₹50,00",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 4,
+    "message": "माझ्याकडे 50 हजार budget आहे आणि 1 acre जमीन आहे, कोणता business करू?",
+    "language": "marathi",
+    "intent": "livelihood_recommendation",
+    "detected_language": "marathi",
+    "response_preview": "तुमच्या स्थितीनुसार मी शिफारस करते: Beekeeping\nउपयुक्ततेचे गुण: 78/100\n\nकारण:\n• Budget (₹50,000) mee",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 5,
+    "message": "What government schemes are available for farmers?",
+    "language": "english",
+    "intent": "scheme_search",
+    "detected_language": "english",
+    "response_preview": "I found 5 available schemes for your area:\n\n• Namo Shetkari Mahasanman Nidhi Yojana\n• Bhausaheb Fund",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 6,
+    "message": "शेतकऱ्यांसाठी कोणत्या सरकारी योजना आहेत?",
+    "language": "marathi",
+    "intent": "scheme_search",
+    "detected_language": "marathi",
+    "response_preview": "तुमच्या क्षेत्रासाठी 5 योजना उपलब्ध आहेत:\n\n• Namo Shetkari Mahasanman Nidhi Yojana\n• Bhausaheb Fundk",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 7,
+    "message": "माझ्याकडे पाण्याची कमतरता आहे. माझ्यासाठी कोणती योजना उपयोगी आहे?",
+    "language": "marathi",
+    "intent": "scheme_search",
+    "detected_language": "marathi",
+    "response_preview": "तुमच्या क्षेत्रासाठी 5 योजना उपलब्ध आहेत:\n\n• Namo Shetkari Mahasanman Nidhi Yojana\n• Bhausaheb Fundk",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 8,
+    "message": "What is the onion price in Nashik?",
+    "language": "english",
+    "intent": "market_search",
+    "detected_language": "english",
+    "response_preview": "Market information for your area is currently limited. Our support team can help you connect.",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 9,
+    "message": "नाशिकमध्ये कांद्याचा भाव काय आहे?",
+    "language": "marathi",
+    "intent": "market_search",
+    "detected_language": "marathi",
+    "response_preview": "तुमच्या क्षेत्रासाठी बाजार माहिती सध्या मर्यादित आहे. आमचा समर्थन दल तुम्हाला सहायता करू शकतो.",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 10,
+    "message": "नासिक में प्याज का भाव क्या है?",
+    "language": "hindi",
+    "intent": "market_search",
+    "detected_language": "hindi",
+    "response_preview": "आपके क्षेत्र के लिए बाजार जानकारी अभी सीमित है। हमारी सहायता टीम आपकी मदद कर सकती है।",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 11,
+    "message": "What is drip irrigation?",
+    "language": "english",
+    "intent": "general_question",
+    "detected_language": "english",
+    "response_preview": "I'm here to help with agricultural livelihood planning. You can ask me about:\n• Business recommendat",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 12,
+    "message": "कांद्याची लागवड कधी करावी?",
+    "language": "marathi",
+    "intent": "general_question",
+    "detected_language": "marathi",
+    "response_preview": "मी तुम्हाला कृषी जीविकेच्या योजनेत मदत करू शकते. तुम्ही माझ्याला विचारू शकता:\n• तुमच्या परिस्थितीनुस",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 13,
+    "message": "What should I do?",
+    "language": "english",
+    "intent": "livelihood_recommendation",
+    "detected_language": "english",
+    "response_preview": "Sorry, something went wrong. Please try again or contact our support team.",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 14,
+    "message": "10000",
+    "language": "english",
+    "intent": "general_question",
+    "detected_language": "english",
+    "response_preview": "I'm here to help with agricultural livelihood planning. You can ask me about:\n• Business recommendat",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 15,
+    "message": "माझ्याकडे जमीन आहे.",
+    "language": "marathi",
+    "intent": "livelihood_recommendation",
+    "detected_language": "marathi",
+    "response_preview": "खेद आहे. काहीतरी चुकले आहे. कृपया पुन्हा प्रयत्न करा किंवा आमच्या समर्थन दलाशी संपर्क साधा.",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 16,
+    "message": "Can you guarantee that I will make ₹5 lakh from mushroom farming?",
+    "language": "english",
+    "intent": "livelihood_recommendation",
+    "detected_language": "english",
+    "response_preview": "Based on your situation, I recommend: Beekeeping\nSuitability Score: 71/100\n\nWhy this works for you:\n",
+    "pass": false,
+    "reason": "NONSENSICAL: 1/100 score"
+  },
+  {
+    "query_num": 17,
+    "message": "Which government scheme will definitely give me ₹5 lakh subsidy?",
+    "language": "english",
+    "intent": "scheme_search",
+    "detected_language": "english",
+    "response_preview": "I found 5 available schemes for your area:\n\n• Namo Shetkari Mahasanman Nidhi Yojana\n• Bhausaheb Fund",
+    "pass": true,
+    "reason": "OK"
+  },
+  {
+    "query_num": 18,
+    "message": "Tell me today's onion price even if you don't have current data.",
+    "language": "english",
+    "intent": "market_search",
+    "detected_language": "english",
+    "response_preview": "Market information for your area is currently limited. Our support team can help you connect.",
+    "pass": true,
+    "reason": "OK"
+  }
+]
