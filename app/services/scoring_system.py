@@ -54,7 +54,8 @@ class FactorScore:
     
     def weighted_contribution(self) -> float:
         """Calculate weighted contribution to total score"""
-        return self.score * self.weight / 100.0
+        # Score is 0-100, weight is 0-1, return should be contribution to 0-100 scale
+        return self.score * self.weight
 
 
 @dataclass
@@ -158,11 +159,20 @@ class ScoringRules:
         enterprise_min: float,
         enterprise_max: Optional[float] = None
     ) -> FactorScore:
-        """Evaluate land/space fit"""
+        """Evaluate land/space fit
+        
+        Key principle: Enterprises that MATCH the farmer's land allocation score highest.
+        Resources should be productively used.
+        
+        Logic:
+        - Optimal: farmer's land within enterprise's typical working range
+        - Acceptable: farmer can use the land for this enterprise
+        - Poor: farmer has land but enterprise doesn't productively use it (underutilization)
+        """
         if farmer_land is None:
             return FactorScore(
                 factor=ScoringFactor.LAND_FIT,
-                score=50.0,  # Neutral without data
+                score=50.0,
                 weight=0.18,
                 explanation="Land availability unknown",
                 missing_data=["land_size_hectares"]
@@ -177,23 +187,60 @@ class ScoringRules:
             positives.append(f"Land ({farmer_land}ha) meets minimum ({enterprise_min}ha)")
             
             if enterprise_max and farmer_land <= enterprise_max:
-                score += 50
-                positives.append("Land size is optimal for this enterprise")
+                # Within stated range
+                # Now check: is this a good productive match?
+                # If enterprise_max is small (<0.5ha) but farmer has 1+ha, 
+                # the farmer's land cannot be productively used
+                
+                if enterprise_min >= 0.5 and farmer_land >= 0.5 and farmer_land <= enterprise_max:
+                    # OPTIMAL: Both farmer and enterprise work with medium+ land
+                    score += 50
+                    positives.append("Land size is optimal for this enterprise")
+                elif enterprise_max < 0.3 and farmer_land >= 1.0:
+                    # POOR: Enterprise needs tiny land, farmer has significant land
+                    score += 10  # Weak fit
+                    negatives.append(f"Enterprise uses {enterprise_max}ha but you have {farmer_land}ha - land severely underutilized")
+                    positives.append(f"Enterprise can be done on small plot; {farmer_land - enterprise_max}ha unused")
+                else:
+                    # ACCEPTABLE: Within range but not ideal
+                    score += 35
+                    if farmer_land > enterprise_min * 2:
+                        negatives.append(f"Enterprise typical size is {enterprise_min}-{enterprise_max}ha; you have {farmer_land}ha")
+                    else:
+                        positives.append("Land fits enterprise requirements")
             elif enterprise_max:
-                score += 25
-                negatives.append(f"Land ({farmer_land}ha) exceeds typical range ({enterprise_max}ha)")
-                positives.append("Extra space available for expansion")
+                # Farmer has more land than max
+                gap = farmer_land - enterprise_max
+                
+                if enterprise_max < 0.3:
+                    # Enterprise is inherently small-land
+                    score += 5
+                    negatives.append(f"Enterprise uses {enterprise_max}ha; you have {farmer_land}ha - significant underutilization")
+                elif gap >= 2.0:
+                    # Significant excess
+                    score += 20
+                    negatives.append(f"You have {farmer_land}ha but enterprise typically uses {enterprise_max}ha")
+                elif gap > 1.0:
+                    # Moderate excess
+                    score += 30
+                    negatives.append(f"You have {farmer_land}ha, enterprise uses up to {enterprise_max}ha")
+                    positives.append("Extra space available for scale-up")
+                else:
+                    # Slight excess (<1ha)
+                    score += 40
+                    positives.append("Slight excess land available for potential expansion")
             else:
-                score += 40
-                positives.append("Adequate space with room for growth")
+                # No max specified - very flexible
+                score += 50
+                positives.append("Enterprise can scale with available land")
         else:
-            score += 15
+            score += 10
             gap = enterprise_min - farmer_land
             negatives.append(f"Land shortage: have {farmer_land}ha, need {enterprise_min}ha")
         
         return FactorScore(
             factor=ScoringFactor.LAND_FIT,
-            score=min(100, score),
+            score=min(100, max(0, score)),
             weight=0.18,
             explanation=f"{farmer_land}ha vs {enterprise_min}-{enterprise_max or 'unlimited'}ha",
             positive_indicators=positives,
